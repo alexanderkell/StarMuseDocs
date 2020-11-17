@@ -1,0 +1,712 @@
+\begin{theindex}
+
+  \item \spxentry{\_compute\_new\_assets()}\spxextra{muse.agents.agent.InvestingAgent method}, 
+		\hyperpage{141}
+
+  \indexspace
+
+  \item \spxentry{AbstractAgent}\spxextra{class in muse.agents.agent}, 
+		\hyperpage{139}
+  \item \spxentry{AbstractSector}\spxextra{class in muse.sectors}, 
+		\hyperpage{132}
+  \item \spxentry{add\_assets()}\spxextra{muse.agents.agent.InvestingAgent method}, 
+		\hyperpage{141}
+  \item \spxentry{Agent}\spxextra{class in muse.agents.agent}, 
+		\hyperpage{139}
+  \item \spxentry{agent\_concatenation()}\spxextra{in module muse.utilities}, 
+		\hyperpage{186}
+  \item \spxentry{agents()}\spxextra{muse.sectors.sector.Sector property}, 
+		\hyperpage{133}
+  \item \spxentry{agents\_factory()}\spxextra{in module muse.agents.factories}, 
+		\hyperpage{138}
+  \item \spxentry{aggregate\_technology\_model()}\spxextra{in module muse.utilities}, 
+		\hyperpage{187}
+  \item \spxentry{aggregate\_transforms()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{174}
+  \item \spxentry{annual\_levelized\_cost\_of\_energy()}\spxextra{in module muse.quantities}, 
+		\hyperpage{167}
+  \item \spxentry{asset\_merge\_factory()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+  \item \spxentry{assets}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{avoid\_repetitions()}\spxextra{in module muse.utilities}, 
+		\hyperpage{188}
+
+  \indexspace
+
+  \item \spxentry{broadcast\_techs()}\spxextra{in module muse.utilities}, 
+		\hyperpage{188}
+
+  \indexspace
+
+  \item \spxentry{calibrate\_legacy\_sectors()}\spxextra{muse.mca.MCA method}, 
+		\hyperpage{127}
+  \item \spxentry{calibrated}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{capacity()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+  \item \spxentry{capacity()}\spxextra{muse.sectors.sector.Sector property}, 
+		\hyperpage{133}
+  \item \spxentry{capacity\_in\_use()}\spxextra{in module muse.quantities}, 
+		\hyperpage{168}
+  \item \spxentry{capacity\_to\_service\_demand()}\spxextra{in module muse.objectives}, 
+		\hyperpage{142}
+  \item \spxentry{capital\_costs()}\spxextra{in module muse.objectives}, 
+		\hyperpage{142}
+  \item \spxentry{CARBON\_BUDGET\_FITTERS}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{CARBON\_BUDGET\_FITTERS\_SIGNATURE}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{CARBON\_BUDGET\_METHODS}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{CARBON\_BUDGET\_METHODS\_SIGNATURE}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{category}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{check\_demand\_fulfillment()}\spxextra{in module muse.mca}, 
+		\hyperpage{128}
+  \item \spxentry{check\_equilibrium()}\spxextra{in module muse.mca}, 
+		\hyperpage{129}
+  \item \spxentry{check\_usage()}\spxextra{in module muse.commodities}, 
+		\hyperpage{181}
+  \item \spxentry{clean()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+  \item \spxentry{clean\_assets()}\spxextra{in module muse.utilities}, 
+		\hyperpage{188}
+  \item \spxentry{cliff\_retirement\_profile()}\spxextra{in module muse.investments}, 
+		\hyperpage{150}
+  \item \spxentry{comfort()}\spxextra{in module muse.objectives}, 
+		\hyperpage{142}
+  \item \spxentry{commodities}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{commodity\_price}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{CommodityUsage}\spxextra{class in muse.commodities}, 
+		\hyperpage{180}
+  \item \spxentry{compress()}\spxextra{in module muse.filters}, 
+		\hyperpage{146}
+  \item \spxentry{constraints}\spxextra{muse.agents.agent.InvestingAgent attribute}, 
+		\hyperpage{141}
+  \item \spxentry{CONSUMABLE}\spxextra{muse.commodities.CommodityUsage attribute}, 
+		\hyperpage{180}
+  \item \spxentry{consumption()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+  \item \spxentry{consumption()}\spxextra{in module muse.quantities}, 
+		\hyperpage{168}
+  \item \spxentry{converged}\spxextra{muse.mca.FindEquilibriumResults attribute}, 
+		\hyperpage{127}
+  \item \spxentry{convert\_market\_timeslice()}\spxextra{muse.sectors.sector.Sector static method}, 
+		\hyperpage{133}
+  \item \spxentry{convert\_timeslice()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{175}
+  \item \spxentry{coords\_to\_multiindex()}\spxextra{in module muse.utilities}, 
+		\hyperpage{188}
+  \item \spxentry{costed\_production()}\spxextra{in module muse.quantities}, 
+		\hyperpage{169}
+  \item \spxentry{costs()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+  \item \spxentry{create\_newcapa\_agent()}\spxextra{in module muse.agents.factories}, 
+		\hyperpage{138}
+  \item \spxentry{create\_retrofit\_agent()}\spxextra{in module muse.agents.factories}, 
+		\hyperpage{138}
+  \item \spxentry{create\_sample()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{currently\_existing\_tech()}\spxextra{in module muse.filters}, 
+		\hyperpage{146}
+  \item \spxentry{currently\_referenced\_tech()}\spxextra{in module muse.filters}, 
+		\hyperpage{146}
+
+  \indexspace
+
+  \item \spxentry{decision}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{decommissioning\_demand()}\spxextra{in module muse.quantities}, 
+		\hyperpage{169}
+  \item \spxentry{demand()}\spxextra{in module muse.constraints}, 
+		\hyperpage{156}
+  \item \spxentry{demand\_matched\_production()}\spxextra{in module muse.production}, 
+		\hyperpage{136}
+  \item \spxentry{demand\_matched\_production()}\spxextra{in module muse.quantities}, 
+		\hyperpage{169}
+  \item \spxentry{demand\_matching()}\spxextra{in module muse.demand\_matching}, 
+		\hyperpage{172}
+  \item \spxentry{DEMAND\_SHARE\_SIGNATURE}\spxextra{in module muse.demand\_share}, 
+		\hyperpage{151}
+  \item \spxentry{demand\_threshhold}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{dims}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+
+  \indexspace
+
+  \item \spxentry{efficiency()}\spxextra{in module muse.objectives}, 
+		\hyperpage{142}
+  \item \spxentry{emission()}\spxextra{in module muse.quantities}, 
+		\hyperpage{169}
+  \item \spxentry{emission\_cost()}\spxextra{in module muse.objectives}, 
+		\hyperpage{142}
+  \item \spxentry{endogenous\_demand()}\spxextra{in module muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{ENERGY}\spxextra{muse.commodities.CommodityUsage attribute}, 
+		\hyperpage{180}
+  \item \spxentry{ENVIRONMENTAL}\spxextra{muse.commodities.CommodityUsage attribute}, 
+		\hyperpage{180}
+  \item \spxentry{epsilon\_constraints()}\spxextra{in module muse.decisions}, 
+		\hyperpage{148}
+  \item \spxentry{equivalent\_annual\_cost()}\spxextra{in module muse.objectives}, 
+		\hyperpage{143}
+  \item \spxentry{excess}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{exp\_guess\_and\_weights()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{Exponential}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{exponential()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{130}
+  \item \spxentry{ExponentialAdj}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+
+  \indexspace
+
+  \item \spxentry{factory()}\spxextra{in module muse.agents.factories}, 
+		\hyperpage{139}
+  \item \spxentry{factory()}\spxextra{in module muse.constraints}, 
+		\hyperpage{157}
+  \item \spxentry{factory()}\spxextra{in module muse.decisions}, 
+		\hyperpage{148}
+  \item \spxentry{factory()}\spxextra{in module muse.filters}, 
+		\hyperpage{146}
+  \item \spxentry{factory()}\spxextra{in module muse.interactions}, 
+		\hyperpage{138}
+  \item \spxentry{factory()}\spxextra{in module muse.objectives}, 
+		\hyperpage{143}
+  \item \spxentry{factory()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{167}
+  \item \spxentry{factory()}\spxextra{in module muse.production}, 
+		\hyperpage{137}
+  \item \spxentry{factory()}\spxextra{in module muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{factory()}\spxextra{muse.mca.MCA class method}, 
+		\hyperpage{127}
+  \item \spxentry{factory()}\spxextra{muse.sectors.AbstractSector class method}, 
+		\hyperpage{132}
+  \item \spxentry{factory()}\spxextra{muse.sectors.legacy\_sector.LegacySector class method}, 
+		\hyperpage{135}
+  \item \spxentry{factory()}\spxextra{muse.sectors.preset\_sector.PresetSector class method}, 
+		\hyperpage{134}
+  \item \spxentry{factory()}\spxextra{muse.sectors.sector.Sector class method}, 
+		\hyperpage{133}
+  \item \spxentry{filter\_input()}\spxextra{in module muse.utilities}, 
+		\hyperpage{188}
+  \item \spxentry{filter\_input()}\spxextra{muse.agents.agent.AbstractAgent method}, 
+		\hyperpage{139}
+  \item \spxentry{filter\_with\_template()}\spxextra{in module muse.utilities}, 
+		\hyperpage{189}
+  \item \spxentry{find\_equilibrium()}\spxextra{in module muse.mca}, 
+		\hyperpage{129}
+  \item \spxentry{find\_equilibrium()}\spxextra{muse.mca.MCA method}, 
+		\hyperpage{128}
+  \item \spxentry{FindEquilibriumResults}\spxextra{class in muse.mca}, 
+		\hyperpage{127}
+  \item \spxentry{FiniteResourceException}, \hyperpage{165}
+  \item \spxentry{fixed\_costs()}\spxextra{in module muse.objectives}, 
+		\hyperpage{143}
+  \item \spxentry{forecast}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{forecast()}\spxextra{muse.sectors.sector.Sector property}, 
+		\hyperpage{133}
+  \item \spxentry{forecast\_year()}\spxextra{muse.agents.agent.Agent property}, 
+		\hyperpage{140}
+  \item \spxentry{fuel\_consumption\_cost()}\spxextra{in module muse.objectives}, 
+		\hyperpage{143}
+  \item \spxentry{future\_propagation()}\spxextra{in module muse.utilities}, 
+		\hyperpage{189}
+
+  \indexspace
+
+  \item \spxentry{global\_commodities()}\spxextra{muse.sectors.legacy\_sector.LegacySector property}, 
+		\hyperpage{135}
+  \item \spxentry{gross\_margin()}\spxextra{in module muse.quantities}, 
+		\hyperpage{170}
+
+  \indexspace
+
+  \item \spxentry{housekeeping}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{housekeeping\_factory()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+
+  \indexspace
+
+  \item \spxentry{identity()}\spxextra{in module muse.filters}, 
+		\hyperpage{146}
+  \item \spxentry{initialize\_from\_technologies()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{inputs()}\spxextra{muse.sectors.legacy\_sector.LegacySector method}, 
+		\hyperpage{135}
+  \item \spxentry{interactions}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{133}
+  \item \spxentry{interpolation}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{interpolation}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{133}
+  \item \spxentry{interpolation\_mode}\spxextra{muse.sectors.preset\_sector.PresetSector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{invest}\spxextra{muse.agents.agent.InvestingAgent attribute}, 
+		\hyperpage{141}
+  \item \spxentry{InvestingAgent}\spxextra{class in muse.agents.agent}, 
+		\hyperpage{141}
+  \item \spxentry{INVESTMENT\_SIGNATURE}\spxextra{in module muse.investments}, 
+		\hyperpage{150}
+  \item \spxentry{is\_consumable()}\spxextra{in module muse.commodities}, 
+		\hyperpage{182}
+  \item \spxentry{is\_enduse()}\spxextra{in module muse.commodities}, 
+		\hyperpage{182}
+  \item \spxentry{is\_fuel()}\spxextra{in module muse.commodities}, 
+		\hyperpage{182}
+  \item \spxentry{is\_material()}\spxextra{in module muse.commodities}, 
+		\hyperpage{183}
+  \item \spxentry{is\_other()}\spxextra{in module muse.commodities}, 
+		\hyperpage{183}
+  \item \spxentry{is\_pollutant()}\spxextra{in module muse.commodities}, 
+		\hyperpage{183}
+
+  \indexspace
+
+  \item \spxentry{LegacySector}\spxextra{class in muse.sectors.legacy\_sector}, 
+		\hyperpage{135}
+  \item \spxentry{lexical\_comparison()}\spxextra{in module muse.decisions}, 
+		\hyperpage{148}
+  \item \spxentry{lexical\_comparison()}\spxextra{in module muse.utilities}, 
+		\hyperpage{190}
+  \item \spxentry{lifetime\_levelized\_cost\_of\_energy()}\spxextra{in module muse.objectives}, 
+		\hyperpage{143}
+  \item \spxentry{lifetime\_levelized\_cost\_of\_energy()}\spxextra{in module muse.quantities}, 
+		\hyperpage{170}
+  \item \spxentry{Linear}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{linear()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{linear\_guess\_and\_weights()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{load\_timeslices\_and\_aggregation()}\spxextra{muse.sectors.legacy\_sector.LegacySector static method}, 
+		\hyperpage{135}
+  \item \spxentry{Logistic}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{LogisticSigmoid}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{Loglog}\spxextra{class in muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{lp\_constraint()}\spxextra{in module muse.constraints}, 
+		\hyperpage{157}
+  \item \spxentry{lp\_constraint\_matrix()}\spxextra{in module muse.constraints}, 
+		\hyperpage{157}
+  \item \spxentry{lp\_costs()}\spxextra{in module muse.constraints}, 
+		\hyperpage{159}
+
+  \indexspace
+
+  \item \spxentry{market}\spxextra{muse.mca.FindEquilibriumResults attribute}, 
+		\hyperpage{127}
+  \item \spxentry{market}\spxextra{muse.mca.SingleYearIterationResult attribute}, 
+		\hyperpage{128}
+  \item \spxentry{market\_iterative}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{market\_variables()}\spxextra{muse.sectors.sector.Sector method}, 
+		\hyperpage{133}
+  \item \spxentry{maturity()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{maturity\_threshhold}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{max\_capacity\_expansion()}\spxextra{in module muse.constraints}, 
+		\hyperpage{160}
+  \item \spxentry{max\_production()}\spxextra{in module muse.constraints}, 
+		\hyperpage{160}
+  \item \spxentry{maximum\_production()}\spxextra{in module muse.production}, 
+		\hyperpage{137}
+  \item \spxentry{maximum\_production()}\spxextra{in module muse.quantities}, 
+		\hyperpage{171}
+  \item \spxentry{MCA}\spxextra{class in muse.mca}, \hyperpage{127}
+  \item \spxentry{mean()}\spxextra{in module muse.decisions}, 
+		\hyperpage{148}
+  \item \spxentry{merge\_assets()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+  \item \spxentry{merge\_assets()}\spxextra{in module muse.utilities}, 
+		\hyperpage{190}
+  \item \spxentry{merge\_transform}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{mode}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{model()}\spxextra{in module muse.examples}, 
+		\hyperpage{192}
+  \item \spxentry{module}
+    \subitem \spxentry{muse}, \hyperpage{127}
+    \subitem \spxentry{muse.agents.factories}, \hyperpage{138}
+    \subitem \spxentry{muse.carbon\_budget}, \hyperpage{130}
+    \subitem \spxentry{muse.commodities}, \hyperpage{180}
+    \subitem \spxentry{muse.constraints}, \hyperpage{153}
+    \subitem \spxentry{muse.decisions}, \hyperpage{148}
+    \subitem \spxentry{muse.decorators}, \hyperpage{164}
+    \subitem \spxentry{muse.demand\_matching}, \hyperpage{172}
+    \subitem \spxentry{muse.demand\_share}, \hyperpage{151}
+    \subitem \spxentry{muse.examples}, \hyperpage{192}
+    \subitem \spxentry{muse.filters}, \hyperpage{145}
+    \subitem \spxentry{muse.hooks}, \hyperpage{161}
+    \subitem \spxentry{muse.interactions}, \hyperpage{137}
+    \subitem \spxentry{muse.investments}, \hyperpage{150}
+    \subitem \spxentry{muse.mca}, \hyperpage{127}
+    \subitem \spxentry{muse.objectives}, \hyperpage{141}
+    \subitem \spxentry{muse.outputs}, \hyperpage{164}
+    \subitem \spxentry{muse.outputs.sector}, \hyperpage{166}
+    \subitem \spxentry{muse.outputs.sinks}, \hyperpage{165}
+    \subitem \spxentry{muse.production}, \hyperpage{136}
+    \subitem \spxentry{muse.quantities}, \hyperpage{167}
+    \subitem \spxentry{muse.readers.csv}, \hyperpage{162}
+    \subitem \spxentry{muse.readers.toml}, \hyperpage{162}
+    \subitem \spxentry{muse.registration}, \hyperpage{185}
+    \subitem \spxentry{muse.regressions}, \hyperpage{184}
+    \subitem \spxentry{muse.sectors}, \hyperpage{132}
+    \subitem \spxentry{muse.timeslices}, \hyperpage{174}
+    \subitem \spxentry{muse.utilities}, \hyperpage{186}
+  \item \spxentry{multiindex\_to\_coords()}\spxextra{in module muse.utilities}, 
+		\hyperpage{190}
+  \item \spxentry{muse}
+    \subitem \spxentry{module}, \hyperpage{127}
+  \item \spxentry{muse.agents.factories}
+    \subitem \spxentry{module}, \hyperpage{138}
+  \item \spxentry{muse.carbon\_budget}
+    \subitem \spxentry{module}, \hyperpage{130}
+  \item \spxentry{muse.commodities}
+    \subitem \spxentry{module}, \hyperpage{180}
+  \item \spxentry{muse.constraints}
+    \subitem \spxentry{module}, \hyperpage{153}
+  \item \spxentry{muse.decisions}
+    \subitem \spxentry{module}, \hyperpage{148}
+  \item \spxentry{muse.decorators}
+    \subitem \spxentry{module}, \hyperpage{164}
+  \item \spxentry{muse.demand\_matching}
+    \subitem \spxentry{module}, \hyperpage{172}
+  \item \spxentry{muse.demand\_share}
+    \subitem \spxentry{module}, \hyperpage{151}
+  \item \spxentry{muse.examples}
+    \subitem \spxentry{module}, \hyperpage{192}
+  \item \spxentry{muse.filters}
+    \subitem \spxentry{module}, \hyperpage{145}
+  \item \spxentry{muse.hooks}
+    \subitem \spxentry{module}, \hyperpage{161}
+  \item \spxentry{muse.interactions}
+    \subitem \spxentry{module}, \hyperpage{137}
+  \item \spxentry{muse.investments}
+    \subitem \spxentry{module}, \hyperpage{150}
+  \item \spxentry{muse.mca}
+    \subitem \spxentry{module}, \hyperpage{127}
+  \item \spxentry{muse.objectives}
+    \subitem \spxentry{module}, \hyperpage{141}
+  \item \spxentry{muse.outputs}
+    \subitem \spxentry{module}, \hyperpage{164}
+  \item \spxentry{muse.outputs.sector}
+    \subitem \spxentry{module}, \hyperpage{166}
+  \item \spxentry{muse.outputs.sinks}
+    \subitem \spxentry{module}, \hyperpage{165}
+  \item \spxentry{muse.production}
+    \subitem \spxentry{module}, \hyperpage{136}
+  \item \spxentry{muse.quantities}
+    \subitem \spxentry{module}, \hyperpage{167}
+  \item \spxentry{muse.readers.csv}
+    \subitem \spxentry{module}, \hyperpage{162}
+  \item \spxentry{muse.readers.toml}
+    \subitem \spxentry{module}, \hyperpage{162}
+  \item \spxentry{muse.registration}
+    \subitem \spxentry{module}, \hyperpage{185}
+  \item \spxentry{muse.regressions}
+    \subitem \spxentry{module}, \hyperpage{184}
+  \item \spxentry{muse.sectors}
+    \subitem \spxentry{module}, \hyperpage{132}
+  \item \spxentry{muse.timeslices}
+    \subitem \spxentry{module}, \hyperpage{174}
+  \item \spxentry{muse.utilities}
+    \subitem \spxentry{module}, \hyperpage{186}
+
+  \indexspace
+
+  \item \spxentry{name}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{name}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{name}\spxextra{muse.sectors.preset\_sector.PresetSector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{name}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{133}
+  \item \spxentry{nametuple\_to\_dict()}\spxextra{in module muse.utilities}, 
+		\hyperpage{191}
+  \item \spxentry{net\_present\_value()}\spxextra{in module muse.objectives}, 
+		\hyperpage{144}
+  \item \spxentry{new\_and\_retro()}\spxextra{in module muse.demand\_share}, 
+		\hyperpage{152}
+  \item \spxentry{new\_assets\_only()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+  \item \spxentry{new\_to\_retro\_net()}\spxextra{in module muse.interactions}, 
+		\hyperpage{138}
+  \item \spxentry{next()}\spxextra{muse.agents.agent.AbstractAgent method}, 
+		\hyperpage{139}
+  \item \spxentry{next()}\spxextra{muse.agents.agent.Agent method}, 
+		\hyperpage{140}
+  \item \spxentry{next()}\spxextra{muse.agents.agent.InvestingAgent method}, 
+		\hyperpage{141}
+  \item \spxentry{next()}\spxextra{muse.sectors.AbstractSector method}, 
+		\hyperpage{132}
+  \item \spxentry{next()}\spxextra{muse.sectors.legacy\_sector.LegacySector method}, 
+		\hyperpage{135}
+  \item \spxentry{next()}\spxextra{muse.sectors.preset\_sector.PresetSector method}, 
+		\hyperpage{134}
+  \item \spxentry{next()}\spxextra{muse.sectors.sector.Sector method}, 
+		\hyperpage{134}
+  \item \spxentry{noop()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+
+  \indexspace
+
+  \item \spxentry{objectives}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{old\_assets\_only()}\spxextra{in module muse.hooks}, 
+		\hyperpage{161}
+  \item \spxentry{old\_sector}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{OTHER}\spxextra{muse.commodities.CommodityUsage attribute}, 
+		\hyperpage{181}
+  \item \spxentry{output\_dir}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{OUTPUT\_QUANTITIES}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+  \item \spxentry{OUTPUT\_QUANTITY\_SIGNATURE}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+  \item \spxentry{OUTPUT\_SINK\_SIGNATURE}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{OUTPUT\_SINKS}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{outputs}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{outputs()}\spxextra{muse.sectors.legacy\_sector.LegacySector method}, 
+		\hyperpage{136}
+  \item \spxentry{OUTPUTS\_PARAMETERS}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{166}
+
+  \indexspace
+
+  \item \spxentry{presets}\spxextra{muse.sectors.preset\_sector.PresetSector attribute}, 
+		\hyperpage{135}
+  \item \spxentry{PresetSector}\spxextra{class in muse.sectors.preset\_sector}, 
+		\hyperpage{134}
+  \item \spxentry{PRODUCT}\spxextra{muse.commodities.CommodityUsage attribute}, 
+		\hyperpage{181}
+  \item \spxentry{PRODUCTION\_SIGNATURE}\spxextra{in module muse.production}, 
+		\hyperpage{136}
+
+  \indexspace
+
+  \item \spxentry{read\_attribute\_table()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{162}
+  \item \spxentry{read\_csv\_agent\_parameters()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{162}
+  \item \spxentry{read\_csv\_outputs()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{162}
+  \item \spxentry{read\_csv\_timeslices()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{162}
+  \item \spxentry{read\_global\_commodities()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_initial\_assets()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_initial\_market()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_io\_technodata()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_macro\_drivers()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_regression\_parameters()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_settings()}\spxextra{in module muse.readers.toml}, 
+		\hyperpage{162}
+  \item \spxentry{read\_technodictionary()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_technologies()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{163}
+  \item \spxentry{read\_timeslice\_shares()}\spxextra{in module muse.readers.csv}, 
+		\hyperpage{164}
+  \item \spxentry{reduce\_asset()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{reduce\_assets()}\spxextra{in module muse.utilities}, 
+		\hyperpage{191}
+  \item \spxentry{reference\_timeslice()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{177}
+  \item \spxentry{refine\_new\_price()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{region}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{regions}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{register\_agent\_interaction()}\spxextra{in module muse.interactions}, 
+		\hyperpage{138}
+  \item \spxentry{register\_carbon\_budget\_fitter()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{register\_carbon\_budget\_method()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{register\_constraints()}\spxextra{in module muse.constraints}, 
+		\hyperpage{160}
+  \item \spxentry{register\_decision()}\spxextra{in module muse.decisions}, 
+		\hyperpage{149}
+  \item \spxentry{register\_demand\_share()}\spxextra{in module muse.demand\_share}, 
+		\hyperpage{153}
+  \item \spxentry{register\_filter()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{register\_final\_asset\_transform()}\spxextra{in module muse.hooks}, 
+		\hyperpage{162}
+  \item \spxentry{register\_initial\_asset\_transform()}\spxextra{in module muse.hooks}, 
+		\hyperpage{162}
+  \item \spxentry{register\_initializer()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{register\_interaction\_net()}\spxextra{in module muse.interactions}, 
+		\hyperpage{138}
+  \item \spxentry{register\_investment()}\spxextra{in module muse.investments}, 
+		\hyperpage{151}
+  \item \spxentry{register\_objective()}\spxextra{in module muse.objectives}, 
+		\hyperpage{144}
+  \item \spxentry{register\_output\_quantity()}\spxextra{in module muse.outputs}, 
+		\hyperpage{164}
+  \item \spxentry{register\_output\_quantity()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{167}
+  \item \spxentry{register\_output\_sink()}\spxextra{in module muse.outputs}, 
+		\hyperpage{164}
+  \item \spxentry{register\_output\_sink()}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{register\_production()}\spxextra{in module muse.production}, 
+		\hyperpage{137}
+  \item \spxentry{register\_regression()}\spxextra{in module muse.regressions}, 
+		\hyperpage{184}
+  \item \spxentry{register\_sector()}\spxextra{in module muse.sectors.register}, 
+		\hyperpage{132}
+  \item \spxentry{register\_settings\_check()}\spxextra{in module muse.decorators}, 
+		\hyperpage{164}
+  \item \spxentry{registrator()}\spxextra{in module muse.registration}, 
+		\hyperpage{185}
+  \item \spxentry{represent\_hours()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{178}
+  \item \spxentry{retro\_epsilon\_constraints()}\spxextra{in module muse.decisions}, 
+		\hyperpage{149}
+  \item \spxentry{retro\_lexical\_comparison()}\spxextra{in module muse.decisions}, 
+		\hyperpage{149}
+  \item \spxentry{run()}\spxextra{muse.mca.MCA method}, \hyperpage{128}
+
+  \indexspace
+
+  \item \spxentry{same\_enduse()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{same\_fuels()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{ScipyAdapter}\spxextra{class in muse.constraints}, 
+		\hyperpage{155}
+  \item \spxentry{search\_rules}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{search\_space()}\spxextra{in module muse.constraints}, 
+		\hyperpage{161}
+  \item \spxentry{Sector}\spxextra{class in muse.sectors.sector}, 
+		\hyperpage{133}
+  \item \spxentry{sector\_commodities()}\spxextra{muse.sectors.legacy\_sector.LegacySector property}, 
+		\hyperpage{136}
+  \item \spxentry{sector\_timeslices()}\spxextra{muse.sectors.legacy\_sector.LegacySector property}, 
+		\hyperpage{136}
+  \item \spxentry{sectors}\spxextra{muse.mca.FindEquilibriumResults attribute}, 
+		\hyperpage{127}
+  \item \spxentry{sectors}\spxextra{muse.mca.SingleYearIterationResult attribute}, 
+		\hyperpage{128}
+  \item \spxentry{sectors\_dir}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{SETTINGS\_CHECKS}\spxextra{in module muse.decorators}, 
+		\hyperpage{164}
+  \item \spxentry{SETTINGS\_CHECKS\_SIGNATURE}\spxextra{in module muse.decorators}, 
+		\hyperpage{164}
+  \item \spxentry{setup\_module()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{178}
+  \item \spxentry{similar\_technology()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+  \item \spxentry{single\_objective()}\spxextra{in module muse.decisions}, 
+		\hyperpage{149}
+  \item \spxentry{single\_year\_iteration()}\spxextra{in module muse.mca}, 
+		\hyperpage{129}
+  \item \spxentry{SingleYearIterationResult}\spxextra{class in muse.mca}, 
+		\hyperpage{128}
+  \item \spxentry{sink\_to\_file()}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{static\_trade}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{Subsector}\spxextra{class in muse.sectors.subsector}, 
+		\hyperpage{134}
+  \item \spxentry{subsectors}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{supply()}\spxextra{in module muse.outputs.sector}, 
+		\hyperpage{167}
+  \item \spxentry{supply()}\spxextra{in module muse.production}, 
+		\hyperpage{137}
+  \item \spxentry{supply()}\spxextra{in module muse.quantities}, 
+		\hyperpage{171}
+  \item \spxentry{supply\_cost()}\spxextra{in module muse.quantities}, 
+		\hyperpage{171}
+  \item \spxentry{supply\_prod}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{134}
+
+  \indexspace
+
+  \item \spxentry{technodata()}\spxextra{in module muse.examples}, 
+		\hyperpage{192}
+  \item \spxentry{technologies}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{time\_framework}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{timeslice\_projector()}\spxextra{in module muse.timeslices}, 
+		\hyperpage{178}
+  \item \spxentry{timeslices}\spxextra{muse.sectors.legacy\_sector.LegacySector attribute}, 
+		\hyperpage{136}
+  \item \spxentry{timeslices}\spxextra{muse.sectors.sector.Sector attribute}, 
+		\hyperpage{134}
+  \item \spxentry{to\_csv()}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{to\_excel()}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{165}
+  \item \spxentry{to\_netcdf()}\spxextra{in module muse.outputs.sinks}, 
+		\hyperpage{166}
+  \item \spxentry{tolerance}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+  \item \spxentry{transfer\_assets()}\spxextra{in module muse.interactions}, 
+		\hyperpage{138}
+  \item \spxentry{tupled\_dimension()}\spxextra{in module muse.utilities}, 
+		\hyperpage{192}
+
+  \indexspace
+
+  \item \spxentry{unmet\_demand()}\spxextra{in module muse.demand\_share}, 
+		\hyperpage{153}
+  \item \spxentry{unmet\_forecasted\_demand()}\spxextra{in module muse.demand\_share}, 
+		\hyperpage{153}
+  \item \spxentry{update\_carbon\_budget()}\spxextra{in module muse.carbon\_budget}, 
+		\hyperpage{131}
+  \item \spxentry{update\_carbon\_budget()}\spxextra{muse.mca.MCA method}, 
+		\hyperpage{128}
+  \item \spxentry{update\_carbon\_price()}\spxextra{muse.mca.MCA method}, 
+		\hyperpage{128}
+  \item \spxentry{uuid}\spxextra{muse.agents.agent.AbstractAgent attribute}, 
+		\hyperpage{139}
+
+  \indexspace
+
+  \item \spxentry{weighted\_sum()}\spxextra{in module muse.decisions}, 
+		\hyperpage{149}
+  \item \spxentry{with\_asset\_technology()}\spxextra{in module muse.filters}, 
+		\hyperpage{147}
+
+  \indexspace
+
+  \item \spxentry{year}\spxextra{muse.agents.agent.Agent attribute}, 
+		\hyperpage{140}
+  \item \spxentry{YearlyAggregate}\spxextra{class in muse.outputs.sinks}, 
+		\hyperpage{165}
+
+\end{theindex}

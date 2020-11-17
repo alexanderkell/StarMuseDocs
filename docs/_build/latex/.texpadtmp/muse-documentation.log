@@ -1,0 +1,1879 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.10.28)  5 NOV 2020 12:19
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**muse-documentation.tex
+(./muse-documentation.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> (./sphinxmanual.cls
+Document Class: sphinxmanual 2019/12/01 v2.3.0 Document class (Sphinx manual)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+LaTeX Info: Redefining \and on input line 35.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+2500 (decimal 9472)
+   defining Unicode char U+2502 (decimal 9474)
+   defining Unicode char U+2514 (decimal 9492)
+   defining Unicode char U+251C (decimal 9500)
+   defining Unicode char U+2572 (decimal 9586)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+<<t1.cmap>>) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen135
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
+\dotsspace@=\muskip16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks18
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks19
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count188
+\U@D=\dimen144
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count189
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fncychap/fncychap.sty
+Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
+\RW=\skip52
+\mylen=\skip53
+\myhi=\skip54
+\px=\skip55
+\py=\skip56
+\pyy=\skip57
+\pxx=\skip58
+\c@AlphaCnt=\count190
+\c@AlphaDecCnt=\count191
+) (./sphinx.sty
+Package: sphinx 2019/09/02 v2.3.0 LaTeX package (Sphinx markup)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+\f@nch@headwidth=\skip59
+\f@nch@O@elh=\skip60
+\f@nch@O@erh=\skip61
+\f@nch@O@olh=\skip62
+\f@nch@O@orh=\skip63
+\f@nch@O@elf=\skip64
+\f@nch@O@erf=\skip65
+\f@nch@O@olf=\skip66
+\f@nch@O@orf=\skip67
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box47
+\beforetitleunit=\skip68
+\aftertitleunit=\skip69
+\ttl@plus=\dimen147
+\ttl@minus=\dimen148
+\ttl@toksa=\toks23
+\titlewidth=\dimen149
+\titlewidthlast=\dimen150
+\titlewidthfirst=\dimen151
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tabulary/tabulary.sty
+Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen152
+\ar@mcellbox=\box48
+\extrarowheight=\dimen153
+\NC@list=\toks24
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box49
+)
+\TY@count=\count192
+\TY@linewidth=\dimen154
+\tymin=\dimen155
+\tymax=\dimen156
+\TY@tablewidth=\dimen157
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip72
+\LTright=\skip73
+\LTpre=\skip74
+\LTpost=\skip75
+\LTchunksize=\count193
+\LTcapwidth=\dimen158
+\LT@head=\box50
+\LT@firsthead=\box51
+\LT@foot=\box52
+\LT@lastfoot=\box53
+\LT@cols=\count194
+\LT@rows=\count195
+\c@LT@tables=\count196
+\c@LT@chunks=\count197
+\LT@p@ftn=\toks25
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box54
+\sift@deathcycles=\count198
+\@vwid@loff=\dimen159
+\@vwid@roff=\dimen160
+) (./sphinxmulticell.sty
+Package: sphinxmulticell 2017/02/23 v1.6 better span rows and columns of a table (Sphinx team)
+\sphinx@TY@tablewidth=\dimen161
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip76
+\fb@frw=\dimen162
+\fb@frh=\dimen163
+\FrameRule=\dimen164
+\FrameSep=\dimen165
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count199
+\FV@InFile=\read3
+\FV@TabBox=\box55
+\c@FancyVerbLine=\count266
+\FV@StepNumber=\count267
+\FV@OutFile=\write3
+) (./footnotehyper-sphinx.sty
+Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for sphinx (JFB)
+\FNH@notes=\box56
+\FNH@width=\dimen166
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count268
+\float@exts=\toks26
+\float@box=\box57
+\@float@everytoks=\toks27
+\@floatcapt=\box58
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen167
+\WF@size=\dimen168
+\c@WF@wrappedlines=\count269
+\WF@box=\box59
+\WF@everypar=\toks28
+Package: wrapfig 2003/01/31  v 3.6
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/parskip/parskip.sty
+Rollback for package 'parskip' requested -> version 'v1'.
+         This corresponds to the release introduced on 2001-04-09.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/parskip/parskip-2001-04-09.sty
+Package: parskip 2001/04/09 non-zero parskip adjustments
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/capt-of/capt-of.sty
+Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+) (./sphinxhighlight.sty
+Package: sphinxhighlight 2016/05/29 stylesheet for highlighting with pygments
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+\sphinxverbatimsep=\dimen169
+\sphinxverbatimborder=\dimen170
+\sphinxshadowsep=\dimen171
+\sphinxshadowsize=\dimen172
+\sphinxshadowrule=\dimen173
+\spx@notice@border=\dimen174
+\spx@image@maxheight=\dimen175
+\spx@image@box=\dimen176
+\c@literalblock=\count270
+\sphinxcontinuationbox=\box60
+\sphinxvisiblespacebox=\box61
+\sphinxVerbatim@TitleBox=\box62
+\sphinxVerbatim@ContentsBox=\box63
+\py@argswidth=\skip77
+\lineblockindentation=\skip78
+\DUlineblockindent=\skip79
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count271
+\Gm@cntv=\count272
+\c@Gm@tempcnt=\count273
+\Gm@bindingoffset=\dimen177
+\Gm@wd@mp=\dimen178
+\Gm@odd@mp=\dimen179
+\Gm@even@mp=\dimen180
+\Gm@layoutwidth=\dimen181
+\Gm@layoutheight=\dimen182
+\Gm@layouthoffset=\dimen183
+\Gm@layoutvoffset=\dimen184
+\Gm@dimlist=\toks29
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen185
+\Hy@linkcounter=\count274
+\Hy@pagecounter=\count275
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count276
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4421.
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count277
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen186
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count278
+\Field@Width=\dimen187
+\Fld@charsize=\dimen188
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring ON on input line 6448.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count279
+\c@Item=\count280
+\c@Hfootnote=\count281
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count282
+\c@bookmark@seq@number=\count283
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip80
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/oberdiek/hypcap.sty
+Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
+) (./sphinxmessages.sty
+Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
+)
+\nbsphinxpromptbox=\box64
+\nbsphinxcodecellspacing=\skip81
+\nbsphinxbox=\box65
+\nbsphinx@image@maxheight=\dimen189
+\@indexfile=\write4
+\openout4 = `muse-documentation.idx'.
+
+
+Writing index file muse-documentation.idx
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count284
+\l__pdf_internal_box=\box66
+) (/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.aux)
+\openout1 = `muse-documentation.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 224.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+) (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen190
+\scratchbox=\box67
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen191
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=36.135pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box68
+Package hyperref Info: Link coloring ON on input line 224.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count291
+)
+LaTeX Info: Redefining \ref on input line 224.
+LaTeX Info: Redefining \pageref on input line 224.
+LaTeX Info: Redefining \nameref on input line 224.
+ (/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.out) (/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.out)
+\@outlinefile=\write5
+\openout5 = `muse-documentation.out'.
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 227.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 227.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 20.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 23.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 26.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 46.
+
+)
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <10> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 227.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 227.
+<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 227.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 227.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+
+] (/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.toc)
+\tf@toc=\write6
+\openout6 = `muse-documentation.toc'.
+
+ [1
+
+] [2
+
+]
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 256.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [1
+
+]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 306.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--332
+[]\T1/ptm/m/n/10 The main page for the doc-u-men-ta-tion can then be found at \T1/ptm/m/it/10 build\sphinx\html\index.html \T1/ptm/m/n/10 (or
+ []
+
+[2]
+Chapter 2.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 369.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [3
+
+]
+<running-muse-example_12_1.png, id=229, 383.4325pt x 262.9825pt>
+File: running-muse-example_12_1.png Graphic file (type png)
+<use running-muse-example_12_1.png>
+Package pdftex.def Info: running-muse-example_12_1.png  used on input line 469.
+(pdftex.def)             Requested size: 287.59122pt x 197.2444pt.
+
+Underfull \vbox (badness 10000) detected at line 471
+ []
+
+[4]
+<running-muse-example_12_3.png, id=235, 383.4325pt x 262.9825pt>
+File: running-muse-example_12_3.png Graphic file (type png)
+<use running-muse-example_12_3.png>
+Package pdftex.def Info: running-muse-example_12_3.png  used on input line 493.
+(pdftex.def)             Requested size: 287.59122pt x 197.2444pt.
+<running-muse-example_12_5.png, id=236, 383.4325pt x 262.9825pt>
+File: running-muse-example_12_5.png Graphic file (type png)
+<use running-muse-example_12_5.png>
+Package pdftex.def Info: running-muse-example_12_5.png  used on input line 517.
+(pdftex.def)             Requested size: 287.59122pt x 197.2444pt.
+ [5 <./running-muse-example_12_1.png> <./running-muse-example_12_3.png> <./running-muse-example_12_5.png>] [6]
+Chapter 3.
+[7
+
+] [8]
+<muse_overview.jpg, id=268, 341.52371pt x 252.62521pt>
+File: muse_overview.jpg Graphic file (type jpg)
+<use muse_overview.jpg>
+Package pdftex.def Info: muse_overview.jpg  used on input line 616.
+(pdftex.def)             Requested size: 414.04419pt x 306.28648pt.
+
+Overfull \hbox (604.0446pt too wide) in paragraph at lines 647--647
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
+
+ []
+
+[9 <./muse_overview.jpg>] [10]
+Chapter 4.
+[11
+
+] [12]
+Chapter 5.
+[13
+
+]
+Overfull \hbox (28.25404pt too wide) in paragraph at lines 884--885
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (23.81398pt too wide) in paragraph at lines 886--887
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (7.2839pt too wide) in paragraph at lines 892--893
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (5.41418pt too wide) in paragraph at lines 928--929
+[]|\T1/ptm/m/n/10 gasCCGT| 
+ []
+
+
+Overfull \hbox (13.79404pt too wide) in paragraph at lines 949--950
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (28.25404pt too wide) in paragraph at lines 1024--1025
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (23.81398pt too wide) in paragraph at lines 1026--1027
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (7.2839pt too wide) in paragraph at lines 1032--1033
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (5.41418pt too wide) in paragraph at lines 1068--1069
+[]|\T1/ptm/m/n/10 gasCCGT| 
+ []
+
+
+Overfull \hbox (13.79404pt too wide) in paragraph at lines 1089--1090
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+[14]
+Overfull \hbox (32.5209pt too wide) in paragraph at lines 1245--1246
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (28.08084pt too wide) in paragraph at lines 1247--1248
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (5.861pt too wide) in paragraph at lines 1253--1254
+[]|\T1/phv/m/n/10 cap_par| 
+ []
+
+
+Overfull \hbox (7.2311pt too wide) in paragraph at lines 1255--1256
+[]|\T1/phv/m/n/10 cap_exp| 
+ []
+
+
+Overfull \hbox (5.30106pt too wide) in paragraph at lines 1261--1262
+[]|\T1/phv/m/n/10 EndUse| 
+ []
+
+
+Overfull \hbox (1.42091pt too wide) in paragraph at lines 1263--1264
+[]|\T1/phv/m/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (1.42091pt too wide) in paragraph at lines 1265--1267
+[]|\T1/phv/m/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (38.07082pt too wide) in paragraph at lines 1278--1279
+[]|\T1/ptm/m/n/10 MUS$2010/PJ_a| 
+ []
+
+
+Overfull \hbox (9.68105pt too wide) in paragraph at lines 1296--1297
+[]|\T1/ptm/m/n/10 gasCCGT| 
+ []
+
+
+Overfull \hbox (22.23135pt too wide) in paragraph at lines 1304--1305
+[]|\T1/ptm/m/n/10 23.78234399| 
+ []
+
+
+Overfull \hbox (9.72054pt too wide) in paragraph at lines 1312--1313
+[]|\T1/ptm/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (18.0609pt too wide) in paragraph at lines 1319--1320
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (22.23135pt too wide) in paragraph at lines 1327--1328
+[]|\T1/ptm/m/n/10 36.30771182| 
+ []
+
+
+Overfull \hbox (9.72054pt too wide) in paragraph at lines 1335--1336
+[]|\T1/ptm/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (4.17104pt too wide) in paragraph at lines 1342--1343
+[]|\T1/ptm/b/n/10 solarPV| 
+ []
+
+
+Overfull \hbox (11.93065pt too wide) in paragraph at lines 1358--1359
+[]|\T1/ptm/b/n/10 electricity| 
+ []
+
+
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 1384--1385
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.06885pt too wide) in paragraph at lines 1390--1391
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+[15]
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 1511--1512
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.06885pt too wide) in paragraph at lines 1517--1518
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1729
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1729
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1729
+[]\T1/phv/m/n/10 Com-mod-i-tyE-mis-sion-Fac-
+ []
+
+
+Overfull \hbox (4.24612pt too wide) in paragraph at lines 1729--1729
+[]\T1/phv/m/n/10 HeatRate| 
+ []
+
+
+Overfull \hbox (1.78732pt too wide) in paragraph at lines 1729--1729
+[]\T1/phv/m/n/10 Unit| 
+ []
+
+
+Overfull \hbox (8.16464pt too wide) in paragraph at lines 1729--1729
+[]\T1/ptm/m/n/10 CO2fuelcomsbustion| 
+ []
+
+
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 1741--1742
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.06885pt too wide) in paragraph at lines 1747--1748
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (19.14896pt too wide) in paragraph at lines 1767--1768
+[]|\T1/ptm/m/n/10 MUS$2010/PJ| 
+ []
+
+
+Overfull \hbox (19.14896pt too wide) in paragraph at lines 1769--1770
+[]|\T1/ptm/m/n/10 MUS$2010/PJ| 
+ []
+
+
+Overfull \hbox (19.14896pt too wide) in paragraph at lines 1771--1772
+[]|\T1/ptm/m/n/10 MUS$2010/PJ| 
+ []
+
+
+Overfull \hbox (17.47902pt too wide) in paragraph at lines 1773--1774
+[]|\T1/ptm/m/n/10 MUS$2010/kt| 
+ []
+
+
+Overfull \hbox (17.47902pt too wide) in paragraph at lines 1775--1776
+[]|\T1/ptm/m/n/10 MUS$2010/kt| 
+ []
+
+
+Overfull \hbox (19.13907pt too wide) in paragraph at lines 1777--1779
+[]|\T1/ptm/b/n/10 MUS$2010/kt| 
+ []
+
+
+Overfull \hbox (28.5886pt too wide) in paragraph at lines 1782--1783
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1786--1787
+[]|\T1/ptm/m/n/10 14.81481472| 
+ []
+
+
+Overfull \hbox (28.5886pt too wide) in paragraph at lines 1801--1802
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1805--1806
+[]|\T1/ptm/m/n/10 17.89814806| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1811--1812
+[]|\T1/ptm/m/n/10 0.052913851| 
+ []
+
+
+Overfull \hbox (28.5886pt too wide) in paragraph at lines 1839--1840
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1843--1844
+[]|\T1/ptm/m/n/10 21.39814806| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1845--1846
+[]|\T1/ptm/m/n/10 7.373485819| 
+ []
+
+
+Overfull \hbox (12.74944pt too wide) in paragraph at lines 1849--1850
+[]|\T1/ptm/m/n/10 1.871299697| 
+ []
+
+[16]
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1920.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+<user-guide_add-solar_25_1.png, id=344, 383.4325pt x 262.9825pt>
+File: user-guide_add-solar_25_1.png Graphic file (type png)
+<use user-guide_add-solar_25_1.png>
+Package pdftex.def Info: user-guide_add-solar_25_1.png  used on input line 1944.
+(pdftex.def)             Requested size: 287.59122pt x 197.2444pt.
+ [17 <./user-guide_add-solar_25_1.png>]
+Overfull \hbox (32.5209pt too wide) in paragraph at lines 1963--1964
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (28.08084pt too wide) in paragraph at lines 1965--1966
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (5.861pt too wide) in paragraph at lines 1971--1972
+[]|\T1/phv/m/n/10 cap_par| 
+ []
+
+
+Overfull \hbox (7.2311pt too wide) in paragraph at lines 1973--1974
+[]|\T1/phv/m/n/10 cap_exp| 
+ []
+
+
+Overfull \hbox (5.30106pt too wide) in paragraph at lines 1979--1980
+[]|\T1/phv/m/n/10 EndUse| 
+ []
+
+
+Overfull \hbox (1.42091pt too wide) in paragraph at lines 1981--1982
+[]|\T1/phv/m/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (1.42091pt too wide) in paragraph at lines 1983--1985
+[]|\T1/phv/m/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (38.07082pt too wide) in paragraph at lines 1996--1997
+[]|\T1/ptm/m/n/10 MUS$2010/PJ_a| 
+ []
+
+
+Overfull \hbox (9.68105pt too wide) in paragraph at lines 2014--2015
+[]|\T1/ptm/m/n/10 gasCCGT| 
+ []
+
+
+Overfull \hbox (22.23135pt too wide) in paragraph at lines 2022--2023
+[]|\T1/ptm/m/n/10 23.78234399| 
+ []
+
+
+Overfull \hbox (9.72054pt too wide) in paragraph at lines 2030--2031
+[]|\T1/ptm/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (18.0609pt too wide) in paragraph at lines 2037--2038
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (22.23135pt too wide) in paragraph at lines 2045--2046
+[]|\T1/ptm/m/n/10 36.30771182| 
+ []
+
+
+Overfull \hbox (9.72054pt too wide) in paragraph at lines 2053--2054
+[]|\T1/ptm/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (1.95094pt too wide) in paragraph at lines 2060--2061
+[]|\T1/ptm/m/n/10 solarPV| 
+ []
+
+
+Overfull \hbox (9.72054pt too wide) in paragraph at lines 2076--2077
+[]|\T1/ptm/m/n/10 electricity| 
+ []
+
+<user-guide_add-solar_30_1.png, id=352, 383.4325pt x 262.9825pt>
+File: user-guide_add-solar_30_1.png Graphic file (type png)
+<use user-guide_add-solar_30_1.png>
+Package pdftex.def Info: user-guide_add-solar_30_1.png  used on input line 2121.
+(pdftex.def)             Requested size: 287.59122pt x 197.2444pt.
+[18 <./user-guide_add-solar_30_1.png>]
+Overfull \hbox (24.64418pt too wide) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 AgentShare| 
+ []
+
+
+Overfull \hbox (11.67346pt too wide) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Name| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Agent-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 Num-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 gion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Ob-j-
+ []
+
+
+Overfull \hbox (4.32117pt too wide) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 Data1| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Ob-j-
+ []
+
+
+Overfull \hbox (4.32117pt too wide) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 Data2| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 De-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+\T1/phv/m/n/10 sion-
+ []
+
+
+Overfull \hbox (3.48813pt too wide) in paragraph at lines 2272--2272
+[]\T1/phv/m/n/10 Type| 
+ []
+
+
+Overfull \hbox (1.27467pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (1.23706pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 sin-
+ []
+
+
+Overfull \hbox (1.0881pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 New| 
+ []
+
+
+Overfull \hbox (1.27467pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (1.23706pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 sin-
+ []
+
+
+Overfull \hbox (13.01776pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/m/n/10 Retrofit| 
+ []
+
+
+Overfull \hbox (2.38467pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (3.4669pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 LCOE| 
+ []
+
+
+Overfull \hbox (1.3381pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 New| 
+ []
+
+
+Overfull \hbox (2.38467pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (3.4669pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 LCOE| 
+ []
+
+
+Overfull \hbox (15.59799pt too wide) in paragraph at lines 2272--2272
+[]\T1/ptm/b/n/10 Retrofit| 
+ []
+
+[19]
+<user-guide_add-agent_7_1.png, id=368, 291.0875pt x 425.59pt>
+File: user-guide_add-agent_7_1.png Graphic file (type png)
+<use user-guide_add-agent_7_1.png>
+Package pdftex.def Info: user-guide_add-agent_7_1.png  used on input line 2353.
+(pdftex.def)             Requested size: 218.31952pt x 319.20468pt.
+
+Overfull \hbox (24.50047pt too wide) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 AgentShare| 
+ []
+
+
+Overfull \hbox (11.67346pt too wide) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Name| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Agent-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 Num-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 gion-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 jec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Ob-j-
+ []
+
+
+Overfull \hbox (4.20709pt too wide) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 Data1| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Ob-j-
+ []
+
+
+Overfull \hbox (4.20709pt too wide) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 Data2| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 De-ci-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+\T1/phv/m/n/10 sion-
+ []
+
+
+Overfull \hbox (4.77138pt too wide) in paragraph at lines 2478--2478
+[]\T1/phv/m/n/10 Type| 
+ []
+
+
+Overfull \hbox (1.13097pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (1.11015pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 sin-
+ []
+
+
+Overfull \hbox (2.37135pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 New| 
+ []
+
+
+Overfull \hbox (1.13097pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (1.11015pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 sin-
+ []
+
+
+Overfull \hbox (14.30101pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Retrofit| 
+ []
+
+
+Overfull \hbox (1.13097pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Agent1| 
+ []
+
+
+Overfull \hbox (3.34pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/b/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/ptm/b/n/10 sin-
+ []
+
+
+Overfull \hbox (2.37135pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 New| 
+ []
+
+
+Overfull \hbox (1.13097pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Agent2| 
+ []
+
+
+Overfull \hbox (3.34pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/b/n/10 LCOE| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2478--2478
+[]\T1/ptm/b/n/10 sin-
+ []
+
+
+Overfull \hbox (14.30101pt too wide) in paragraph at lines 2478--2478
+[]\T1/ptm/m/n/10 Retrofit| 
+ []
+
+[20 <./user-guide_add-agent_7_1.png>]
+<user-guide_add-agent_11_1.png, id=374, 291.0875pt x 425.59pt>
+File: user-guide_add-agent_11_1.png Graphic file (type png)
+<use user-guide_add-agent_11_1.png>
+Package pdftex.def Info: user-guide_add-agent_11_1.png  used on input line 2516.
+(pdftex.def)             Requested size: 218.31952pt x 319.20468pt.
+ [21 <./user-guide_add-agent_11_1.png>]
+Overfull \hbox (23.03899pt too wide) in paragraph at lines 2556--2557
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 2558--2559
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.06885pt too wide) in paragraph at lines 2564--2565
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (3.58904pt too wide) in paragraph at lines 2653--2654
+[]|\T1/ptm/b/n/10 heatpump| 
+ []
+
+
+Overfull \hbox (23.03899pt too wide) in paragraph at lines 2801--2802
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 2803--2804
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (54.16847pt too wide) in paragraph at lines 2807--2808
+[]|\T1/phv/m/n/10 MaxCapacityAddition| 
+ []
+
+
+Overfull \hbox (50.11865pt too wide) in paragraph at lines 2809--2810
+[]|\T1/phv/m/n/10 MaxCapacityGrowth| 
+ []
+
+
+Overfull \hbox (41.28857pt too wide) in paragraph at lines 2811--2812
+[]|\T1/phv/m/n/10 TotalCapacityLimit| 
+ []
+
+
+Overfull \hbox (8.57898pt too wide) in paragraph at lines 2859--2860
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (8.57898pt too wide) in paragraph at lines 2916--2917
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+[22]
+<user-guide_add-region_5_1.png, id=389, 515.9275pt x 208.78pt>
+File: user-guide_add-region_5_1.png Graphic file (type png)
+<use user-guide_add-region_5_1.png>
+Package pdftex.def Info: user-guide_add-region_5_1.png  used on input line 3007.
+(pdftex.def)             Requested size: 386.95255pt x 156.59415pt.
+<user-guide_add-region_5_3.png, id=390, 517.935pt x 208.78pt>
+File: user-guide_add-region_5_3.png Graphic file (type png)
+<use user-guide_add-region_5_3.png>
+Package pdftex.def Info: user-guide_add-region_5_3.png  used on input line 3031.
+(pdftex.def)             Requested size: 388.46608pt x 156.59415pt.
+
+Underfull \vbox (badness 10000) detected at line 3033
+ []
+
+[23 <./user-guide_add-region_5_1.png>]
+<user-guide_add-region_5_5.png, id=396, 513.92pt x 208.78pt>
+File: user-guide_add-region_5_5.png Graphic file (type png)
+<use user-guide_add-region_5_5.png>
+Package pdftex.def Info: user-guide_add-region_5_5.png  used on input line 3055.
+(pdftex.def)             Requested size: 385.43904pt x 156.59415pt.
+ [24 <./user-guide_add-region_5_3.png> <./user-guide_add-region_5_5.png>] [25]
+<user-guide_modify-timing-data_7_1.png, id=410, 389.455pt x 262.9825pt>
+File: user-guide_modify-timing-data_7_1.png Graphic file (type png)
+<use user-guide_modify-timing-data_7_1.png>
+Package pdftex.def Info: user-guide_modify-timing-data_7_1.png  used on input line 3490.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+<user-guide_modify-timing-data_7_3.png, id=411, 396.48125pt x 262.9825pt>
+File: user-guide_modify-timing-data_7_3.png Graphic file (type png)
+<use user-guide_modify-timing-data_7_3.png>
+Package pdftex.def Info: user-guide_modify-timing-data_7_3.png  used on input line 3514.
+(pdftex.def)             Requested size: 297.36624pt x 197.2444pt.
+
+Underfull \vbox (badness 10000) detected at line 3516
+ []
+
+[26 <./user-guide_modify-timing-data_7_1.png>]
+<user-guide_modify-timing-data_7_5.png, id=419, 389.455pt x 262.9825pt>
+File: user-guide_modify-timing-data_7_5.png Graphic file (type png)
+<use user-guide_modify-timing-data_7_5.png>
+Package pdftex.def Info: user-guide_modify-timing-data_7_5.png  used on input line 3538.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+ [27 <./user-guide_modify-timing-data_7_3.png> <./user-guide_modify-timing-data_7_5.png>]
+Overfull \hbox (16.52017pt too wide) in paragraph at lines 3567--3568
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (12.08011pt too wide) in paragraph at lines 3569--3570
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (47.64966pt too wide) in paragraph at lines 3573--3574
+[]|\T1/phv/m/n/10 MaxCapacityAddition| 
+ []
+
+
+Overfull \hbox (43.59984pt too wide) in paragraph at lines 3575--3576
+[]|\T1/phv/m/n/10 MaxCapacityGrowth| 
+ []
+
+
+Overfull \hbox (34.76976pt too wide) in paragraph at lines 3577--3578
+[]|\T1/phv/m/n/10 TotalCapacityLimit| 
+ []
+
+
+Overfull \hbox (2.06017pt too wide) in paragraph at lines 3619--3620
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (2.06017pt too wide) in paragraph at lines 3670--3671
+[]|\T1/ptm/m/n/10 windturbine| 
+ []
+
+
+Overfull \hbox (16.52017pt too wide) in paragraph at lines 3716--3717
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (12.08011pt too wide) in paragraph at lines 3718--3719
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (47.64966pt too wide) in paragraph at lines 3722--3723
+[]|\T1/phv/m/n/10 MaxCapacityAddition| 
+ []
+
+
+Overfull \hbox (43.59984pt too wide) in paragraph at lines 3724--3725
+[]|\T1/phv/m/n/10 MaxCapacityGrowth| 
+ []
+
+
+Overfull \hbox (34.76976pt too wide) in paragraph at lines 3726--3727
+[]|\T1/phv/m/n/10 TotalCapacityLimit| 
+ []
+
+<user-guide_modify-timing-data_13_1.png, id=431, 389.455pt x 262.9825pt>
+File: user-guide_modify-timing-data_13_1.png Graphic file (type png)
+<use user-guide_modify-timing-data_13_1.png>
+Package pdftex.def Info: user-guide_modify-timing-data_13_1.png  used on input line 3865.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+
+Underfull \vbox (badness 7203) detected at line 3867
+ []
+
+[28]
+<user-guide_modify-timing-data_13_3.png, id=436, 396.48125pt x 262.9825pt>
+File: user-guide_modify-timing-data_13_3.png Graphic file (type png)
+<use user-guide_modify-timing-data_13_3.png>
+Package pdftex.def Info: user-guide_modify-timing-data_13_3.png  used on input line 3889.
+(pdftex.def)             Requested size: 297.36624pt x 197.2444pt.
+<user-guide_modify-timing-data_13_5.png, id=437, 389.455pt x 262.9825pt>
+File: user-guide_modify-timing-data_13_5.png Graphic file (type png)
+<use user-guide_modify-timing-data_13_5.png>
+Package pdftex.def Info: user-guide_modify-timing-data_13_5.png  used on input line 3913.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+ [29 <./user-guide_modify-timing-data_13_1.png> <./user-guide_modify-timing-data_13_3.png> <./user-guide_modify-timing-data_13_5.png>] [30]
+Overfull \hbox (23.81398pt too wide) in paragraph at lines 4386--4387
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.65376pt too wide) in paragraph at lines 4388--4389
+[]|\T1/phv/m/n/10 Attribute| 
+ []
+
+
+Overfull \hbox (7.2839pt too wide) in paragraph at lines 4392--4393
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Overfull \hbox (23.81398pt too wide) in paragraph at lines 4504--4505
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (2.65376pt too wide) in paragraph at lines 4506--4507
+[]|\T1/phv/m/n/10 Attribute| 
+ []
+
+
+Overfull \hbox (7.2839pt too wide) in paragraph at lines 4510--4511
+[]|\T1/phv/m/n/10 electricity| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4728--4728
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4728--4728
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4728--4728
+[]\T1/phv/m/n/10 Com-mod-i-tyE-mis-sion-Fac-
+ []
+
+
+Overfull \hbox (4.24612pt too wide) in paragraph at lines 4728--4728
+[]\T1/phv/m/n/10 HeatRate| 
+ []
+
+
+Overfull \hbox (1.78732pt too wide) in paragraph at lines 4728--4728
+[]\T1/phv/m/n/10 Unit| 
+ []
+
+
+Overfull \hbox (8.16464pt too wide) in paragraph at lines 4728--4728
+[]\T1/ptm/m/n/10 CO2fuelcomsbustion| 
+ []
+
+[31]
+Overfull \hbox (28.25404pt too wide) in paragraph at lines 4819--4820
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (23.81398pt too wide) in paragraph at lines 4821--4822
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (1.59413pt too wide) in paragraph at lines 4827--4828
+[]|\T1/phv/m/n/10 cap_par| 
+ []
+
+
+Overfull \hbox (1.0342pt too wide) in paragraph at lines 4833--4834
+[]|\T1/phv/m/n/10 EndUse| 
+ []
+
+
+Overfull \hbox (33.80396pt too wide) in paragraph at lines 4850--4851
+[]|\T1/ptm/m/n/10 MUS$2010/PJ_a| 
+ []
+
+
+Overfull \hbox (2.07407pt too wide) in paragraph at lines 4865--4866
+[]|\T1/ptm/m/n/10 gasboiler| 
+ []
+
+
+Overfull \hbox (23.01375pt too wide) in paragraph at lines 4907--4908
+[]|\T1/ptm/b/n/10 electric_stove| 
+ []
+
+
+Overfull \hbox (7.66379pt too wide) in paragraph at lines 4919--4920
+[]|\T1/ptm/b/n/10 electricity| 
+ []
+
+
+Overfull \hbox (23.01375pt too wide) in paragraph at lines 4928--4929
+[]|\T1/ptm/b/n/10 electric_stove| 
+ []
+
+
+Overfull \hbox (7.66379pt too wide) in paragraph at lines 4940--4941
+[]|\T1/ptm/b/n/10 electricity| 
+ []
+
+
+Overfull \hbox (5.8142pt too wide) in paragraph at lines 4949--4950
+[]|\T1/ptm/b/n/10 gas_stove| 
+ []
+
+
+Overfull \hbox (5.8142pt too wide) in paragraph at lines 4970--4971
+[]|\T1/ptm/b/n/10 gas_stove| 
+ []
+
+
+Overfull \hbox (23.03899pt too wide) in paragraph at lines 5020--5021
+[]|\T1/phv/m/n/10 ProcessName| 
+ []
+
+
+Overfull \hbox (18.59892pt too wide) in paragraph at lines 5022--5023
+[]|\T1/phv/m/n/10 RegionName| 
+ []
+
+
+Overfull \hbox (54.16847pt too wide) in paragraph at lines 5028--5029
+[]|\T1/phv/m/n/10 MaxCapacityAddition| 
+ []
+
+
+Overfull \hbox (50.11865pt too wide) in paragraph at lines 5030--5031
+[]|\T1/phv/m/n/10 MaxCapacityGrowth| 
+ []
+
+
+Overfull \hbox (41.28857pt too wide) in paragraph at lines 5032--5033
+[]|\T1/phv/m/n/10 TotalCapacityLimit| 
+ []
+
+
+Overfull \hbox (5.19911pt too wide) in paragraph at lines 5059--5060
+[]|\T1/ptm/m/n/10 gassupply1| 
+ []
+
+
+Overfull \hbox (5.19911pt too wide) in paragraph at lines 5078--5079
+[]|\T1/ptm/m/n/10 gassupply1| 
+ []
+
+[32]
+<user-guide_addition-service-demand_15_1.png, id=468, 389.455pt x 262.9825pt>
+File: user-guide_addition-service-demand_15_1.png Graphic file (type png)
+<use user-guide_addition-service-demand_15_1.png>
+Package pdftex.def Info: user-guide_addition-service-demand_15_1.png  used on input line 5184.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+<user-guide_addition-service-demand_15_3.png, id=469, 396.48125pt x 262.9825pt>
+File: user-guide_addition-service-demand_15_3.png Graphic file (type png)
+<use user-guide_addition-service-demand_15_3.png>
+Package pdftex.def Info: user-guide_addition-service-demand_15_3.png  used on input line 5208.
+(pdftex.def)             Requested size: 297.36624pt x 197.2444pt.
+
+Underfull \vbox (badness 10000) detected at line 5210
+ []
+
+[33 <./user-guide_addition-service-demand_15_1.png>]
+<user-guide_addition-service-demand_15_5.png, id=476, 389.455pt x 262.9825pt>
+File: user-guide_addition-service-demand_15_5.png Graphic file (type png)
+<use user-guide_addition-service-demand_15_5.png>
+Package pdftex.def Info: user-guide_addition-service-demand_15_5.png  used on input line 5232.
+(pdftex.def)             Requested size: 292.09647pt x 197.2444pt.
+ [34 <./user-guide_addition-service-demand_15_3.png> <./user-guide_addition-service-demand_15_5.png>]
+Chapter 6.
+[35
+
+] [36] [37] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 5666--5668
+[]\T1/ptm/m/n/10 an \T1/ptm/m/it/10 in-ter-ac-tion \T1/ptm/m/n/10 de-fines how the net ac-tu-ally in-ter-acts. See \T1/pcr/m/n/10 muse.interactions.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5719--5724
+[]\T1/ptm/m/n/10 refering to \T1/pcr/m/n/10 muse.
+ []
+
+[40] [41] [42]
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6090--6091
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6103--6104
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6116--6117
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6129--6130
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6142--6143
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6155--6156
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6168--6169
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6181--6182
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+
+Overfull \hbox (2.5133pt too wide) in paragraph at lines 6194--6195
+[]|\T1/ptm/m/n/10 CommodityPrice| 
+ []
+
+[43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 6440--6440
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6440--6440
+[]\T1/phv/m/n/10 Com-mod-i-ty-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6440--6440
+[]\T1/phv/m/n/10 Com-mod-i-tyE-mis-sion-Fac-
+ []
+
+
+Overfull \hbox (4.26224pt too wide) in paragraph at lines 6440--6440
+[]\T1/phv/m/n/10 HeatRate| 
+ []
+
+
+Overfull \hbox (1.7941pt too wide) in paragraph at lines 6440--6440
+[]\T1/phv/m/n/10 Unit| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6440--6440
+[]\T1/ptm/m/n/10 Agricultural-
+ []
+
+[45] [46] [47]
+<commodities_io.png, id=608, 352.9185pt x 61.4295pt>
+File: commodities_io.png Graphic file (type png)
+<use commodities_io.png>
+Package pdftex.def Info: commodities_io.png  used on input line 7142.
+(pdftex.def)             Requested size: 301.12305pt x 52.41496pt.
+<commodities_io_table.png, id=609, 271.61475pt x 221.02576pt>
+File: commodities_io_table.png Graphic file (type png)
+<use commodities_io_table.png>
+Package pdftex.def Info: commodities_io_table.png  used on input line 7146.
+(pdftex.def)             Requested size: 301.12305pt x 245.05481pt.
+ [48 <./commodities_io.png>] [49 <./commodities_io_table.png>]
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family ptm in TS1 encoding.
+(textcomp)                Default family used instead on input line 7328.
+
+
+Package textcomp Warning: Symbol \textasciigrave not provided by
+(textcomp)                font family ptm in TS1 encoding.
+(textcomp)                Default family used instead on input line 7328.
+
+[50] [51] [52]
+Chapter 7.
+[53
+
+] [54
+
+]
+Chapter 8.
+(/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 7717.
+ [55]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 7717.
+ (/Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 7717.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 7717.
+Package rerunfilecheck Info: File `muse-documentation.out' has not changed.
+(rerunfilecheck)             Checksum: 805CC42925C8B63E72BC794F3A6E9811;4720.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 7717.
+ ) 
+Here is how much of TeX's memory you used:
+ 14018 strings out of 480608
+ 204456 string characters out of 5903629
+ 512908 words of memory out of 5000000
+ 29372 multiletter control sequences out of 15000+600000
+ 590554 words of font info for 92 fonts, out of 8000000 for 9000
+ 1142 hyphenation exceptions out of 8191
+ 38i,19n,49p,716b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrb1000.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/alexkell/Documents/SGI/2-documentation/StarMuse/docs/_build/latex/.texpadtmp/muse-documentation.pdf (59 pages, 600314 bytes).
+PDF statistics:
+ 772 PDF objects out of 1000 (max. 8388607)
+ 641 compressed objects within 7 object streams
+ 168 named destinations out of 1000 (max. 500000)
+ 403 words of extra memory for PDF output out of 10000 (max. 10000000)
+
