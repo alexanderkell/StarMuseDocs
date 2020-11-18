@@ -23,9 +23,9 @@ Tutorial Information
 --------------------
 
 
-Below is a table to help you keep up with the different scenarios. The "Tutorial" header refers to the tutorial number as per the contents table. For example, Tutorial 1 is equal to "1. Adding a new technology". The "Agents", "Regions", "Residential Technologies", "Power Technologies" and "Gas Technologies" headers containts a tuple which contains the respective technologies present in the tutorial. The "Code" header provides a link to the files required to generate the tutorials.
+Below is a table to help you keep up with the different scenarios. The "Tutorial" header refers to the tutorial number as per the contents table. For example, Tutorial 1 is equal to "1. Adding a new technology". The "Agents", "Regions", "Residential Technologies", "Power Technologies" and "Gas Technologies" headers contains a tuple which contains the respective technologies present in the tutorial. The "Code" header provides a link to the files required to generate the tutorials.
 
-In the table below, you will notice a x2 after some of the technology tuples. This refers to the fact that there are two regions, and the technologies within each region are the same.
+In the table below, you will notice a x2 after some of the technology tuples. This refers to the fact that there are two regions, and the technologies within each region are the same for both regions.
 
 .. list-table:: Scenarios
    :widths: 5 25 25 25 25 25 5

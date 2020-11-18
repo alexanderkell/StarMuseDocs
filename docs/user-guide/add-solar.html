@@ -987,7 +987,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <p>Next, we will import the <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> file into pandas and print the first 5 lines using the <code class="docutils literal notranslate"><span class="pre">head()</span></code> command.</p>
-<p>Make sure to change the file path of <code class="docutils literal notranslate"><span class="pre">&quot;../Results/MCACapacity.csv&quot;</span></code> to where the <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> is on your computer, otherwise you will receive an error when you import the csv file.</p>
+<p>Make sure to change the file path of <code class="docutils literal notranslate"><span class="pre">&quot;../tutorial-code/1-add-new-technology/introduction/Results/MCACapacity.csv&quot;</span></code> to where the <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> is on your computer, otherwise you will receive an error when you import the csv file.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -1243,9 +1243,9 @@ div.rendered_html tbody tr:hover {
 </table>
 <p>Notice that we must provide entries for 2040 for the other technologies, <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>. For this example, we will keep these the same as before, copying and pasting the rows.</p>
 <p>Here, we increase the <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> variable by 10 for <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> in the year 2020, to be a total of 40, and then reduce <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> by 10 in 2040, again for <code class="docutils literal notranslate"><span class="pre">solarPV</span></code>.</p>
-<p>MUSE uses interpolation for the years which are unknown. So, in this example, for the benchmark years between 2020 and 2040 (2025, 2030, 2035) use interpolated <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> values. The interpolation mode can be set in the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, and defaults to linear interpolation. This example uses the default setting for interpolation.</p>
+<p>MUSE uses interpolation for the years which are unknown. So in this example, for the benchmark years between 2020 and 2040 (2025, 2030, 2035), MUSE uses interpolated <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> values. The interpolation mode can be set in the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, and defaults to linear interpolation. This example uses the default setting for interpolation.</p>
 <p>Next we will modify the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> file.</p>
-<p>For this step, we have to provide the input commodities for each technology, in each of the years defined in the <code class="docutils literal notranslate"><span class="pre">Technodata.csv</span></code> file. So, for this example we are required to provide entries for the years 2020 and 2040 for each of the technologies. For now, we won’t vary the 2040 values compared to the 2020. Therefore, we just need to copy and paste each of the entries for each of the technologies, as shown below:</p>
+<p>For this step, we have to provide the input commodities for each technology, in each of the years defined in the <code class="docutils literal notranslate"><span class="pre">Technodata.csv</span></code> file. So, for this example we are required to provide entries for the years 2020 and 2040 for each of the technologies. For now, we won’t change the 2040 values compared to the 2020. Therefore, we just need to copy and paste each of the entries for each of the technologies, as shown below:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19%" />
@@ -1358,7 +1358,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 </tbody>
 </table>
-<p>We must do the same for the <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> file. For the sake of brevity we won’t show you this, but the link to the file can be found <a class="reference external" href="dead-link">here INSERT LINK HERE</a></p>
+<p>We must do the same for the <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> file. For the sake of brevity we won’t show you this, but the link to the file can be found <a class="reference external" href="dead-link">here INSERT LINK HERE</a>.</p>
 <p>We will now rerun the simulation, using the same command as previously and visualise the new results.</p>
 <p>We must import the new <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> file again, and then visualise the results.</p>
 <div class="nbinput docutils container">

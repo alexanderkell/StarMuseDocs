@@ -15,7 +15,7 @@
     "\n",
     "A service demand is an end-use demand. For example, in the residential sector, a service demand could be cooking. Houses require energy to cook food and a technology to service this demand, such as an electric stove. \n",
     "\n",
-    "This process consists of setting a demand, either through inputs derived from the user or correlations of GDP and population which reflect the socio-economic decvelopment of a region or country. In addition, a technology must be added to service the demand."
+    "This process consists of setting a demand, either through inputs derived from the user or correlations of GDP and population which reflect the socio-economic decvelopment of a region or country. In addition, a technology must be added to service this new demand."
    ]
   },
   {
@@ -89,7 +89,7 @@
    "source": [
     "As can be seen, we only need to add a `cook` column in the file, as well as the demand level for each timeslice and each region. This can be seen through the addition of a positive number in the `cook` column.\n",
     "\n",
-    "The process is very similar for the `Residential2050Consumption.csv` file, however, for this example, we often placed larger numbers to indicate higher demand in 2050. For the complete file see the link [here INCLUDE LINK HERE](total-addition-service-demand-github)"
+    "The process is very similar for the `Residential2050Consumption.csv` file, however, for this example, we often placed larger numbers to indicate higher demand in 2050. For the complete file see the link [here INCLUDE LINK HERE](total-addition-service-demand-github)."
    ]
   },
   {
@@ -150,7 +150,7 @@
     "|…|…|…|…|**…**|\n",
     "|R2|CommodityPrice|2100|…|**100**|\n",
     "\n",
-    "We set every price of cook to be `100MUS$2010/kt`"
+    "We set every price of cook to be `100MUS$2010/PJ`"
    ]
   },
   {
@@ -164,7 +164,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Next, we must add a technology to service this new demand. This is achieved through a similar process as the section in the [\"adding a new technology\"](add-solar.ipynb) section. However, we must be careful to specify the end-use of the technology as `cook`.\n",
+    "Next, we must add a technology to service this new demand. This is achieved through a similar process as the section in the [\"1. adding a new technology\"](add-solar.ipynb) section. However, we must be careful to specify the end-use of the technology as `cook`.\n",
     "\n",
     "For this example, we will add two competing technologies to service the cooking demand: `electric_stove` and `gas_stove` to the `Technodata.csv` file in `/technodata/residential/Technodata.csv`.\n",
     "\n",

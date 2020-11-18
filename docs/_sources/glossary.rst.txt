@@ -1,7 +1,7 @@
 Glossary
 ========
 
-Here we provide a glossary for some of the frequently used terms in this documentation. Feel free to come back to this page when you come across a term you don't understand!
+Here we provide a glossary for some of the frequently used terms in this documentation. Feel free to come back to this page when you come across a term that you don't understand!
 
 .. glossary::
 

@@ -23,13 +23,3 @@ MUSE: ModUlar energy system Simulation Environment
    
    
 
-   
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

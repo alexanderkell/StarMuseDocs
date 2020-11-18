@@ -11,9 +11,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "In this section, we will add a new agent called `A2`. This agent will be slightly different to the other agents in the ```default``` example, in that it will make investments based upon a mixture of [levelised cost of electricity (LCOE)](https://en.wikipedia.org/wiki/Levelized_cost_of_energy) and [equivalent annual cost (EAC)](https://en.wikipedia.org/wiki/Equivalent_annual_cost). These two objectives will be combined by calculating a weighted sum of the two when comparing potential investment options. We will weight LCOE with a relative value of 1 and the EAC with a relative value of 0.25.\n",
+    "In this section, we will add a new agent called `A2`. This agent will be slightly different to the other agents in the ```default``` example, in that it will make investments based upon a mixture of [levelised cost of electricity (LCOE)](https://en.wikipedia.org/wiki/Levelized_cost_of_energy) and [equivalent annual cost (EAC)](https://en.wikipedia.org/wiki/Equivalent_annual_cost). These two objectives will be combined by calculating a weighted sum of the two when comparing potential investment options. We will give the LCOE a relative weight value of 1 and the EAC a relative weight value  of 0.25.\n",
     "\n",
-    "We will continue to use the files from the previous tutorial where we added `solarPV` and created a future scenario. \n",
+    "We will continue to use the files from the previous tutorial where we added `solarPV` and created a new scenario. \n",
     "\n",
     "To achieve this, first, we must modify the ```Agents.csv``` file in the directory:\n",
     "\n",
@@ -38,7 +38,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We will now save this file and run the new simulation model using the following command:\n",
+    "We will now save this file and run the new simulation model using the following command in Anaconda prompt:\n",
     "\n",
     "    python -m muse settings.toml\n",
     "\n",
@@ -219,7 +219,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using LCOE. This requires to edit the ```Agents.csv``` file once more, to look like the following:\n",
+    "Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using LCOE. This requires us to edit the ```Agents.csv``` file once more, to look like the following:\n",
     "\n",
     "|AgentShare|Name|AgentNumber|RegionName|Objective1|Objective2|Objective3|ObjData1|ObjData2|…|DecisionMethod|…|Type|\n",
     "|-|-|-|-|-|-|-|-|-|-|-|-|-|\n",
@@ -233,7 +233,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Again, this requires the re-running of the simulation, and visualisation like before:"
+    "Again, this requires the re-running of the simulation, and to visualise the results like before:"
    ]
   },
   {
@@ -277,6 +277,8 @@
    "metadata": {},
    "source": [
     "In this new scenario, with both agents running the same objective, very similar results between agents can be seen. There is a low uptake in `gasCCGT`, and competition between `solarPV` and `windturbine`, especially in the year 2040 where a change in the price of `solarPV` was set in the previous tutorial. \n",
+    "\n",
+    "As the two agents make the same decisions, we see the same scenario develop for both agents, unlike in the previous scenario.\n",
     "\n",
     "Have a play around with the files to see if you can come up with different scenarios!"
    ]

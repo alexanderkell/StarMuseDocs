@@ -285,8 +285,8 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Adding-an-agent">
 <h1><span class="section-number">2. </span>Adding an agent<a class="headerlink" href="#Adding-an-agent" title="Permalink to this headline">¶</a></h1>
 <p>In this section, we will add a new agent called <code class="docutils literal notranslate"><span class="pre">A2</span></code>. This agent will be slightly different to the other agents in the <code class="docutils literal notranslate"><span class="pre">default</span></code> example, in that it will make investments based upon a mixture of <a class="reference external" href="https://en.wikipedia.org/wiki/Levelized_cost_of_energy">levelised cost of electricity (LCOE)</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Equivalent_annual_cost">equivalent annual cost (EAC)</a>. These two objectives will be combined by calculating a weighted sum of the two when comparing potential
-investment options. We will weight LCOE with a relative value of 1 and the EAC with a relative value of 0.25.</p>
-<p>We will continue to use the files from the previous tutorial where we added <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and created a future scenario.</p>
+investment options. We will give the LCOE a relative weight value of 1 and the EAC a relative weight value of 0.25.</p>
+<p>We will continue to use the files from the previous tutorial where we added <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and created a new scenario.</p>
 <p>To achieve this, first, we must modify the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file in the directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">muse_install_location</span><span class="p">}</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">muse</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">technodata</span><span class="o">/</span><span class="n">Agents</span><span class="o">.</span><span class="n">csv</span>
 </pre></div>
@@ -377,7 +377,7 @@ investment options. We will weight LCOE with a relative value of 1 and the EAC w
 </tr>
 </tbody>
 </table>
-<p>We will now save this file and run the new simulation model using the following command:</p>
+<p>We will now save this file and run the new simulation model using the following command in Anaconda prompt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">muse</span> <span class="n">settings</span><span class="o">.</span><span class="n">toml</span>
 </pre></div>
 </div>
@@ -520,7 +520,7 @@ investment options. We will weight LCOE with a relative value of 1 and the EAC w
 </div>
 <p>In this scenario we can see two divergent strategies. Agent <code class="docutils literal notranslate"><span class="pre">A2</span></code> invests heavily in <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>, and less so in <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code>. Whereas Agent <code class="docutils literal notranslate"><span class="pre">A1</span></code> invests primarily in <code class="docutils literal notranslate"><span class="pre">solarPV</span></code>.</p>
 <p>From this small scenario, the difference between investment strategies between agents is evident. This is one of the key benefits of agent-based models when compared to optimisation based models.</p>
-<p>Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using LCOE. This requires to edit the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file once more, to look like the following:</p>
+<p>Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using LCOE. This requires us to edit the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file once more, to look like the following:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -612,7 +612,7 @@ investment options. We will weight LCOE with a relative value of 1 and the EAC w
 </tr>
 </tbody>
 </table>
-<p>Again, this requires the re-running of the simulation, and visualisation like before:</p>
+<p>Again, this requires the re-running of the simulation, and to visualise the results like before:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -643,6 +643,7 @@ investment options. We will weight LCOE with a relative value of 1 and the EAC w
 </div>
 </div>
 <p>In this new scenario, with both agents running the same objective, very similar results between agents can be seen. There is a low uptake in <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code>, and competition between <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>, especially in the year 2040 where a change in the price of <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> was set in the previous tutorial.</p>
+<p>As the two agents make the same decisions, we see the same scenario develop for both agents, unlike in the previous scenario.</p>
 <p>Have a play around with the files to see if you can come up with different scenarios!</p>
 <div class="section" id="Next-steps">
 <h2><span class="section-number">2.1. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>

@@ -303,7 +303,7 @@ div.rendered_html tbody tr:hover {
 <span class="n">level_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;hour&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The number of timeslices within this should add up to 8760; the number of hours in a benchmark year. Whilst this is required, MUSE does not check that.</p>
+<p>The number of timeslices within this should add up to 8760; the number of hours in a benchmark year. Whilst this is required, MUSE does not double check this.</p>
 <p>Next, we modify both Residential Consumption files. Again, we put the text in bold for the modified entries. We must add the demand for the two additional timelsices, which we call timeslice 7 and 8. We make the demand for heat to be 2 for both of the new timeslices.</p>
 <p>Below is the modified <code class="docutils literal notranslate"><span class="pre">Residential2020Consumption.csv</span></code> file:</p>
 <table class="docutils align-default">
@@ -572,7 +572,7 @@ residential sector:
 </div>
 </div>
 <p>Compared to the scenario where we added a <a class="reference internal" href="add-region.html"><span class="doc">region</span></a>, there is a smaller increase in solarPV in region <code class="docutils literal notranslate"><span class="pre">R2</span></code> in the power sector. However, the rest remains largely unchanged.</p>
-<p>This example shows the trade-off between time granularity and speed of computation.</p>
+<p>This example shows the trade-off between time granularity and speed of computation. This is due to the fact that as we add more timesteps, the model takes longer to run, but slightly different scenarios emerge. It is up to you to decide what level of granularity is required for your use case.</p>
 </div>
 <div class="section" id="Modify-time-horizon-and-time-periods">
 <h2><span class="section-number">4.2. </span>Modify time horizon and time periods<a class="headerlink" href="#Modify-time-horizon-and-time-periods" title="Permalink to this headline">¶</a></h2>
@@ -584,7 +584,7 @@ residential sector:
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">time_framework</span></code> details each benchmark year in which we run the simulation. The <code class="docutils literal notranslate"><span class="pre">foresight</span></code> variable details how much foresight an agent has when making investments.</p>
-<p>As we have modified the timeslicing arrangements there will be a change in the underlying demand for heating. This may require more electricity to service this demand. Therefore, we relax the constraints for growth in the power sector for all technologies and constraints in the <code class="docutils literal notranslate"><span class="pre">technodata/power/technodata.csv</span></code>, as is shown below:</p>
+<p>As we have modified the timeslicing arrangements there will be a change in the underlying demand for heating. This may require more electricity to service this demand. Therefore, we relax the constraints for growth in the power sector for all technologies and constraints in the <code class="docutils literal notranslate"><span class="pre">technodata/power/technodata.csv</span></code>, as shown below:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 13%" />
