@@ -284,12 +284,14 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="section" id="Adding-an-agent">
 <h1><span class="section-number">2. </span>Adding an agent<a class="headerlink" href="#Adding-an-agent" title="Permalink to this headline">¶</a></h1>
-<p>In this section, we will add a new agent called <code class="docutils literal notranslate"><span class="pre">A2</span></code>. This agent will be slightly different to the other agents in the <code class="docutils literal notranslate"><span class="pre">default</span></code> example, in that it will make investments based upon a mixture of <a class="reference external" href="https://en.wikipedia.org/wiki/Levelized_cost_of_energy">levelised cost of electricity (LCOE)</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Net_present_value">net present value (NPV)</a>. These two objectives will be combined by calculating the mean of the two when comparing potential investment options.</p>
-<p>To achieve this, we must modify the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file in the directory:</p>
+<p>In this section, we will add a new agent called <code class="docutils literal notranslate"><span class="pre">A2</span></code>. This agent will be slightly different to the other agents in the <code class="docutils literal notranslate"><span class="pre">default</span></code> example, in that it will make investments based upon a mixture of <a class="reference external" href="https://en.wikipedia.org/wiki/Levelized_cost_of_energy">levelised cost of electricity (LCOE)</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Equivalent_annual_cost">equivalent annual cost (EAC)</a>. These two objectives will be combined by calculating a weighted sum of the two when comparing potential
+investment options. We will weight LCOE with a relative value of 1 and the EAC with a relative value of 0.25.</p>
+<p>We will continue to use the files from the previous tutorial where we added <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and created a future scenario.</p>
+<p>To achieve this, first, we must modify the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file in the directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">muse_install_location</span><span class="p">}</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">muse</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">technodata</span><span class="o">/</span><span class="n">Agents</span><span class="o">.</span><span class="n">csv</span>
 </pre></div>
 </div>
-<p>To do this, we will add two new rows to the file. To simplify the process, we copy the data from the first two rows of agent <code class="docutils literal notranslate"><span class="pre">A1</span></code>, changing only the rows: <code class="docutils literal notranslate"><span class="pre">Name</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective1</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective2</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData1</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData2</span></code> and <code class="docutils literal notranslate"><span class="pre">DecisionMethod</span></code>. The values we changed can be seen below. Again, we only show some of the rows due to space constraints, however see <a class="reference external" href="broken-link">here</a> for the full file.</p>
+<p>To do this, we will add two new rows to the file. To simplify the process, we copy the data from the first two rows of agent <code class="docutils literal notranslate"><span class="pre">A1</span></code>, changing only the rows: <code class="docutils literal notranslate"><span class="pre">Name</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective1</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective2</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData1</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData2</span></code> and <code class="docutils literal notranslate"><span class="pre">DecisionMethod</span></code>. The values we changed can be seen below. Again, we only show some of the rows due to space constraints, however see <a class="reference external" href="broken-link">here INSERT LINK HERE</a> for the full file.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -351,12 +353,12 @@ div.rendered_html tbody tr:hover {
 <td><p><strong>A2</strong></p></td>
 <td><p><strong>R1</strong></p></td>
 <td><p><strong>LCOE</strong></p></td>
-<td><p><strong>NPV</strong></p></td>
+<td><p><strong>EAC</strong></p></td>
 <td></td>
 <td><p><strong>1</strong></p></td>
-<td><p><strong>1</strong></p></td>
+<td><p><strong>0.25</strong></p></td>
 <td><p><strong>…</strong></p></td>
-<td><p><strong>mean</strong></p></td>
+<td><p><strong>weighted_sum</strong></p></td>
 <td><p><strong>…</strong></p></td>
 <td><p><strong>New</strong></p></td>
 </tr>
@@ -364,12 +366,12 @@ div.rendered_html tbody tr:hover {
 <td><p><strong>A2</strong></p></td>
 <td><p><strong>R1</strong></p></td>
 <td><p><strong>LCOE</strong></p></td>
-<td><p><strong>NPV</strong></p></td>
+<td><p><strong>EAC</strong></p></td>
 <td></td>
 <td><p><strong>1</strong></p></td>
-<td><p><strong>1</strong></p></td>
+<td><p><strong>0.25</strong></p></td>
 <td><p><strong>…</strong></p></td>
-<td><p><strong>mean</strong></p></td>
+<td><p><strong>weighted_sum</strong></p></td>
 <td><p><strong>…</strong></p></td>
 <td><p><strong>Retrofit</strong></p></td>
 </tr>
@@ -381,7 +383,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Again, we use seaborn and pandas to analyse the data in the <code class="docutils literal notranslate"><span class="pre">Results</span></code> folder.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -391,18 +393,18 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/multiple-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">power_sector</span> <span class="o">=</span> <span class="n">mca_capacity</span><span class="p">[</span><span class="n">mca_capacity</span><span class="o">.</span><span class="n">sector</span><span class="o">==</span><span class="s2">&quot;power&quot;</span><span class="p">]</span>
 <span class="n">power_sector</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -441,7 +443,7 @@ div.rendered_html tbody tr:hover {
       <td>A1</td>
       <td>retrofit</td>
       <td>power</td>
-      <td>1.000</td>
+      <td>1.0000</td>
       <td>2020</td>
     </tr>
     <tr>
@@ -451,7 +453,7 @@ div.rendered_html tbody tr:hover {
       <td>A2</td>
       <td>retrofit</td>
       <td>power</td>
-      <td>1.000</td>
+      <td>1.0000</td>
       <td>2020</td>
     </tr>
     <tr>
@@ -461,7 +463,7 @@ div.rendered_html tbody tr:hover {
       <td>A1</td>
       <td>retrofit</td>
       <td>power</td>
-      <td>1.000</td>
+      <td>1.0000</td>
       <td>2025</td>
     </tr>
     <tr>
@@ -471,7 +473,7 @@ div.rendered_html tbody tr:hover {
       <td>A1</td>
       <td>retrofit</td>
       <td>power</td>
-      <td>5.172</td>
+      <td>8.4048</td>
       <td>2025</td>
     </tr>
     <tr>
@@ -481,7 +483,7 @@ div.rendered_html tbody tr:hover {
       <td>A2</td>
       <td>retrofit</td>
       <td>power</td>
-      <td>11.000</td>
+      <td>1.0000</td>
       <td>2025</td>
     </tr>
   </tbody>
@@ -490,7 +492,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>This time we can see that there is data for the new agent, <code class="docutils literal notranslate"><span class="pre">A2</span></code>. Next, we will visualise the investments made by each of the agents using seaborn’s facetgrid command.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -501,12 +503,12 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;seaborn.axisgrid.FacetGrid at 0x7f95819b4730&gt;
+&lt;seaborn.axisgrid.FacetGrid at 0x7fda86bcfc40&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -516,8 +518,9 @@ div.rendered_html tbody tr:hover {
 <img alt="../_images/user-guide_add-agent_7_1.png" src="../_images/user-guide_add-agent_7_1.png" />
 </div>
 </div>
-<p>In this scenario, agent <code class="docutils literal notranslate"><span class="pre">A1</span></code> is investing using LCOE, whereas agent <code class="docutils literal notranslate"><span class="pre">A2</span></code> is investing based on the mean of the objectives: LCOE and NPV in the same region. A different strategy is employed by these agents with <code class="docutils literal notranslate"><span class="pre">A2</span></code> investing in gasCCGT and windturbines, whereas <code class="docutils literal notranslate"><span class="pre">A1</span></code> invests in solarPV.</p>
-<p>Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using NPV. This requires to edit the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file once more, to look like the following:</p>
+<p>In this scenario we can see two divergent strategies. Agent <code class="docutils literal notranslate"><span class="pre">A2</span></code> invests heavily in <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>, and less so in <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code>. Whereas Agent <code class="docutils literal notranslate"><span class="pre">A1</span></code> invests primarily in <code class="docutils literal notranslate"><span class="pre">solarPV</span></code>.</p>
+<p>From this small scenario, the difference between investment strategies between agents is evident. This is one of the key benefits of agent-based models when compared to optimisation based models.</p>
+<p>Next, we will see what occurs if the agents invest based upon the same investment strategy, with both investing using LCOE. This requires to edit the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file once more, to look like the following:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -611,11 +614,11 @@ div.rendered_html tbody tr:hover {
 </table>
 <p>Again, this requires the re-running of the simulation, and visualisation like before:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/single-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">power_sector</span> <span class="o">=</span> <span class="n">mca_capacity</span><span class="p">[</span><span class="n">mca_capacity</span><span class="o">.</span><span class="n">sector</span><span class="o">==</span><span class="s2">&quot;power&quot;</span><span class="p">]</span>
 <span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">power_sector</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="s1">&#39;agent&#39;</span><span class="p">)</span>
 <span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;capacity&quot;</span><span class="p">,</span> <span class="s2">&quot;technology&quot;</span><span class="p">)</span>
@@ -624,12 +627,12 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;seaborn.axisgrid.FacetGrid at 0x7f957e5f0970&gt;
+&lt;seaborn.axisgrid.FacetGrid at 0x7fda83e27fd0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -639,10 +642,11 @@ div.rendered_html tbody tr:hover {
 <img alt="../_images/user-guide_add-agent_11_1.png" src="../_images/user-guide_add-agent_11_1.png" />
 </div>
 </div>
-<p>In this new scenario, with both agents running the same objective, very similar results can be seen, with a high investmwent in <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>, none in <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and low <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code>. Have a play around with the files to see if you can come up with different scenarios!</p>
+<p>In this new scenario, with both agents running the same objective, very similar results between agents can be seen. There is a low uptake in <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code>, and competition between <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>, especially in the year 2040 where a change in the price of <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> was set in the previous tutorial.</p>
+<p>Have a play around with the files to see if you can come up with different scenarios!</p>
 <div class="section" id="Next-steps">
 <h2><span class="section-number">2.1. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
-<p>In the next section we will show you how to add a new region.</p>
+<p>In the next section we will show you how to add a new region. We will maintain the two agents in this next section, and all the work done in the previous tutorials.</p>
 </div>
 </div>
 

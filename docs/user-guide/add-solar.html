@@ -989,17 +989,17 @@ div.rendered_html tbody tr:hover {
 <p>Next, we will import the <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> file into pandas and print the first 5 lines using the <code class="docutils literal notranslate"><span class="pre">head()</span></code> command.</p>
 <p>Make sure to change the file path of <code class="docutils literal notranslate"><span class="pre">&quot;../Results/MCACapacity.csv&quot;</span></code> to where the <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> is on your computer, otherwise you will receive an error when you import the csv file.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/add-solar/introduction/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/1-add-new-technology/introduction/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">mca_capacity</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1087,7 +1087,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>We will only visualise the power sector in this example, as this was the only sector we changed. We, therefore, filter for this sector, and then visualise it using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1097,12 +1097,12 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8fb241d370&gt;
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd58a330dc0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1244,33 +1244,148 @@ div.rendered_html tbody tr:hover {
 <p>Notice that we must provide entries for 2040 for the other technologies, <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code> and <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>. For this example, we will keep these the same as before, copying and pasting the rows.</p>
 <p>Here, we increase the <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> variable by 10 for <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> in the year 2020, to be a total of 40, and then reduce <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> by 10 in 2040, again for <code class="docutils literal notranslate"><span class="pre">solarPV</span></code>.</p>
 <p>MUSE uses interpolation for the years which are unknown. So, in this example, for the benchmark years between 2020 and 2040 (2025, 2030, 2035) use interpolated <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> values. The interpolation mode can be set in the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, and defaults to linear interpolation. This example uses the default setting for interpolation.</p>
+<p>Next we will modify the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> file.</p>
+<p>For this step, we have to provide the input commodities for each technology, in each of the years defined in the <code class="docutils literal notranslate"><span class="pre">Technodata.csv</span></code> file. So, for this example we are required to provide entries for the years 2020 and 2040 for each of the technologies. For now, we won’t vary the 2040 values compared to the 2020. Therefore, we just need to copy and paste each of the entries for each of the technologies, as shown below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 14%" />
+<col style="width: 10%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ProcessName</p></th>
+<th class="head"><p>RegionName</p></th>
+<th class="head"><p>Time</p></th>
+<th class="head"><p>Level</p></th>
+<th class="head"><p>electricity</p></th>
+<th class="head"><p>gas</p></th>
+<th class="head"><p>heat</p></th>
+<th class="head"><p>CO2f</p></th>
+<th class="head"><p>wind</p></th>
+<th class="head"><p>solar</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unit</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Year</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>PJ/PJ</p></td>
+<td><p>PJ/PJ</p></td>
+<td><p>PJ/PJ</p></td>
+<td><p>kt/PJ</p></td>
+<td><p>PJ/PJ</p></td>
+<td><p>PJ/PJ</p></td>
+</tr>
+<tr class="row-odd"><td><p>gasCCGT</p></td>
+<td><p>R1</p></td>
+<td><p>2020</p></td>
+<td><p>fixed</p></td>
+<td><p>0</p></td>
+<td><p>1.67</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>gasCCGT</strong></p></td>
+<td><p><strong>R1</strong></p></td>
+<td><p><strong>2040</strong></p></td>
+<td><p><strong>fixed</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>1.67</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>windturbine</p></td>
+<td><p>R1</p></td>
+<td><p>2020</p></td>
+<td><p>fixed</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>windturbine</strong></p></td>
+<td><p><strong>R1</strong></p></td>
+<td><p><strong>2040</strong></p></td>
+<td><p><strong>fixed</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>1</strong></p></td>
+<td><p><strong>0</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>solarPV</p></td>
+<td><p>R1</p></td>
+<td><p>2020</p></td>
+<td><p>fixed</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>solarPV</strong></p></td>
+<td><p><strong>R1</strong></p></td>
+<td><p><strong>2040</strong></p></td>
+<td><p><strong>fixed</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>0</strong></p></td>
+<td><p><strong>1</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>We must do the same for the <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> file. For the sake of brevity we won’t show you this, but the link to the file can be found <a class="reference external" href="dead-link">here INSERT LINK HERE</a></p>
 <p>We will now rerun the simulation, using the same command as previously and visualise the new results.</p>
 <p>We must import the new <code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> file again, and then visualise the results.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/add-solar/scenario/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/1-add-new-technology/scenario/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">power_capacity</span> <span class="o">=</span> <span class="n">mca_capacity</span><span class="p">[</span><span class="n">mca_capacity</span><span class="o">.</span><span class="n">sector</span><span class="o">==</span><span class="s2">&quot;power&quot;</span><span class="p">]</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">power_capacity</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;capacity&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;technology&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f8fb2d8ce80&gt;
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fd58a41cf10&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="../_images/user-guide_add-solar_30_1.png" src="../_images/user-guide_add-solar_30_1.png" />
+<img alt="../_images/user-guide_add-solar_31_1.png" src="../_images/user-guide_add-solar_31_1.png" />
 </div>
 </div>
 <p>From the results, we can see that <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> increases rapidly between 2025 and 2040. However, between the years 2030 and 2050 <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> increases. This is because of the changing cost of <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> during these years. A crossover can be seen around the year 2038.</p>
