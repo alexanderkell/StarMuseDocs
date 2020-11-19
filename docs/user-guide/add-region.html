@@ -294,6 +294,7 @@ div.rendered_html tbody tr:hover {
 <p>Effectively, for this example, we will copy and paste the results for each of the input files from region <code class="docutils literal notranslate"><span class="pre">R1</span></code>, and change the name of the region for the new rows to <code class="docutils literal notranslate"><span class="pre">R2</span></code>.</p>
 <p>However, as we are increasing the demand by adding a region, as well as modifying the costs of technologies, it may be the case that a higher growth in technology is required. For example, there may be no possible solution to meet demand without increasing the <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> maximum allowed limit. We will therefore increase the allowed limits for <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> in region <code class="docutils literal notranslate"><span class="pre">R2</span></code>.</p>
 <p>We have placed two examples as to how to edit the residential sector below. Again, the edited data are highlighted in <strong>bold</strong>, with the original data in normal text.</p>
+<p>For the sake of brevity, we have omitted the entries for 2040 for the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> file, however, just make sure to copy and paste the values for 2020 to 2040 here. The full file can be seen <a class="reference external" href="dead-link">here INSERT LINK HERE</a>.</p>
 <p>The following file is the modified <code class="docutils literal notranslate"><span class="pre">/technodata/residential/CommIn.csv</span></code> file:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -376,6 +377,16 @@ div.rendered_html tbody tr:hover {
 <td><p><strong>0</strong></p></td>
 <td><p><strong>0</strong></p></td>
 </tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
 </tbody>
 </table>
 <p>Whereas the following file is the modified <code class="docutils literal notranslate"><span class="pre">/technodata/residential/ExistingCapacity.csv</span></code> file:</p>
@@ -453,20 +464,23 @@ div.rendered_html tbody tr:hover {
 </tbody>
 </table>
 <p>Below is the reduced <code class="docutils literal notranslate"><span class="pre">/technodata/power/technodata.csv</span></code> file, showing the increased capacity for <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> in <code class="docutils literal notranslate"><span class="pre">R2</span></code>. For this, we highlight only the elements we changed from the rows in <code class="docutils literal notranslate"><span class="pre">R1</span></code>. The rest of the elements are the same for <code class="docutils literal notranslate"><span class="pre">R1</span></code> as they are for <code class="docutils literal notranslate"><span class="pre">R2</span></code>.</p>
+<p>Again, we don’t show the entries for 2040, apart from the edited windturbine row, for the sake of brevity.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>ProcessName</p></th>
 <th class="head"><p>RegionName</p></th>
+<th class="head"><p>Time</p></th>
 <th class="head"><p>…</p></th>
 <th class="head"><p>MaxCapacityAddition</p></th>
 <th class="head"><p>MaxCapacityGrowth</p></th>
@@ -481,6 +495,7 @@ div.rendered_html tbody tr:hover {
 <li></li>
 </ul>
 </td>
+<td><p>Year</p></td>
 <td><p>…</p></td>
 <td><p>PJ</p></td>
 <td><p>%</p></td>
@@ -490,6 +505,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-odd"><td><p>gasCCGT</p></td>
 <td><p>R1</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p>2</p></td>
 <td><p>0.02</p></td>
@@ -499,6 +515,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-even"><td><p>windturbine</p></td>
 <td><p>R1</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p>2</p></td>
 <td><p>0.02</p></td>
@@ -508,6 +525,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-odd"><td><p>solarPV</p></td>
 <td><p>R1</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p>2</p></td>
 <td><p>0.02</p></td>
@@ -517,6 +535,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-even"><td><p>gasCCGT</p></td>
 <td><p>R2</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p>2</p></td>
 <td><p>0.02</p></td>
@@ -526,6 +545,7 @@ div.rendered_html tbody tr:hover {
 </tr>
 <tr class="row-odd"><td><p>windturbine</p></td>
 <td><p>R2</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p><strong>5</strong></p></td>
 <td><p><strong>0.05</strong></p></td>
@@ -533,8 +553,19 @@ div.rendered_html tbody tr:hover {
 <td><p>…</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-even"><td><p>solarPV</p></td>
+<tr class="row-even"><td><p>windturbine</p></td>
 <td><p>R2</p></td>
+<td><p>2040</p></td>
+<td><p>…</p></td>
+<td><p><strong>5</strong></p></td>
+<td><p><strong>0.05</strong></p></td>
+<td><p><strong>100</strong></p></td>
+<td><p>…</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>solarPV</p></td>
+<td><p>R2</p></td>
+<td><p>2020</p></td>
 <td><p>…</p></td>
 <td><p>2</p></td>
 <td><p>0.02</p></td>
@@ -542,7 +573,8 @@ div.rendered_html tbody tr:hover {
 <td><p>…</p></td>
 <td><p>1</p></td>
 </tr>
-<tr class="row-odd"><td><p>…</p></td>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
 <td><p>…</p></td>
 <td><p>…</p></td>
 <td><p>…</p></td>

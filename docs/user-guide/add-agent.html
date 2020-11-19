@@ -397,7 +397,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/multiple-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/1-multiple-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">power_sector</span> <span class="o">=</span> <span class="n">mca_capacity</span><span class="p">[</span><span class="n">mca_capacity</span><span class="o">.</span><span class="n">sector</span><span class="o">==</span><span class="s2">&quot;power&quot;</span><span class="p">]</span>
 <span class="n">power_sector</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -508,7 +508,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;seaborn.axisgrid.FacetGrid at 0x7fda86bcfc40&gt;
+&lt;seaborn.axisgrid.FacetGrid at 0x7faaf03cfcd0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -618,7 +618,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/single-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">mca_capacity</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../tutorial-code/2-add-agent/2-single-objective/Results/MCACapacity.csv&quot;</span><span class="p">)</span>
 <span class="n">power_sector</span> <span class="o">=</span> <span class="n">mca_capacity</span><span class="p">[</span><span class="n">mca_capacity</span><span class="o">.</span><span class="n">sector</span><span class="o">==</span><span class="s2">&quot;power&quot;</span><span class="p">]</span>
 <span class="n">g</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">FacetGrid</span><span class="p">(</span><span class="n">power_sector</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="s1">&#39;agent&#39;</span><span class="p">)</span>
 <span class="n">g</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">,</span> <span class="s2">&quot;capacity&quot;</span><span class="p">,</span> <span class="s2">&quot;technology&quot;</span><span class="p">)</span>
@@ -632,7 +632,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;seaborn.axisgrid.FacetGrid at 0x7fda83e27fd0&gt;
+&lt;seaborn.axisgrid.FacetGrid at 0x7faaf0325fa0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
