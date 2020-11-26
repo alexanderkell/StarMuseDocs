@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Running your first example &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -287,7 +287,7 @@ div.rendered_html tbody tr:hover {
 <p>Once python and MUSE have been installed, we can run an example. To do this open anaconda prompt. Then change directory to where you have downloaded the MUSE source code.</p>
 <p>Navigate to the following link for MacOS or Linux based operating systems:</p>
 <p><code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}/StarMuse/run/example/default/</span></code></p>
-<p>Change <code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}</span></code> to the location you downloaded MUSE to, for example <code class="docutils literal notranslate"><span class="pre">Users/{my_name}/Documents/</span></code> using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, or “change directory” command. Once we have navigated to the directory containing the example settings <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code>, we can run the simulation using the following command in the anaconda prompt or terminal:</p>
+<p>Change <code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}</span></code> to the location you downloaded MUSE to, for example <code class="docutils literal notranslate"><span class="pre">Users/{my_name}/Documents/</span></code> using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, or “change directory” command. Once we have navigated to the directory containing the example settings <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> we can run the simulation using the following command in the anaconda prompt or terminal:</p>
 <p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">muse</span> <span class="pre">settings.toml</span></code></p>
 <p>If running correctly, your prompt should output text similar to that which can be found <a class="reference internal" href="example-output.html"><span class="doc">here</span></a>.</p>
 <p>It is also possible to run MUSE directly in python using the following code:</p>
@@ -310,7 +310,7 @@ div.rendered_html tbody tr:hover {
 <li><p><code class="docutils literal notranslate"><span class="pre">MCACapacity.csv</span></code> contains information about the capacity each agent has for each technology per benchmark year. Each benchmark year is the modelled year in the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file. In our example, this is 2020, 2025, …, 2050.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">MCAPrices.csv</span></code> has the price of each commodity per benchmark year and timeslice. eg. the cost of electricity at night for electricity in 2020.</p></li>
 </ul>
-<p>Within each of the sector result folders, there is an output for <code class="docutils literal notranslate"><span class="pre">Capacity</span></code> for each commodity in each benchmark year. The benchmark years into the future, which the simulation has not run to, refers to the capacity as it retires. Within the <code class="docutils literal notranslate"><span class="pre">Residential</span></code> folder there is also a folder for <code class="docutils literal notranslate"><span class="pre">Supply</span></code> within each benchmark year. This refers to how much end-use commodity was output.</p>
+<p>Within each of the sector result folders, there is an output for <code class="docutils literal notranslate"><span class="pre">Capacity</span></code> for each commodity in each year. The years into the future, which the simulation has not run to, refers to the capacity as it retires. Within the <code class="docutils literal notranslate"><span class="pre">Residential</span></code> folder there is also a folder for <code class="docutils literal notranslate"><span class="pre">Supply</span></code> within each year. This refers to how much end-use commodity was output.</p>
 <p>The output can be fully configurable, as shown in the developer guide <a class="reference internal" href="advanced-guide/extending-muse.html"><span class="doc">here</span></a>.</p>
 </div>
 <div class="section" id="Visualisation">
@@ -486,7 +486,7 @@ residential sector
 </div>
 </div>
 <p>In this toy example, we can see that the end-use technology of choice in the residential sector becomes a heatpump. The heatpump displaces the gas boiler. Therefore, the supply of gas crashes due to a reduced demand. To account for the increase in demand for electricity, the agent invests heavily in wind turbines.</p>
-<p>Note that the units are in petajoules (PJ). MUSE requires consistent units across each of the sectors, and each of the input files (which we will see later). The model does not make any unit conversion internally.</p>
+<p>Note, that the units are in petajoules (PJ). MUSE requires consistent units across each of the sectors, and each of the input files (which we will see later). The model does not make any unit conversion internally.</p>
 </div>
 <div class="section" id="Next-steps">
 <h2>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
@@ -559,7 +559,7 @@ residential sector
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.objectives &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -223,13 +223,6 @@
             <span class="p">)</span>
             <span class="n">getLogger</span><span class="p">(</span><span class="n">function</span><span class="o">.</span><span class="vm">__module__</span><span class="p">)</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="p">{</span><span class="s2">&quot;replacement&quot;</span><span class="p">,</span> <span class="s2">&quot;asset&quot;</span><span class="p">}</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">dims</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span>
-                <span class="s2">&quot;Objective </span><span class="si">{func}</span><span class="s2"> returned an array with dimensions </span><span class="si">{dims}</span><span class="s2">; &quot;</span>
-                <span class="s2">&quot;it is not a subset of {{&#39;replacemment&#39;, &#39;asset&#39;}}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-                    <span class="n">dims</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">function</span><span class="o">.</span><span class="vm">__name__</span>
-                <span class="p">)</span>
-            <span class="p">)</span>
         <span class="k">if</span> <span class="s2">&quot;technology&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">dims</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Objective should not return a dimension &#39;technology&#39;&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="s2">&quot;technology&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
@@ -813,7 +806,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

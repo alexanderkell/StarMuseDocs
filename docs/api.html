@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -20,6 +20,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FAQs" href="faq.html" />
     <link rel="prev" title="Further extending MUSE" href="advanced-guide/further-extending-muse.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -31,6 +32,9 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="faq.html" title="FAQs"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="advanced-guide/further-extending-muse.html" title="Further extending MUSE"
              accesskey="P">previous</a> |</li>
@@ -55,21 +59,21 @@
 <dt id="muse.mca.FindEquilibriumResults">
 <em class="property">class </em><code class="sig-prename descclassname">muse.mca.</code><code class="sig-name descname">FindEquilibriumResults</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">converged</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span></em>, <em class="sig-param"><span class="n">sectors</span><span class="p">:</span> <span class="n">List<span class="p">[</span>AbstractSector<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/mca.html#FindEquilibriumResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.mca.FindEquilibriumResults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Result of find equilibrium.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="muse.mca.FindEquilibriumResults.converged">
-<code class="sig-name descname">converged</code><em class="property">: bool</em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.converged" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">converged</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="muse.mca.FindEquilibriumResults.market">
-<code class="sig-name descname">market</code><em class="property">: Dataset</em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.market" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">market</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.market" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="muse.mca.FindEquilibriumResults.sectors">
-<code class="sig-name descname">sectors</code><em class="property">: List<span class="p">[</span>AbstractSector<span class="p">]</span></em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.sectors" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">sectors</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.sectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
@@ -175,15 +179,15 @@ sectors do, the carbon budget limit is not exceeded.</p>
 <dd><p>Result of iterating over sectors for a year.</p>
 <p>Convenience tuple naming naming the return values from  of
 <a class="reference internal" href="source/muse.html#muse.mca.single_year_iteration" title="muse.mca.single_year_iteration"><code class="xref py py-func docutils literal notranslate"><span class="pre">single_year_iteration()</span></code></a>.</p>
-<dl class="py attribute">
+<dl class="py method">
 <dt id="muse.mca.SingleYearIterationResult.market">
-<code class="sig-name descname">market</code><em class="property">: Dataset</em><a class="headerlink" href="#muse.mca.SingleYearIterationResult.market" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">market</code><a class="headerlink" href="#muse.mca.SingleYearIterationResult.market" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py attribute">
+<dl class="py method">
 <dt id="muse.mca.SingleYearIterationResult.sectors">
-<code class="sig-name descname">sectors</code><em class="property">: List<span class="p">[</span>AbstractSector<span class="p">]</span></em><a class="headerlink" href="#muse.mca.SingleYearIterationResult.sectors" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">sectors</code><a class="headerlink" href="#muse.mca.SingleYearIterationResult.sectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
@@ -513,7 +517,7 @@ which derive from it will be warned if either method is not implemented.</p>
 <h3>Sector<a class="headerlink" href="#sector" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="muse.sectors.sector.Sector">
-<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.sector.</code><code class="sig-name descname">Sector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">subsectors</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.sectors.html#muse.sectors.subsector.Subsector" title="muse.sectors.subsector.Subsector">muse.sectors.subsector.Subsector</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">timeslices</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pandas.core.indexes.multi.MultiIndex<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interactions</span><span class="p">:</span> <span class="n">Optional[Callable[[Sequence[muse.agents.agent.AbstractAgent]], None]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supply_prod</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/sector.html#Sector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.sector.Sector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.sector.</code><code class="sig-name descname">Sector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">subsectors</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.sectors.html#muse.sectors.subsector.Subsector" title="muse.sectors.subsector.Subsector">muse.sectors.subsector.Subsector</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">timeslices</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pandas.core.indexes.multi.MultiIndex<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interactions</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.AbstractAgent" title="muse.agents.agent.AbstractAgent">muse.agents.agent.AbstractAgent</a><span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supply_prod</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/sector.html#Sector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.sector.Sector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for all sectors.</p>
 <dl class="py method">
 <dt id="muse.sectors.sector.Sector.agents">
@@ -643,7 +647,7 @@ expected to modify the agents in-place.</p>
 <h3>Subsector<a class="headerlink" href="#subsector" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="muse.sectors.subsector.Subsector">
-<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.subsector.</code><code class="sig-name descname">Subsector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agents</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">commodities</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">demand_share</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constraints</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'subsector'</span></em>, <em class="sig-param"><span class="n">forecast</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/subsector.html#Subsector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.subsector.Subsector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.subsector.</code><code class="sig-name descname">Subsector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">agents</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">commodities</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">demand_share</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">constraints</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">investment</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'subsector'</span></em>, <em class="sig-param"><span class="n">forecast</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5</span></em>, <em class="sig-param"><span class="n">expand_market_prices</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/subsector.html#Subsector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.subsector.Subsector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Agent group servicing a subset of the sectorial commodities.</p>
 </dd></dl>
 
@@ -943,7 +947,7 @@ interaction. The second registrator registers the interaction proper: it takes a
 arguments and returns nothing. It is expected to modify the agents in-place.</p>
 <dl class="py function">
 <dt id="muse.interactions.factory">
-<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">factory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>Mapping<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable[[Sequence[muse.agents.agent.AbstractAgent]], None]<a class="reference internal" href="_modules/muse/interactions.html#factory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.factory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">factory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>Mapping<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable<span class="p">[</span><span class="p">[</span>Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.AbstractAgent" title="muse.agents.agent.AbstractAgent">muse.agents.agent.AbstractAgent</a><span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><a class="reference internal" href="_modules/muse/interactions.html#factory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.factory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an interaction functor.</p>
 </dd></dl>
 
@@ -955,7 +959,7 @@ arguments and returns nothing. It is expected to modify the agents in-place.</p>
 
 <dl class="py function">
 <dt id="muse.interactions.register_agent_interaction">
-<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">register_agent_interaction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable[[muse.agents.agent.Agent, muse.agents.agent.Agent], None]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/interactions.html#register_agent_interaction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.register_agent_interaction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">register_agent_interaction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">, </span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/interactions.html#register_agent_interaction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.register_agent_interaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to register an agent to agent(s) interaction function.</p>
 <p>An agent interaction function takes at least two agents and makes them
 interact in some way.</p>
@@ -1078,9 +1082,43 @@ and by how much.</p>
 
 <dl class="py class">
 <dt id="muse.agents.agent.Agent">
-<em class="property">class </em><code class="sig-prename descclassname">muse.agents.agent.</code><code class="sig-name descname">Agent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Agent'</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'USA'</span></em>, <em class="sig-param"><span class="n">assets</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>xarray.core.dataset.Dataset<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">search_rules</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">objectives</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">decision</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">year</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2010</span></em>, <em class="sig-param"><span class="n">maturity_threshhold</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">forecast</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5</span></em>, <em class="sig-param"><span class="n">housekeeping</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_transform</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">demand_threshhold</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#Agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.Agent" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">muse.agents.agent.</code><code class="sig-name descname">Agent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'Agent'</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'USA'</span></em>, <em class="sig-param"><span class="n">assets</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>xarray.core.dataset.Dataset<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">search_rules</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">objectives</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">decision</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">year</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">2010</span></em>, <em class="sig-param"><span class="n">maturity_threshhold</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">forecast</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">5</span></em>, <em class="sig-param"><span class="n">housekeeping</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">merge_transform</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">demand_threshhold</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>float<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">category</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">asset_threshhold</span><span class="p">:</span> <span class="n">float</span> <span class="o">=</span> <span class="default_value">0.0001</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#Agent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.Agent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Agent that is capable of computing a search-space and a cost metric.</p>
 <p>This agent will not perform any investment itself.</p>
+<dl class="py attribute">
+<dt id="muse.agents.agent.Agent._housekeeping">
+<code class="sig-name descname">_housekeeping</code><a class="headerlink" href="#muse.agents.agent.Agent._housekeeping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tranforms applied on the assets at the start of each iteration.</p>
+<p>It could mean keeping the assets as are, or removing assets with no
+capacity in the current year and beyond, etc…
+It can be any function registered with
+<a class="reference internal" href="source/muse.html#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initial_asset_transform()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="muse.agents.agent.Agent.add_investments">
+<code class="sig-name descname">add_investments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">investments</span><span class="p">:</span> <span class="n">xarray.core.dataarray.DataArray</span></em>, <em class="sig-param"><span class="n">current_year</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">time_period</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#Agent.add_investments"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.Agent.add_investments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new assets to the agent.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="muse.agents.agent.Agent.asset_housekeeping">
+<code class="sig-name descname">asset_housekeeping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#Agent.asset_housekeeping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.Agent.asset_housekeeping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reduces memory footprint of assets.</p>
+<p>Performs tasks such as:</p>
+<ul class="simple">
+<li><p>remove empty assets</p></li>
+<li><p>remove years prior to current</p></li>
+<li><p>interpolate current year and forecasted year</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="muse.agents.agent.Agent.asset_threshhold">
+<code class="sig-name descname">asset_threshhold</code><a class="headerlink" href="#muse.agents.agent.Agent.asset_threshhold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Threshhold below which assets are not added.</p>
+</dd></dl>
+
 <dl class="py attribute">
 <dt id="muse.agents.agent.Agent.decision">
 <code class="sig-name descname">decision</code><a class="headerlink" href="#muse.agents.agent.Agent.decision" title="Permalink to this definition">¶</a></dt>
@@ -1105,16 +1143,6 @@ then the criteria is not applied.</p>
 <dt id="muse.agents.agent.Agent.forecast_year">
 <em class="property">property </em><code class="sig-name descname">forecast_year</code><a class="headerlink" href="#muse.agents.agent.Agent.forecast_year" title="Permalink to this definition">¶</a></dt>
 <dd><p>Year to consider when forecasting.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt id="muse.agents.agent.Agent.housekeeping">
-<code class="sig-name descname">housekeeping</code><a class="headerlink" href="#muse.agents.agent.Agent.housekeeping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Tranforms applied on the assets at the start of each iteration.</p>
-<p>It could mean keeping the assets as are, or removing assets with no
-capacity in the current year and beyond, etc…
-It can be any function registered with
-<a class="reference internal" href="source/muse.html#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initial_asset_transform()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1174,18 +1202,6 @@ used to filter the search space.</p>
 <dt id="muse.agents.agent.InvestingAgent">
 <em class="property">class </em><code class="sig-prename descclassname">muse.agents.agent.</code><code class="sig-name descname">InvestingAgent</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="n">constraints</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">investment</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#InvestingAgent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.InvestingAgent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Agent that performs investment for itself.</p>
-<dl class="py method">
-<dt id="muse.agents.agent.InvestingAgent._compute_new_assets">
-<code class="sig-name descname">_compute_new_assets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">demand</span><span class="p">:</span> <span class="n">xarray.core.dataarray.DataArray</span></em>, <em class="sig-param"><span class="n">search</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">market</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">time_period</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">current_year</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; xarray.core.dataarray.DataArray<a class="reference internal" href="_modules/muse/agents/agent.html#InvestingAgent._compute_new_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.InvestingAgent._compute_new_assets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes investment and retirement profile.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="muse.agents.agent.InvestingAgent.add_assets">
-<code class="sig-name descname">add_assets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">newassets</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/agents/agent.html#InvestingAgent.add_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.agents.agent.InvestingAgent.add_assets" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new assets to the agent.</p>
-</dd></dl>
-
 <dl class="py attribute">
 <dt id="muse.agents.agent.InvestingAgent.constraints">
 <code class="sig-name descname">constraints</code><a class="headerlink" href="#muse.agents.agent.InvestingAgent.constraints" title="Permalink to this definition">¶</a></dt>
@@ -1794,13 +1810,13 @@ MUSE’s plugin platform.</p>
 have the following signature:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_investment</span>
 <span class="k">def</span> <span class="nf">investment</span><span class="p">(</span>
-    <span class="n">costs</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
-    <span class="n">search_space</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
-    <span class="n">technologies</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
+    <span class="n">costs</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
+    <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
+    <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">constraints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Constraint</span><span class="p">],</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="o">**</span><span class="n">kwargs</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="k">pass</span>
 </pre></div>
 </div>
@@ -2726,7 +2742,7 @@ Pass <cite>None</cite> if this behaviour is not required.</p>
 
 <span class="target" id="module-muse.decorators"></span><dl class="py data">
 <dt id="muse.decorators.SETTINGS_CHECKS">
-<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">SETTINGS_CHECKS</code><em class="property">: Mapping[str, Callable[[dict], None]]</em><em class="property"> = {'check_budget_parameters': &lt;function check_budget_parameters&gt;, 'check_foresight': &lt;function check_foresight&gt;, 'check_global_data_files': &lt;function check_global_data_files&gt;, 'check_interpolation_mode': &lt;function check_interpolation_mode&gt;, 'check_iteration_control': &lt;function check_iteration_control&gt;, 'check_log_level': &lt;function check_log_level&gt;, 'check_sectors_files': &lt;function check_sectors_files&gt;, 'check_time_slices': &lt;function check_time_slices&gt;}</em><a class="headerlink" href="#muse.decorators.SETTINGS_CHECKS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">SETTINGS_CHECKS</code><em class="property">: Mapping<span class="p">[</span>str<span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span>dict<span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></em><em class="property"> = {'check_budget_parameters': &lt;function check_budget_parameters&gt;, 'check_foresight': &lt;function check_foresight&gt;, 'check_global_data_files': &lt;function check_global_data_files&gt;, 'check_interpolation_mode': &lt;function check_interpolation_mode&gt;, 'check_iteration_control': &lt;function check_iteration_control&gt;, 'check_log_level': &lt;function check_log_level&gt;, 'check_sectors_files': &lt;function check_sectors_files&gt;, 'check_time_slices': &lt;function check_time_slices&gt;}</em><a class="headerlink" href="#muse.decorators.SETTINGS_CHECKS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dictionary of settings checks.</p>
 </dd></dl>
 
@@ -2739,7 +2755,7 @@ Pass <cite>None</cite> if this behaviour is not required.</p>
 
 <dl class="py function">
 <dt id="muse.decorators.register_settings_check">
-<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">register_settings_check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable[[dict], None]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/decorators.html#register_settings_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.decorators.register_settings_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">register_settings_check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>dict<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/decorators.html#register_settings_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.decorators.register_settings_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to register a function as a settings check.</p>
 <p>Registers a function as a settings check so that it can be applied easily
 when validating the MUSE input settings.</p>
@@ -2750,12 +2766,6 @@ in lower_snake_case, as it is a python function.</p>
 </div>
 <div class="section" id="module-muse.outputs">
 <span id="writing-outputs"></span><h2>Writing Outputs<a class="headerlink" href="#module-muse.outputs" title="Permalink to this headline">¶</a></h2>
-<dl class="py function">
-<dt id="muse.outputs.register_output_quantity">
-<code class="sig-prename descclassname">muse.outputs.</code><code class="sig-name descname">register_output_quantity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>xarray.core.dataset.Dataset<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">, </span>Any<span class="p">]</span><span class="p">, </span>Union<span class="p">[</span>pandas.core.frame.DataFrame<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable<a class="reference internal" href="_modules/muse/outputs/sector.html#register_output_quantity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.outputs.register_output_quantity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Registers a function to compute an output quantity.</p>
-</dd></dl>
-
 <dl class="py function">
 <dt id="muse.outputs.register_output_sink">
 <code class="sig-prename descclassname">muse.outputs.</code><code class="sig-name descname">register_output_sink</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>Union<span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>pandas.core.frame.DataFrame<span class="p">]</span><span class="p">, </span>int<span class="p">, </span>Any<span class="p">]</span><span class="p">, </span>Optional<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable<a class="reference internal" href="_modules/muse/outputs/sinks.html#register_output_sink"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.outputs.register_output_sink" title="Permalink to this definition">¶</a></dt>
@@ -4430,7 +4440,7 @@ no turning to integer.)</p></li>
 
 <dl class="py function">
 <dt id="muse.utilities.reduce_assets">
-<code class="sig-prename descclassname">muse.utilities.</code><code class="sig-name descname">reduce_assets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">assets</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">, </span>Sequence<span class="p">[</span>Union<span class="p">[</span>xarray.core.dataset.Dataset<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">coords</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Iterable<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dim</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'asset'</span></em>, <em class="sig-param"><span class="n">operation</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; xarray.core.dataarray.DataArray<a class="reference internal" href="_modules/muse/utilities.html#reduce_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.utilities.reduce_assets" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.utilities.</code><code class="sig-name descname">reduce_assets</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">assets</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">, </span>Sequence<span class="p">[</span>Union<span class="p">[</span>xarray.core.dataset.Dataset<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">coords</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Iterable<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dim</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'asset'</span></em>, <em class="sig-param"><span class="n">operation</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><a class="reference internal" href="_modules/muse/utilities.html#reduce_assets"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.utilities.reduce_assets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Combine assets along given asset dimension.</p>
 <p>This method simplifies combining assets accross multiple agents, or combining assets
 across a given dimension. By default, it will sum together assets from the same
@@ -4611,6 +4621,9 @@ python.</p>
   <h4>Previous topic</h4>
   <p class="topless"><a href="advanced-guide/further-extending-muse.html"
                         title="previous chapter">Further extending MUSE</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="faq.html"
+                        title="next chapter">FAQs</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -4642,6 +4655,9 @@ python.</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
+          <a href="faq.html" title="FAQs"
+             >next</a> |</li>
+        <li class="right" >
           <a href="advanced-guide/further-extending-muse.html" title="Further extending MUSE"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
@@ -4650,7 +4666,7 @@ python.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

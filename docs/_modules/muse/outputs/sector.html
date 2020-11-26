@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.outputs.sector &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -84,7 +84,7 @@
 <span class="sd">&quot;&quot;&quot;Acceptable Datastructures for outputs parameters&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_output_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.register_output_quantity">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">)</span>
+<div class="viewcode-block" id="register_output_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.register_output_quantity">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_output_quantity</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">OUTPUT_QUANTITY_SIGNATURE</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Registers a function to compute an output quantity.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
@@ -155,7 +155,7 @@
     <span class="k">return</span> <span class="n">save_multiple_outputs</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="o">*</span><span class="n">parameters</span><span class="p">:</span> <span class="n">OUTPUTS_PARAMETERS</span><span class="p">,</span> <span class="n">sector_name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
     <span class="sd">&quot;&quot;&quot;Creates outputs functions for post-mortem analysis.</span>
@@ -180,7 +180,7 @@
     <span class="k">return</span> <span class="n">_factory</span><span class="p">(</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">,</span> <span class="o">*</span><span class="n">parameters</span><span class="p">,</span> <span class="n">sector_name</span><span class="o">=</span><span class="n">sector_name</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="capacity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.capacity">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="capacity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.capacity">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="k">def</span> <span class="nf">capacity</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -192,7 +192,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">capacity</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="market_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.market_quantity">[docs]</a><span class="k">def</span> <span class="nf">market_quantity</span><span class="p">(</span>
+<div class="viewcode-block" id="market_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.market_quantity">[docs]</a><span class="k">def</span> <span class="nf">market_quantity</span><span class="p">(</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">sum_over</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Text</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">drop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Text</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -213,7 +213,7 @@
     <span class="k">return</span> <span class="n">quantity</span></div>
 
 
-<div class="viewcode-block" id="consumption"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.consumption">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="consumption"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.consumption">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="k">def</span> <span class="nf">consumption</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -232,7 +232,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">consumption</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.supply">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.supply">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="k">def</span> <span class="nf">supply</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -251,7 +251,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">supply</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="costs"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.costs">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="costs"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sector.costs">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="k">def</span> <span class="nf">costs</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -312,7 +312,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.sectors.sector &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -285,6 +285,13 @@
             <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="n">result</span><span class="o">.</span><span class="n">region</span><span class="o">.</span><span class="n">values</span><span class="p">])</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">output_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;region&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;dst_region&quot;</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">supply</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">supply</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;region&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">dst_region</span><span class="o">=</span><span class="s2">&quot;region&quot;</span><span class="p">)</span>
+            <span class="n">consumption</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">consumption</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;dst_region&quot;</span><span class="p">)</span>
+            <span class="n">costs</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">costs</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;dst_region&quot;</span><span class="p">)</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span>
+                <span class="nb">dict</span><span class="p">(</span><span class="n">supply</span><span class="o">=</span><span class="n">supply</span><span class="p">,</span> <span class="n">consumption</span><span class="o">=</span><span class="n">consumption</span><span class="p">,</span> <span class="n">costs</span><span class="o">=</span><span class="n">costs</span><span class="p">)</span>
+            <span class="p">)</span>
         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_market_timeslice</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">mca_market</span><span class="o">.</span><span class="n">timeslice</span><span class="p">)</span>
         <span class="n">result</span><span class="p">[</span><span class="s2">&quot;comm_usage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">technologies</span><span class="o">.</span><span class="n">comm_usage</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">commodity</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">commodity</span><span class="p">)</span>
         <span class="n">result</span><span class="o">.</span><span class="n">set_coords</span><span class="p">(</span><span class="s2">&quot;comm_usage&quot;</span><span class="p">)</span>
@@ -331,7 +338,30 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">muse.utilities</span> <span class="kn">import</span> <span class="n">reduce_assets</span>
 
-        <span class="k">return</span> <span class="n">reduce_assets</span><span class="p">([</span><span class="n">u</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">capacity</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">agents</span><span class="p">])</span>
+        <span class="n">traded</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">capacity</span>
+            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">agents</span>
+            <span class="k">if</span> <span class="s2">&quot;dst_region&quot;</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">capacity</span><span class="o">.</span><span class="n">dims</span>
+        <span class="p">]</span>
+        <span class="n">nontraded</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">u</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">capacity</span>
+            <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">agents</span>
+            <span class="k">if</span> <span class="s2">&quot;dst_region&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">u</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">capacity</span><span class="o">.</span><span class="n">dims</span>
+        <span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">traded</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">reduce_assets</span><span class="p">(</span><span class="n">nontraded</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">nontraded</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">reduce_assets</span><span class="p">(</span><span class="n">traded</span><span class="p">)</span>
+        <span class="n">traded_results</span> <span class="o">=</span> <span class="n">reduce_assets</span><span class="p">(</span><span class="n">traded</span><span class="p">)</span>
+        <span class="n">nontraded_results</span> <span class="o">=</span> <span class="n">reduce_assets</span><span class="p">(</span><span class="n">nontraded</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">reduce_assets</span><span class="p">(</span>
+            <span class="p">[</span>
+                <span class="n">traded_results</span><span class="p">,</span>
+                <span class="n">nontraded_results</span>
+                <span class="o">*</span> <span class="p">(</span><span class="n">nontraded_results</span><span class="o">.</span><span class="n">region</span> <span class="o">==</span> <span class="n">traded_results</span><span class="o">.</span><span class="n">dst_region</span><span class="p">),</span>
+            <span class="p">]</span>
+        <span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">agents</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">AbstractAgent</span><span class="p">]:</span>
@@ -402,7 +432,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>pathlib &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -297,7 +297,9 @@
             <span class="k">return</span> <span class="s1">&#39;file:&#39;</span> <span class="o">+</span> <span class="n">urlquote_from_bytes</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">as_posix</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">gethomedir</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
-        <span class="k">if</span> <span class="s1">&#39;USERPROFILE&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">&#39;HOME&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+            <span class="n">userhome</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HOME&#39;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="s1">&#39;USERPROFILE&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
             <span class="n">userhome</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;USERPROFILE&#39;</span><span class="p">]</span>
         <span class="k">elif</span> <span class="s1">&#39;HOMEPATH&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
             <span class="k">try</span><span class="p">:</span>
@@ -459,13 +461,6 @@
     <span class="n">mkdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span>
 
     <span class="n">unlink</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">unlink</span>
-
-    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">os</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">):</span>
-        <span class="n">link_to</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">link</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nd">@staticmethod</span>
-        <span class="k">def</span> <span class="nf">link_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;os.link() not available on this system&quot;</span><span class="p">)</span>
 
     <span class="n">rmdir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span>
 
@@ -971,16 +966,10 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_child</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_child</span><span class="p">((</span><span class="n">key</span><span class="p">,))</span>
-        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">NotImplemented</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_child</span><span class="p">((</span><span class="n">key</span><span class="p">,))</span>
 
     <span class="k">def</span> <span class="fm">__rtruediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_from_parts</span><span class="p">([</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parts</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">NotImplemented</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_from_parts</span><span class="p">([</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parts</span><span class="p">)</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">parent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1354,18 +1343,14 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">lchmod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">missing_ok</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Remove this file or link.</span>
 <span class="sd">        If the path is a directory, use rmdir() instead.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-        <span class="k">except</span> <span class="ne">FileNotFoundError</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">missing_ok</span><span class="p">:</span>
-                <span class="k">raise</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">rmdir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1384,34 +1369,22 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">lstat</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">link_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Create a hard link pointing to a path named target.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">link_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-
     <span class="k">def</span> <span class="nf">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Rename this path to the given path,</span>
-<span class="sd">        and return a new Path instance pointing to the given path.</span>
+<span class="sd">        Rename this path to the given path.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Rename this path to the given path, clobbering the existing</span>
-<span class="sd">        destination if it exists, and return a new Path instance</span>
-<span class="sd">        pointing to the given path.</span>
+<span class="sd">        destination if it exists.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_closed</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_closed</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_accessor</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">symlink_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">target_is_directory</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1434,9 +1407,6 @@
             <span class="k">if</span> <span class="ow">not</span> <span class="n">_ignore_error</span><span class="p">(</span><span class="n">e</span><span class="p">):</span>
                 <span class="k">raise</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
-            <span class="k">return</span> <span class="kc">False</span>
         <span class="k">return</span> <span class="kc">True</span>
 
     <span class="k">def</span> <span class="nf">is_dir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1451,9 +1421,6 @@
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
-            <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1467,9 +1434,6 @@
                 <span class="k">raise</span>
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
             <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_mount</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1504,9 +1468,6 @@
                 <span class="k">raise</span>
             <span class="c1"># Path doesn&#39;t exist</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
-            <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_block_device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1519,9 +1480,6 @@
                 <span class="k">raise</span>
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
             <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_char_device</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1536,9 +1494,6 @@
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
-            <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_fifo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1552,9 +1507,6 @@
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
             <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
-            <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">is_socket</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
@@ -1567,9 +1519,6 @@
                 <span class="k">raise</span>
             <span class="c1"># Path doesn&#39;t exist or is a broken symlink</span>
             <span class="c1"># (see https://bitbucket.org/pitrou/pathlib/issue/12/)</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-            <span class="c1"># Non-encodable path</span>
             <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">def</span> <span class="nf">expanduser</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -1644,7 +1593,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

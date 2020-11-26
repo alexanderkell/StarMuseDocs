@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -72,7 +72,7 @@
 <h2 id="_">_</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#muse.agents.agent.InvestingAgent._compute_new_assets">_compute_new_assets() (muse.agents.agent.InvestingAgent method)</a>
+      <li><a href="api.html#muse.agents.agent.Agent._housekeeping">_housekeeping (muse.agents.agent.Agent attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -96,10 +96,10 @@
         <li><a href="source/muse.sectors.html#muse.sectors.abstract.AbstractSector">(class in muse.sectors.abstract)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#muse.agents.agent.InvestingAgent.add_assets">add_assets() (muse.agents.agent.InvestingAgent method)</a>, <a href="source/muse.agents.html#muse.agents.agent.InvestingAgent.add_assets">[1]</a>
+      <li><a href="source/muse.agents.html#muse.agents.Agent.add_investments">add_investments() (muse.agents.Agent method)</a>
 
       <ul>
-        <li><a href="source/muse.agents.html#muse.agents.InvestingAgent.add_assets">(muse.agents.InvestingAgent method)</a>
+        <li><a href="api.html#muse.agents.agent.Agent.add_investments">(muse.agents.agent.Agent method)</a>, <a href="source/muse.agents.html#muse.agents.agent.Agent.add_investments">[1]</a>
 </li>
       </ul></li>
       <li><a href="source/muse.html#muse.conftest.add_np">add_np() (in module muse.conftest)</a>
@@ -120,14 +120,14 @@
         <li><a href="api.html#muse.sectors.sector.Sector.agents">(muse.sectors.sector.Sector property)</a>, <a href="source/muse.sectors.html#muse.sectors.sector.Sector.agents">[1]</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/muse.agents.html#muse.agents.agents_factory">agents_factory() (in module muse.agents)</a>
 
       <ul>
         <li><a href="api.html#muse.agents.factories.agents_factory">(in module muse.agents.factories)</a>, <a href="source/muse.agents.html#muse.agents.factories.agents_factory">[1]</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/muse.sectors.html#muse.sectors.subsector.aggregate_enduses">aggregate_enduses() (in module muse.sectors.subsector)</a>
 </li>
       <li><a href="source/muse.sectors.html#muse.sectors.subsector.Subsector.aggregate_lp">aggregate_lp() (muse.sectors.subsector.Subsector method)</a>
@@ -146,8 +146,20 @@
 </li>
       <li><a href="api.html#muse.quantities.annual_levelized_cost_of_energy">annual_levelized_cost_of_energy() (in module muse.quantities)</a>, <a href="source/muse.html#muse.quantities.annual_levelized_cost_of_energy">[1]</a>
 </li>
+      <li><a href="source/muse.agents.html#muse.agents.Agent.asset_housekeeping">asset_housekeeping() (muse.agents.Agent method)</a>
+
+      <ul>
+        <li><a href="api.html#muse.agents.agent.Agent.asset_housekeeping">(muse.agents.agent.Agent method)</a>, <a href="source/muse.agents.html#muse.agents.agent.Agent.asset_housekeeping">[1]</a>
+</li>
+      </ul></li>
       <li><a href="api.html#muse.hooks.asset_merge_factory">asset_merge_factory() (in module muse.hooks)</a>, <a href="source/muse.html#muse.hooks.asset_merge_factory">[1]</a>
 </li>
+      <li><a href="source/muse.agents.html#muse.agents.Agent.asset_threshhold">asset_threshhold (muse.agents.Agent attribute)</a>
+
+      <ul>
+        <li><a href="api.html#muse.agents.agent.Agent.asset_threshhold">(muse.agents.agent.Agent attribute)</a>, <a href="source/muse.agents.html#muse.agents.agent.Agent.asset_threshhold">[1]</a>
+</li>
+      </ul></li>
       <li><a href="source/muse.agents.html#muse.agents.AbstractAgent.assets">assets (muse.agents.AbstractAgent attribute)</a>
 
       <ul>
@@ -288,7 +300,7 @@
         <li><a href="api.html#muse.quantities.consumption">(in module muse.quantities)</a>, <a href="source/muse.html#muse.quantities.consumption">[1]</a>
 </li>
       </ul></li>
-      <li><a href="api.html#muse.mca.FindEquilibriumResults.converged">converged (muse.mca.FindEquilibriumResults attribute)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.converged">[1]</a>
+      <li><a href="api.html#muse.mca.FindEquilibriumResults.converged">converged() (muse.mca.FindEquilibriumResults property)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.converged">[1]</a>
 </li>
       <li><a href="source/muse.sectors.html#muse.sectors.Sector.convert_market_timeslice">convert_market_timeslice() (muse.sectors.Sector static method)</a>
 
@@ -421,6 +433,8 @@
       <li><a href="glossary.html#term-Exogenous-quantity"><strong>Exogenous quantity</strong></a>
 </li>
       <li><a href="api.html#muse.carbon_budget.exp_guess_and_weights">exp_guess_and_weights() (in module muse.carbon_budget)</a>, <a href="source/muse.html#muse.carbon_budget.exp_guess_and_weights">[1]</a>
+</li>
+      <li><a href="source/muse.sectors.html#muse.sectors.subsector.Subsector.expand_market_prices">expand_market_prices (muse.sectors.subsector.Subsector attribute)</a>
 </li>
       <li><a href="api.html#muse.regressions.Exponential">Exponential (class in muse.regressions)</a>, <a href="source/muse.html#muse.regressions.Exponential">[1]</a>
 </li>
@@ -565,14 +579,6 @@
 
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="source/muse.agents.html#muse.agents.Agent.housekeeping">housekeeping (muse.agents.Agent attribute)</a>
-
-      <ul>
-        <li><a href="api.html#muse.agents.agent.Agent.housekeeping">(muse.agents.agent.Agent attribute)</a>, <a href="source/muse.agents.html#muse.agents.agent.Agent.housekeeping">[1]</a>
-</li>
-      </ul></li>
-  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#muse.hooks.housekeeping_factory">housekeeping_factory() (in module muse.hooks)</a>, <a href="source/muse.html#muse.hooks.housekeeping_factory">[1]</a>
 </li>
@@ -730,10 +736,10 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="source/muse.sectors.html#muse.sectors.legacy_sector.LegacyMarket.macro_drivers">macro_drivers (muse.sectors.legacy_sector.LegacyMarket attribute)</a>
 </li>
-      <li><a href="api.html#muse.mca.FindEquilibriumResults.market">market (muse.mca.FindEquilibriumResults attribute)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.market">[1]</a>
+      <li><a href="api.html#muse.mca.FindEquilibriumResults.market">market() (muse.mca.FindEquilibriumResults property)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.market">[1]</a>
 
       <ul>
-        <li><a href="api.html#muse.mca.SingleYearIterationResult.market">(muse.mca.SingleYearIterationResult attribute)</a>, <a href="source/muse.html#muse.mca.SingleYearIterationResult.market">[1]</a>
+        <li><a href="api.html#muse.mca.SingleYearIterationResult.market">(muse.mca.SingleYearIterationResult property)</a>, <a href="source/muse.html#muse.mca.SingleYearIterationResult.market">[1]</a>
 </li>
       </ul></li>
       <li><a href="api.html#muse.sectors.legacy_sector.LegacySector.market_iterative">market_iterative (muse.sectors.legacy_sector.LegacySector attribute)</a>, <a href="source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.market_iterative">[1]</a>
@@ -1419,11 +1425,9 @@
 </li>
       <li><a href="api.html#muse.objectives.register_objective">register_objective() (in module muse.objectives)</a>, <a href="source/muse.html#muse.objectives.register_objective">[1]</a>
 </li>
-      <li><a href="api.html#muse.outputs.register_output_quantity">register_output_quantity() (in module muse.outputs)</a>, <a href="source/muse.outputs.html#muse.outputs.register_output_quantity">[1]</a>
+      <li><a href="source/muse.outputs.html#muse.outputs.mca.register_output_quantity">register_output_quantity() (in module muse.outputs.mca)</a>
 
       <ul>
-        <li><a href="source/muse.outputs.html#muse.outputs.mca.register_output_quantity">(in module muse.outputs.mca)</a>
-</li>
         <li><a href="api.html#muse.outputs.sector.register_output_quantity">(in module muse.outputs.sector)</a>, <a href="source/muse.outputs.html#muse.outputs.sector.register_output_quantity">[1]</a>
 </li>
       </ul></li>
@@ -1449,6 +1453,12 @@
 </li>
       <li><a href="api.html#muse.timeslices.represent_hours">represent_hours() (in module muse.timeslices)</a>, <a href="source/muse.html#muse.timeslices.represent_hours">[1]</a>
 </li>
+      <li><a href="source/muse.agents.html#muse.agents.Agent.retirement_profile">retirement_profile() (muse.agents.Agent method)</a>
+
+      <ul>
+        <li><a href="source/muse.agents.html#muse.agents.agent.Agent.retirement_profile">(muse.agents.agent.Agent method)</a>
+</li>
+      </ul></li>
       <li><a href="api.html#muse.decisions.retro_epsilon_constraints">retro_epsilon_constraints() (in module muse.decisions)</a>, <a href="source/muse.html#muse.decisions.retro_epsilon_constraints">[1]</a>
 </li>
       <li><a href="api.html#muse.decisions.retro_lexical_comparison">retro_lexical_comparison() (in module muse.decisions)</a>, <a href="source/muse.html#muse.decisions.retro_lexical_comparison">[1]</a>
@@ -1511,10 +1521,10 @@
         <li><a href="source/muse.sectors.html#muse.sectors.LegacySector.sector_timeslices">(muse.sectors.LegacySector property)</a>
 </li>
       </ul></li>
-      <li><a href="api.html#muse.mca.FindEquilibriumResults.sectors">sectors (muse.mca.FindEquilibriumResults attribute)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.sectors">[1]</a>
+      <li><a href="api.html#muse.mca.FindEquilibriumResults.sectors">sectors() (muse.mca.FindEquilibriumResults property)</a>, <a href="source/muse.html#muse.mca.FindEquilibriumResults.sectors">[1]</a>
 
       <ul>
-        <li><a href="api.html#muse.mca.SingleYearIterationResult.sectors">(muse.mca.SingleYearIterationResult attribute)</a>, <a href="source/muse.html#muse.mca.SingleYearIterationResult.sectors">[1]</a>
+        <li><a href="api.html#muse.mca.SingleYearIterationResult.sectors">(muse.mca.SingleYearIterationResult property)</a>, <a href="source/muse.html#muse.mca.SingleYearIterationResult.sectors">[1]</a>
 </li>
       </ul></li>
       <li><a href="api.html#muse.sectors.legacy_sector.LegacySector.sectors_dir">sectors_dir (muse.sectors.legacy_sector.LegacySector attribute)</a>, <a href="source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.sectors_dir">[1]</a>
@@ -1546,8 +1556,6 @@
       <li><a href="api.html#muse.outputs.sinks.sink_to_file">sink_to_file() (in module muse.outputs.sinks)</a>, <a href="source/muse.outputs.html#muse.outputs.sinks.sink_to_file">[1]</a>
 </li>
       <li><a href="source/muse.readers.html#muse.readers.snake_to_kebab">snake_to_kebab() (in module muse.readers)</a>
-</li>
-      <li><a href="source/muse.sectors.html#muse.sectors.subsector.Subsector.solve">solve() (muse.sectors.subsector.Subsector method)</a>
 </li>
       <li><a href="api.html#muse.sectors.legacy_sector.LegacySector.static_trade">static_trade (muse.sectors.legacy_sector.LegacySector attribute)</a>, <a href="source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.static_trade">[1]</a>
 
@@ -1743,7 +1751,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

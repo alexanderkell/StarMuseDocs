@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.filters &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -452,10 +452,8 @@
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Initialize a search space from existing technologies.&quot;&quot;&quot;</span>
-    <span class="n">not_assets</span> <span class="o">=</span> <span class="p">[</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">demand</span><span class="o">.</span><span class="n">dims</span> <span class="k">if</span> <span class="n">u</span> <span class="o">!=</span> <span class="s2">&quot;asset&quot;</span><span class="p">]</span>
-    <span class="n">condtechs</span> <span class="o">=</span> <span class="n">demand</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">not_assets</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="s2">&quot;tolerance&quot;</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">)</span>
     <span class="n">coords</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="n">demand</span><span class="o">.</span><span class="n">asset</span><span class="p">[</span><span class="n">condtechs</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="n">demand</span><span class="o">.</span><span class="n">asset</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
         <span class="p">(</span><span class="s2">&quot;replacement&quot;</span><span class="p">,</span> <span class="n">technologies</span><span class="o">.</span><span class="n">technology</span><span class="o">.</span><span class="n">values</span><span class="p">),</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span>
@@ -525,7 +523,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>
