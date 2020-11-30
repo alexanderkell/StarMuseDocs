@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1. Adding a new technology &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -326,7 +326,7 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Technodata-Input">
 <h3><span class="section-number">1.2.1. </span>Technodata Input<a class="headerlink" href="#Technodata-Input" title="Permalink to this headline">¶</a></h3>
 <p>Within the default folder there is the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, input folder and technodata folder. To add a technology within the power sector, we must open the <code class="docutils literal notranslate"><span class="pre">technodata</span></code> folder followed by the <code class="docutils literal notranslate"><span class="pre">power</span></code> folder.</p>
-<p>At this point, we must note that we require consistency in input and output units. For example, if capacity is in PJ, the same basis would be needed for the output files <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code>. In addition, across sectors a commodity needs to maintain the same unit. In these examples, we use the unit petajoules (PJ).</p>
+<p>At this point, we must note that we require consistency in input and output units. For example, if capacity is in PJ, the same basis would be needed for the output files <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code>. In addition, across sectors a commodity needs to maintain the same unit. In these examples, we use the unit petajoule (PJ).</p>
 <p>Next, we will edit the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> file, which specifies the commodities consumed by solar photovoltaics.</p>
 <p>The table below shows the original <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> version in normal text, and the added column and row in <strong>bold</strong>.</p>
 <table class="docutils align-default">
@@ -887,7 +887,7 @@ div.rendered_html tbody tr:hover {
 </tbody>
 </table>
 <p>The <code class="docutils literal notranslate"><span class="pre">projections.csv</span></code> file details the initial market prices for the commodities. The market clearing algorithm will update these throughout the simulation, however, an initial estimate is required to start the simulation. As solar energy is free, we will indicate this by adding a final column.</p>
-<p>Please note that the unit row is not read by MUSE, but used as a reference for the user. The units should be consistent across all input files for MUSE; MUSE does not do any unit conversion.</p>
+<p>Please note that the unit row is not read by MUSE, but used as a reference for the user. The units should be consistent across all input files for MUSE; MUSE does not carry out any unit conversion.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 11%" />
@@ -975,7 +975,7 @@ div.rendered_html tbody tr:hover {
 <p>To do this we run the same run command as previously in the anaconda command prompt:</p>
 <p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">muse</span> <span class="pre">settings.toml</span></code></p>
 <p>The output should be similar to the output <a class="reference internal" href="../example-output.html"><span class="doc">here</span></a>. However, expect the simulation to take slightly longer to run. This is due to the additional calculations made.</p>
-<p>If the simulation has run successfully, you should now have a folder in the same location as your settings.toml file called Results. The next step is to visualise the results using the python visualisation package <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> as well as the data analysis library <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
+<p>If the simulation has run successfully, you should now have a folder in the same location as your <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file called <code class="docutils literal notranslate"><span class="pre">Results</span></code>. The next step is to visualise the results using the python visualisation package <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> as well as the data analysis library <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -1085,7 +1085,7 @@ div.rendered_html tbody tr:hover {
 </table>
 </div></div>
 </div>
-<p>We will only visualise the power sector in this example, as this was the only sector we changed. We, therefore, filter for this sector, and then visualise it using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>:</p>
+<p>We will only visualise the power sector in this example, as this was the only sector we changed. Therefore, we filter for this sector, and then visualise it using <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -1394,7 +1394,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Next-steps">
 <h2><span class="section-number">1.3. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
-<p>In the next section we will add a new agent to the simulation.</p>
+<p>In the next section we will add a new agent to the simulation. Note, that we will keep the additional <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> technology, as well as the changing costs in 2040.</p>
 </div>
 </div>
 
@@ -1470,7 +1470,7 @@ div.rendered_html tbody tr:hover {
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
   </body>
 </html>

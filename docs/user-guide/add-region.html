@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3. Adding a region &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -660,7 +660,11 @@ residential sector:
 </div>
 </div>
 <p>Due to the similar natures of the two regions, with the parameters effectively copied and pasted between them, the results are very similar in both <code class="docutils literal notranslate"><span class="pre">R1</span></code> and <code class="docutils literal notranslate"><span class="pre">R2</span></code>. <code class="docutils literal notranslate"><span class="pre">gassupply1</span></code> drops significantly within the gas sector due to the carbon price profile. Which leads to the increasing demand of <code class="docutils literal notranslate"><span class="pre">heatpump</span></code> and falling demand of <code class="docutils literal notranslate"><span class="pre">gasboiler</span></code> in both region <code class="docutils literal notranslate"><span class="pre">R1</span></code> and <code class="docutils literal notranslate"><span class="pre">R2</span></code>. <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> and <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> increase significantly to match this demand of <code class="docutils literal notranslate"><span class="pre">heatpump</span></code>.</p>
-<p>Have a play around with the various costs data in the technodata files for each of the sectors and technologies to see if different scenarios emerge. Although be careful. In some cases, the constraints on certain technologies will make it impossible for the demand to be met. Therefore you may have to relax these constraints.</p>
+<p>Have a play around with the various costs data in the technodata files for each of the sectors and technologies to see if different scenarios emerge. Although be careful. In some cases, the constraints on certain technologies will make it impossible for the demand to be met and it will give you an error such as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">message</span><span class="p">:</span> <span class="s1">&#39;The algorithm terminated successfully and determined that the problem is infeasible.&#39;</span>
+</pre></div>
+</div>
+<p>To avoid this error message you may have to relax the constraints in the technodata files. For instance, <code class="docutils literal notranslate"><span class="pre">MaxCapacityGrowth</span></code>.</p>
 <div class="section" id="Next-steps">
 <h2><span class="section-number">3.1. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
 <p>In the next section we modify the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file to change the timeslicing arrangements as well as project until 2040, instead of 2050, in two benchmark year time steps.</p>
@@ -731,7 +735,7 @@ residential sector:
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
   </body>
 </html>

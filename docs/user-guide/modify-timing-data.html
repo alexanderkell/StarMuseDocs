@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4. Modification of time &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -303,7 +303,7 @@ div.rendered_html tbody tr:hover {
 <span class="n">level_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;hour&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The number of timeslices within this should add up to 8760; the number of hours in a benchmark year. Whilst this is required, MUSE does not double check this.</p>
+<p>The number of timeslices within this should add up to 8760; the number of hours in a benchmark year. Whilst this is required, MUSE does not check and enforce this.</p>
 <p>Next, we modify both Residential Consumption files. Again, we put the text in bold for the modified entries. We must add the demand for the two additional timelsices, which we call timeslice 7 and 8. We make the demand for heat to be 2 for both of the new timeslices.</p>
 <p>Below is the modified <code class="docutils literal notranslate"><span class="pre">Residential2020Consumption.csv</span></code> file:</p>
 <table class="docutils align-default">
@@ -766,7 +766,7 @@ residential sector:
 </tr>
 </tbody>
 </table>
-<p>It must be noted, that this is a toy example. For modelling a real life scenario, data should be sought to ensure there remain realistic constriants.</p>
+<p>It must be noted, that this is a toy example. For modelling a real life scenario, data should be sought to ensure that these constriants remain realistic.</p>
 <p>For the full power sector <code class="docutils literal notranslate"><span class="pre">technodata.csv</span></code> file click <a class="reference external" href="github-power-technodata">here INSERT LINK HERE</a>, and for the full residential sector <code class="docutils literal notranslate"><span class="pre">technodata.csv</span></code> file click <a class="reference external" href="github-residential-technodata">here INSERT LINK HERE</a>.</p>
 <!-- Again, we run the simulation and ensure that the constraints allow for the demand to be met by modifying the `technodata.csv` files. See [here (INSERT LINK HERE)](github-horizon-periods) for the modified full example, including the `technodata.csv` files.
  --><div class="nbinput docutils container">
@@ -905,7 +905,7 @@ residential sector:
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API &#8212; MUSE Documentation 0.8 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -59,21 +59,21 @@
 <dt id="muse.mca.FindEquilibriumResults">
 <em class="property">class </em><code class="sig-prename descclassname">muse.mca.</code><code class="sig-name descname">FindEquilibriumResults</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">converged</span><span class="p">:</span> <span class="n">bool</span></em>, <em class="sig-param"><span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span></em>, <em class="sig-param"><span class="n">sectors</span><span class="p">:</span> <span class="n">List<span class="p">[</span>AbstractSector<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/mca.html#FindEquilibriumResults"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.mca.FindEquilibriumResults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Result of find equilibrium.</p>
-<dl class="py method">
+<dl class="py attribute">
 <dt id="muse.mca.FindEquilibriumResults.converged">
-<em class="property">property </em><code class="sig-name descname">converged</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.converged" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">converged</code><em class="property">: bool</em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.converged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py attribute">
 <dt id="muse.mca.FindEquilibriumResults.market">
-<em class="property">property </em><code class="sig-name descname">market</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.market" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">market</code><em class="property">: Dataset</em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.market" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py attribute">
 <dt id="muse.mca.FindEquilibriumResults.sectors">
-<em class="property">property </em><code class="sig-name descname">sectors</code><a class="headerlink" href="#muse.mca.FindEquilibriumResults.sectors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sectors</code><em class="property">: List<span class="p">[</span>AbstractSector<span class="p">]</span></em><a class="headerlink" href="#muse.mca.FindEquilibriumResults.sectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 2</p>
 </dd></dl>
 
@@ -179,15 +179,15 @@ sectors do, the carbon budget limit is not exceeded.</p>
 <dd><p>Result of iterating over sectors for a year.</p>
 <p>Convenience tuple naming naming the return values from  of
 <a class="reference internal" href="source/muse.html#muse.mca.single_year_iteration" title="muse.mca.single_year_iteration"><code class="xref py py-func docutils literal notranslate"><span class="pre">single_year_iteration()</span></code></a>.</p>
-<dl class="py method">
+<dl class="py attribute">
 <dt id="muse.mca.SingleYearIterationResult.market">
-<em class="property">property </em><code class="sig-name descname">market</code><a class="headerlink" href="#muse.mca.SingleYearIterationResult.market" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">market</code><em class="property">: Dataset</em><a class="headerlink" href="#muse.mca.SingleYearIterationResult.market" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 0</p>
 </dd></dl>
 
-<dl class="py method">
+<dl class="py attribute">
 <dt id="muse.mca.SingleYearIterationResult.sectors">
-<em class="property">property </em><code class="sig-name descname">sectors</code><a class="headerlink" href="#muse.mca.SingleYearIterationResult.sectors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sectors</code><em class="property">: List<span class="p">[</span>AbstractSector<span class="p">]</span></em><a class="headerlink" href="#muse.mca.SingleYearIterationResult.sectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alias for field number 1</p>
 </dd></dl>
 
@@ -517,7 +517,7 @@ which derive from it will be warned if either method is not implemented.</p>
 <h3>Sector<a class="headerlink" href="#sector" title="Permalink to this headline">¶</a></h3>
 <dl class="py class">
 <dt id="muse.sectors.sector.Sector">
-<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.sector.</code><code class="sig-name descname">Sector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">subsectors</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.sectors.html#muse.sectors.subsector.Subsector" title="muse.sectors.subsector.Subsector">muse.sectors.subsector.Subsector</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">timeslices</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pandas.core.indexes.multi.MultiIndex<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interactions</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.AbstractAgent" title="muse.agents.agent.AbstractAgent">muse.agents.agent.AbstractAgent</a><span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supply_prod</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/sector.html#Sector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.sector.Sector" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">muse.sectors.sector.</code><code class="sig-name descname">Sector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">technologies</span><span class="p">:</span> <span class="n">xarray.core.dataset.Dataset</span></em>, <em class="sig-param"><span class="n">subsectors</span><span class="p">:</span> <span class="n">Sequence<span class="p">[</span><a class="reference internal" href="source/muse.sectors.html#muse.sectors.subsector.Subsector" title="muse.sectors.subsector.Subsector">muse.sectors.subsector.Subsector</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">timeslices</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pandas.core.indexes.multi.MultiIndex<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interactions</span><span class="p">:</span> <span class="n">Optional[Callable[[Sequence[muse.agents.agent.AbstractAgent]], None]]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">interpolation</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'linear'</span></em>, <em class="sig-param"><span class="n">outputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">supply_prod</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Callable<span class="p">[</span><span class="p">[</span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">, </span>xarray.core.dataset.Dataset<span class="p">]</span><span class="p">, </span>xarray.core.dataarray.DataArray<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/sectors/sector.html#Sector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.sectors.sector.Sector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for all sectors.</p>
 <dl class="py method">
 <dt id="muse.sectors.sector.Sector.agents">
@@ -947,7 +947,7 @@ interaction. The second registrator registers the interaction proper: it takes a
 arguments and returns nothing. It is expected to modify the agents in-place.</p>
 <dl class="py function">
 <dt id="muse.interactions.factory">
-<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">factory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>Mapping<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable<span class="p">[</span><span class="p">[</span>Sequence<span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.AbstractAgent" title="muse.agents.agent.AbstractAgent">muse.agents.agent.AbstractAgent</a><span class="p">]</span><span class="p">]</span><span class="p">, </span>None<span class="p">]</span><a class="reference internal" href="_modules/muse/interactions.html#factory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.factory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">factory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inputs</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>Mapping<span class="p">, </span>Tuple<span class="p">[</span>str<span class="p">, </span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Callable[[Sequence[muse.agents.agent.AbstractAgent]], None]<a class="reference internal" href="_modules/muse/interactions.html#factory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.factory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an interaction functor.</p>
 </dd></dl>
 
@@ -959,7 +959,7 @@ arguments and returns nothing. It is expected to modify the agents in-place.</p>
 
 <dl class="py function">
 <dt id="muse.interactions.register_agent_interaction">
-<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">register_agent_interaction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">, </span><a class="reference internal" href="source/muse.agents.html#muse.agents.agent.Agent" title="muse.agents.agent.Agent">muse.agents.agent.Agent</a><span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/interactions.html#register_agent_interaction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.register_agent_interaction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.interactions.</code><code class="sig-name descname">register_agent_interaction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable[[muse.agents.agent.Agent, muse.agents.agent.Agent], None]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/interactions.html#register_agent_interaction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.interactions.register_agent_interaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to register an agent to agent(s) interaction function.</p>
 <p>An agent interaction function takes at least two agents and makes them
 interact in some way.</p>
@@ -2742,7 +2742,7 @@ Pass <cite>None</cite> if this behaviour is not required.</p>
 
 <span class="target" id="module-muse.decorators"></span><dl class="py data">
 <dt id="muse.decorators.SETTINGS_CHECKS">
-<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">SETTINGS_CHECKS</code><em class="property">: Mapping<span class="p">[</span>str<span class="p">, </span>Callable<span class="p">[</span><span class="p">[</span>dict<span class="p">]</span><span class="p">, </span>None<span class="p">]</span><span class="p">]</span></em><em class="property"> = {'check_budget_parameters': &lt;function check_budget_parameters&gt;, 'check_foresight': &lt;function check_foresight&gt;, 'check_global_data_files': &lt;function check_global_data_files&gt;, 'check_interpolation_mode': &lt;function check_interpolation_mode&gt;, 'check_iteration_control': &lt;function check_iteration_control&gt;, 'check_log_level': &lt;function check_log_level&gt;, 'check_sectors_files': &lt;function check_sectors_files&gt;, 'check_time_slices': &lt;function check_time_slices&gt;}</em><a class="headerlink" href="#muse.decorators.SETTINGS_CHECKS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">SETTINGS_CHECKS</code><em class="property">: Mapping[str, Callable[[dict], None]]</em><em class="property"> = {'check_budget_parameters': &lt;function check_budget_parameters&gt;, 'check_foresight': &lt;function check_foresight&gt;, 'check_global_data_files': &lt;function check_global_data_files&gt;, 'check_interpolation_mode': &lt;function check_interpolation_mode&gt;, 'check_iteration_control': &lt;function check_iteration_control&gt;, 'check_log_level': &lt;function check_log_level&gt;, 'check_sectors_files': &lt;function check_sectors_files&gt;, 'check_time_slices': &lt;function check_time_slices&gt;}</em><a class="headerlink" href="#muse.decorators.SETTINGS_CHECKS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dictionary of settings checks.</p>
 </dd></dl>
 
@@ -2755,7 +2755,7 @@ Pass <cite>None</cite> if this behaviour is not required.</p>
 
 <dl class="py function">
 <dt id="muse.decorators.register_settings_check">
-<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">register_settings_check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable<span class="p">[</span><span class="p">[</span>dict<span class="p">]</span><span class="p">, </span>None<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/decorators.html#register_settings_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.decorators.register_settings_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">muse.decorators.</code><code class="sig-name descname">register_settings_check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span><span class="p">:</span> <span class="n">Callable[[dict], None]</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/muse/decorators.html#register_settings_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#muse.decorators.register_settings_check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decorator to register a function as a settings check.</p>
 <p>Registers a function as a settings check so that it can be applied easily
 when validating the MUSE input settings.</p>
@@ -4666,7 +4666,7 @@ python.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
     </div>
   </body>
 </html>
