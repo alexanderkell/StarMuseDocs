@@ -44,6 +44,20 @@ interpolation_mode
    interpolation when reading the initial market. One of
    `linear`, `nearest`, `zero`, `slinear`, `quadratic`, `cubic`. Defaults to `linear`.
 
+   * `linear` interpolates using a `linear function <https://en.wikipedia.org/wiki/Linear_interpolation>`_.
+
+   * `nearest` uses `nearest-neighbour interpolation <https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation>`_. That is, the closest known data point is used as the prediction for the data point to interpolate.
+
+   * `zero` assumes that the data point to interpolate is zero.
+
+   * `slinear` uses a spline of order 1. This is a similar method to `linear` interpolation.
+
+   * `quadratic` uses a quadratic equation for interpolation. This should be used if you expect your data to take a quadratic form.
+
+   * `cubic` interpolation is similar to `quadratic` interpolation, but uses a cubic function for interpolation.
+
+
+
 log_level:
    verbosity of the output.
 

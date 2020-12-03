@@ -30,9 +30,6 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="add-agent.html" title="2. Adding an agent"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -54,21 +51,35 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -169,7 +180,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -235,6 +246,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -323,8 +335,9 @@ div.rendered_html tbody tr:hover {
 <p>In this section, we will add solar photovoltaics to the default model seen in the <a class="reference internal" href="../running-muse-example.html"><span class="doc">example page</span></a>. To achieve this, we must modify some of the input files shown in the above section. These files can be found in the <code class="docutils literal notranslate"><span class="pre">StarMuse</span></code> folder at the following location:</p>
 <p><code class="docutils literal notranslate"><span class="pre">{muse_install_location}/src/muse/data/example/default</span></code></p>
 <p>Change <code class="docutils literal notranslate"><span class="pre">{muse_install_location}</span></code> to the location where you installed MUSE using your file browser. You can modify the files in your favourite spreadsheet editor or text editor such as VSCODE, Excel, Numbers, Notepad or TextEdit.</p>
+</div>
 <div class="section" id="Technodata-Input">
-<h3><span class="section-number">1.2.1. </span>Technodata Input<a class="headerlink" href="#Technodata-Input" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.3. </span>Technodata Input<a class="headerlink" href="#Technodata-Input" title="Permalink to this headline">¶</a></h2>
 <p>Within the default folder there is the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, input folder and technodata folder. To add a technology within the power sector, we must open the <code class="docutils literal notranslate"><span class="pre">technodata</span></code> folder followed by the <code class="docutils literal notranslate"><span class="pre">power</span></code> folder.</p>
 <p>At this point, we must note that we require consistency in input and output units. For example, if capacity is in PJ, the same basis would be needed for the output files <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code>. In addition, across sectors a commodity needs to maintain the same unit. In these examples, we use the unit petajoule (PJ).</p>
 <p>Next, we will edit the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> file, which specifies the commodities consumed by solar photovoltaics.</p>
@@ -498,7 +511,7 @@ div.rendered_html tbody tr:hover {
 </tbody>
 </table>
 <p>Similar to the the <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code>, we create a new row, and add in the solar commodity. We must ensure that we call our new commodity and technologies the same as the previous file for MUSE to successfully run. ie <code class="docutils literal notranslate"><span class="pre">solar</span></code> and <code class="docutils literal notranslate"><span class="pre">solarPV</span></code>.</p>
-<p>Please not that we use flat forward extension of the values when only one value is defined. For example, in the <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> we only provide data for the year 2020. Therefore for the benchmark years, 2025, 2030, 2035… we assume the data remains unchanged from 2020.</p>
+<p>Please note that we use flat forward extension of the values when only one value is defined. For example, in the <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> we only provide data for the year 2020. Therefore for the benchmark years, 2025, 2030, 2035… we assume the data remains unchanged from 2020.</p>
 <p>The next file to modify is the <code class="docutils literal notranslate"><span class="pre">ExistingCapacity.csv</span></code> file. This file details the existing capacity of each technology, per benchmark year. For this example, we will set the existing capacity to be 0. Please note, that the model interpolates between years linearly.</p>
 <table class="docutils align-default">
 <colgroup>
@@ -656,7 +669,7 @@ div.rendered_html tbody tr:hover {
 </table>
 </div>
 <div class="section" id="Global-inputs">
-<h3><span class="section-number">1.2.2. </span>Global inputs<a class="headerlink" href="#Global-inputs" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.4. </span>Global inputs<a class="headerlink" href="#Global-inputs" title="Permalink to this headline">¶</a></h2>
 <p>Next, navigate to the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder, found at <code class="docutils literal notranslate"><span class="pre">{muse_installation_location}src/muse/data/example/default/input</span></code>.</p>
 <p>We must now edit each of the files found here to add the new solar commodity. Due to space constraints we will not display all of the entries contained in the input files. The edited files can be viewed <a class="reference external" href="here">here INSERT LINK HERE</a> however.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">BaseYearExport.csv</span></code> file defines the exports in the base year. For our example we add a column to indicate that there is no export for solar. However, it is important that a column exists for our new commodity.</p>
@@ -970,7 +983,7 @@ div.rendered_html tbody tr:hover {
 </table>
 </div>
 <div class="section" id="Running-our-customised-simulation">
-<h3><span class="section-number">1.2.3. </span>Running our customised simulation<a class="headerlink" href="#Running-our-customised-simulation" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.5. </span>Running our customised simulation<a class="headerlink" href="#Running-our-customised-simulation" title="Permalink to this headline">¶</a></h2>
 <p>Now we are able to run our simulation, with the new solar power technology.</p>
 <p>To do this we run the same run command as previously in the anaconda command prompt:</p>
 <p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">muse</span> <span class="pre">settings.toml</span></code></p>
@@ -1116,7 +1129,7 @@ div.rendered_html tbody tr:hover {
 <p>The difference in uptake of <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> compared to <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> is due to the fact that <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> has a lower <code class="docutils literal notranslate"><span class="pre">cap_par</span></code> cost of 30, compared to the <code class="docutils literal notranslate"><span class="pre">windturbine</span></code>. Meaning that <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> outcompetes both <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> and <code class="docutils literal notranslate"><span class="pre">gasCCGT</span></code> in the electricity market.</p>
 </div>
 <div class="section" id="Change-Solar-Price">
-<h3><span class="section-number">1.2.4. </span>Change Solar Price<a class="headerlink" href="#Change-Solar-Price" title="Permalink to this headline">¶</a></h3>
+<h2><span class="section-number">1.6. </span>Change Solar Price<a class="headerlink" href="#Change-Solar-Price" title="Permalink to this headline">¶</a></h2>
 <p>Now, we will observe what happens if we increase the price of solar to be more expensive than wind in the year 2020, but then reduce the price of solar in 2040. By doing this, we should observe an increase in wind in the first few benchmark years of the simulation, followed by a transition to solar as we approach the year 2040.</p>
 <p>To achieve this we have to modify the <code class="docutils literal notranslate"><span class="pre">Technodata.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">CommIn.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">CommOut.csv</span></code> files.</p>
 <p>First, we will amend the <code class="docutils literal notranslate"><span class="pre">Technodata.csv</span></code> file as follows:</p>
@@ -1391,9 +1404,8 @@ div.rendered_html tbody tr:hover {
 <p>From the results, we can see that <code class="docutils literal notranslate"><span class="pre">windturbine</span></code> increases rapidly between 2025 and 2040. However, between the years 2030 and 2050 <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> increases. This is because of the changing cost of <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> during these years. A crossover can be seen around the year 2038.</p>
 <p>For the full example with the completed input files see <a class="reference external" href="dead-link">here INSERT LINK HERE</a></p>
 </div>
-</div>
 <div class="section" id="Next-steps">
-<h2><span class="section-number">1.3. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.7. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
 <p>In the next section we will add a new agent to the simulation. Note, that we will keep the additional <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> technology, as well as the changing costs in 2040.</p>
 </div>
 </div>
@@ -1409,14 +1421,12 @@ div.rendered_html tbody tr:hover {
   <ul>
 <li><a class="reference internal" href="#">1. Adding a new technology</a><ul>
 <li><a class="reference internal" href="#Input-Files">1.1. Input Files</a></li>
-<li><a class="reference internal" href="#Addition-of-solar-PV">1.2. Addition of solar PV</a><ul>
-<li><a class="reference internal" href="#Technodata-Input">1.2.1. Technodata Input</a></li>
-<li><a class="reference internal" href="#Global-inputs">1.2.2. Global inputs</a></li>
-<li><a class="reference internal" href="#Running-our-customised-simulation">1.2.3. Running our customised simulation</a></li>
-<li><a class="reference internal" href="#Change-Solar-Price">1.2.4. Change Solar Price</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Next-steps">1.3. Next steps</a></li>
+<li><a class="reference internal" href="#Addition-of-solar-PV">1.2. Addition of solar PV</a></li>
+<li><a class="reference internal" href="#Technodata-Input">1.3. Technodata Input</a></li>
+<li><a class="reference internal" href="#Global-inputs">1.4. Global inputs</a></li>
+<li><a class="reference internal" href="#Running-our-customised-simulation">1.5. Running our customised simulation</a></li>
+<li><a class="reference internal" href="#Change-Solar-Price">1.6. Change Solar Price</a></li>
+<li><a class="reference internal" href="#Next-steps">1.7. Next steps</a></li>
 </ul>
 </li>
 </ul>
@@ -1454,9 +1464,6 @@ div.rendered_html tbody tr:hover {
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="add-agent.html" title="2. Adding an agent"
              >next</a> |</li>

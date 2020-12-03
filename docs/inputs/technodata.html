@@ -30,9 +30,6 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
           <a href="timeslices.html" title="Time-slices"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -123,10 +120,7 @@ such as:</p>
 <p>Capref is decided by the modeller before filling the input data files.</p>
 <p>This allows the model to take into account economies of scale. ie. As <cite>Capacity</cite> increases, the price of the technology decreases.</p>
 </dd>
-</dl>
-<p>fix_par, fix_exp</p>
-<blockquote>
-<div><p>are used in the fixed cost estimation. Fixed costs are calculated as:</p>
+<dt>fix_par, fix_exp</dt><dd><p>are used in the fixed cost estimation. Fixed costs are calculated as:</p>
 <div class="math notranslate nohighlight">
 \[\text{FOM} = \text{fix\_par} * (\text{Capacity})^\text{fix\_exp}\]</div>
 <p>where the parameter fix_par is estimated at a selected reference size (i.e. Capref),
@@ -136,8 +130,7 @@ such as:</p>
    \frac{\text{FOMref}}{\text{Capref}}
 \right)^{\text{fix\_exp}}\]</div>
 <p>Capref is decided by the modeller before filling the input data files.</p>
-</div></blockquote>
-<dl>
+</dd>
 <dt>var_par, var_exp</dt><dd><p>are used in the variable costs estimation. These variable costs are capacity
 dependent Variable costs are calculated as:</p>
 <div class="math notranslate nohighlight">
@@ -159,7 +152,7 @@ technology, region and year.</p>
 </dd>
 <dt>TechnicalLife</dt><dd><p>represents the number of years that a technology operates before it is decommissioned.</p>
 </dd>
-<dt>UtilizationFactor</dt><dd><p>is the number of operating hours of a process over the maximum number of hours in a year.</p>
+<dt>UtilizationFactor</dt><dd><p>represents the maximum actual output of the technology in a year, divided by the theoretical maximum output if the technology were operating at full capacity for the whole year.</p>
 </dd>
 <dt>ScalingSize</dt><dd><p>represents the minimum size of a technology to be installed.</p>
 </dd>
@@ -224,9 +217,6 @@ the values between the provided periods and assume a constant value afterwards.<
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
         <li class="right" >
           <a href="timeslices.html" title="Time-slices"
              >next</a> |</li>
