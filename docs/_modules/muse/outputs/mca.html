@@ -94,7 +94,7 @@
 <span class="sd">&quot;&quot;&quot;Acceptable Datastructures for outputs parameters&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_output_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.register_output_quantity">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">)</span>
+<div class="viewcode-block" id="register_output_quantity"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.register_output_quantity">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_output_quantity</span><span class="p">(</span>
     <span class="n">function</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">OUTPUT_QUANTITY_SIGNATURE</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
@@ -113,7 +113,7 @@
     <span class="k">return</span> <span class="n">decorated</span></div>
 
 
-<div class="viewcode-block" id="round_values"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.round_values">[docs]</a><span class="k">def</span> <span class="nf">round_values</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OUTPUT_QUANTITY_SIGNATURE</span><span class="p">:</span>
+<div class="viewcode-block" id="round_values"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.round_values">[docs]</a><span class="k">def</span> <span class="nf">round_values</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OUTPUT_QUANTITY_SIGNATURE</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Rounds the outputs to given number of decimals and drops columns with zeros.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
 
@@ -131,7 +131,7 @@
     <span class="k">return</span> <span class="n">rounded</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="o">*</span><span class="n">parameters</span><span class="p">:</span> <span class="n">OUTPUTS_PARAMETERS</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">]],</span> <span class="n">List</span><span class="p">[</span><span class="n">Path</span><span class="p">]]:</span>
     <span class="sd">&quot;&quot;&quot;Creates outputs functions for post-mortem analysis.</span>
@@ -188,7 +188,7 @@
     <span class="k">return</span> <span class="n">_factory</span><span class="p">(</span><span class="n">OUTPUT_QUANTITIES</span><span class="p">,</span> <span class="o">*</span><span class="n">parameters</span><span class="p">,</span> <span class="n">sector_name</span><span class="o">=</span><span class="s2">&quot;MCA&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="consumption"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.consumption">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="consumption"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.consumption">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="nd">@round_values</span>
 <span class="k">def</span> <span class="nf">consumption</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
@@ -199,7 +199,7 @@
     <span class="k">return</span> <span class="n">market_quantity</span><span class="p">(</span><span class="n">market</span><span class="o">.</span><span class="n">consumption</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.supply">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.supply">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="nd">@round_values</span>
 <span class="k">def</span> <span class="nf">supply</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Current supply.&quot;&quot;&quot;</span>
@@ -208,7 +208,7 @@
     <span class="k">return</span> <span class="n">market_quantity</span><span class="p">(</span><span class="n">market</span><span class="o">.</span><span class="n">supply</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="prices"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.prices">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="prices"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.prices">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="nd">@round_values</span>
 <span class="k">def</span> <span class="nf">prices</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -230,7 +230,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="capacity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.capacity">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="capacity"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.capacity">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="nd">@round_values</span>
 <span class="k">def</span> <span class="nf">capacity</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
@@ -239,7 +239,7 @@
     <span class="k">return</span> <span class="n">_aggregate_sectors</span><span class="p">(</span><span class="n">sectors</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">sector_capacity</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="alcoe"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.alcoe">[docs]</a><span class="nd">@register_output_quantity</span><span class="p">(</span>
+<div class="viewcode-block" id="alcoe"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.alcoe">[docs]</a><span class="nd">@register_output_quantity</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ALCOE&quot;</span><span class="p">,</span> <span class="s2">&quot;alcoe&quot;</span><span class="p">,</span> <span class="s2">&quot;Annualized Levelized Cost of Energy&quot;</span><span class="p">]</span>
 <span class="p">)</span>
 <span class="nd">@round_values</span>
@@ -248,14 +248,14 @@
     <span class="k">return</span> <span class="n">_aggregate_sectors</span><span class="p">(</span><span class="n">sectors</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">sector_alcoe</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="llcoe"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.llcoe">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="llcoe"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.llcoe">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="nd">@round_values</span>
 <span class="k">def</span> <span class="nf">llcoe</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Current lifetime levelised cost across all sectors.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">_aggregate_sectors</span><span class="p">(</span><span class="n">sectors</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">op</span><span class="o">=</span><span class="n">sector_llcoe</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="sector_alcoe"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.sector_alcoe">[docs]</a><span class="k">def</span> <span class="nf">sector_alcoe</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="viewcode-block" id="sector_alcoe"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.sector_alcoe">[docs]</a><span class="k">def</span> <span class="nf">sector_alcoe</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Sector annual levelised cost (ALCOE) with agent annotations.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">concat</span>
     <span class="kn">from</span> <span class="nn">muse.quantities</span> <span class="kn">import</span> <span class="n">annual_levelized_cost_of_energy</span>
@@ -289,7 +289,7 @@
     <span class="k">return</span> <span class="n">alcoe</span></div>
 
 
-<div class="viewcode-block" id="sector_llcoe"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.sector_llcoe">[docs]</a><span class="k">def</span> <span class="nf">sector_llcoe</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="viewcode-block" id="sector_llcoe"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.sector_llcoe">[docs]</a><span class="k">def</span> <span class="nf">sector_llcoe</span><span class="p">(</span><span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Sector lifetime levelised cost with agent annotations.&quot;&quot;&quot;</span>
 
     <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">concat</span>
@@ -323,7 +323,7 @@
     <span class="k">return</span> <span class="n">lcoe</span></div>
 
 
-<div class="viewcode-block" id="sector_capacity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.sector_capacity">[docs]</a><span class="k">def</span> <span class="nf">sector_capacity</span><span class="p">(</span><span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<div class="viewcode-block" id="sector_capacity"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.sector_capacity">[docs]</a><span class="k">def</span> <span class="nf">sector_capacity</span><span class="p">(</span><span class="n">sector</span><span class="p">:</span> <span class="n">AbstractSector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Sector capacity with agent annotations.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">attrgetter</span>
     <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">concat</span>
@@ -358,7 +358,7 @@
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">alldata</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="AggregateResources"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.AggregateResources">[docs]</a><span class="nd">@register_output_quantity</span>
+<div class="viewcode-block" id="AggregateResources"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.AggregateResources">[docs]</a><span class="nd">@register_output_quantity</span>
 <span class="k">class</span> <span class="nc">AggregateResources</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Aggregates a set of commodities.&quot;&quot;&quot;</span>
 
@@ -395,7 +395,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span></div>
 
 
-<div class="viewcode-block" id="FiniteResources"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.mca.FiniteResources">[docs]</a><span class="nd">@register_output_quantity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;finite_resources&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="FiniteResources"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.mca.FiniteResources">[docs]</a><span class="nd">@register_output_quantity</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;finite_resources&quot;</span><span class="p">])</span>
 <span class="k">class</span> <span class="nc">FiniteResources</span><span class="p">(</span><span class="n">AggregateResources</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Aggregates a set of commodities.&quot;&quot;&quot;</span>
 

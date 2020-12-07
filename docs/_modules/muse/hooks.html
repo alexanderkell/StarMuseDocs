@@ -67,7 +67,7 @@
 <span class="sd">&quot;&quot;&quot; Tranform at the end of each step, including new assets. &quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="housekeeping_factory"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.housekeeping_factory">[docs]</a><span class="k">def</span> <span class="nf">housekeeping_factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;noop&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<div class="viewcode-block" id="housekeeping_factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.housekeeping_factory">[docs]</a><span class="k">def</span> <span class="nf">housekeeping_factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;noop&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns a function for performing initial housekeeping.</span>
 
 <span class="sd">    For instance, remove technologies with no capacity now or in the future.</span>
@@ -91,7 +91,7 @@
     <span class="k">return</span> <span class="n">initial_assets_transform</span></div>
 
 
-<div class="viewcode-block" id="asset_merge_factory"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.asset_merge_factory">[docs]</a><span class="k">def</span> <span class="nf">asset_merge_factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;new&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<div class="viewcode-block" id="asset_merge_factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.asset_merge_factory">[docs]</a><span class="k">def</span> <span class="nf">asset_merge_factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;new&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns a function for merging new investments into assets.</span>
 
 <span class="sd">    Available merging functions should be registered with</span>
@@ -118,7 +118,7 @@
     <span class="k">return</span> <span class="n">final_assets_transform</span></div>
 
 
-<div class="viewcode-block" id="register_initial_asset_transform"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.register_initial_asset_transform">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INITIAL_ASSET_TRANSFORM</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_initial_asset_transform"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.register_initial_asset_transform">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INITIAL_ASSET_TRANSFORM</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_initial_asset_transform</span><span class="p">(</span>
     <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Agent</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">],</span> <span class="n">Dataset</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
@@ -132,7 +132,7 @@
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="register_final_asset_transform"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.register_final_asset_transform">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">FINAL_ASSET_TRANSFORM</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_final_asset_transform"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.register_final_asset_transform">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">FINAL_ASSET_TRANSFORM</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_final_asset_transform</span><span class="p">(</span>
     <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">],</span> <span class="n">Dataset</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
@@ -160,13 +160,13 @@
     <span class="k">return</span> <span class="n">decorated</span></div>
 
 
-<div class="viewcode-block" id="noop"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.noop">[docs]</a><span class="nd">@register_initial_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="noop"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.noop">[docs]</a><span class="nd">@register_initial_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">noop</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return assets as they are.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">assets</span></div>
 
 
-<div class="viewcode-block" id="clean"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.clean">[docs]</a><span class="nd">@register_initial_asset_transform</span>
+<div class="viewcode-block" id="clean"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.clean">[docs]</a><span class="nd">@register_initial_asset_transform</span>
 <span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Removes empty assets.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">muse.utilities</span> <span class="kn">import</span> <span class="n">clean_assets</span>
@@ -175,19 +175,19 @@
     <span class="k">return</span> <span class="n">clean_assets</span><span class="p">(</span><span class="n">assets</span><span class="p">,</span> <span class="n">years</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="new_assets_only"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.new_assets_only">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;new&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="new_assets_only"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.new_assets_only">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;new&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">new_assets_only</span><span class="p">(</span><span class="n">old_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">new_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns newly invested assets and ignores old assets.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">new_assets</span></div>
 
 
-<div class="viewcode-block" id="old_assets_only"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.old_assets_only">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;old&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="old_assets_only"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.old_assets_only">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;old&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">old_assets_only</span><span class="p">(</span><span class="n">old_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">new_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns old assets and ignores newly invested assets.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">old_assets</span></div>
 
 
-<div class="viewcode-block" id="merge_assets"><a class="viewcode-back" href="../../source/muse.html#muse.hooks.merge_assets">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;merge&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="merge_assets"><a class="viewcode-back" href="../../source/muse 2.html#muse.hooks.merge_assets">[docs]</a><span class="nd">@register_final_asset_transform</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;merge&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">merge_assets</span><span class="p">(</span><span class="n">old_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">new_assets</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Adds new assets to old along asset dimension.</span>
 

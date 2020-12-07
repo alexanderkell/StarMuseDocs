@@ -52,7 +52,7 @@
 <span class="kn">from</span> <span class="nn">muse.defaults</span> <span class="kn">import</span> <span class="n">DEFAULT_SECTORS_DIRECTORY</span>
 
 
-<div class="viewcode-block" id="create_standard_agent"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.create_standard_agent">[docs]</a><span class="k">def</span> <span class="nf">create_standard_agent</span><span class="p">(</span>
+<div class="viewcode-block" id="create_standard_agent"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.create_standard_agent">[docs]</a><span class="k">def</span> <span class="nf">create_standard_agent</span><span class="p">(</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -85,7 +85,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="create_retrofit_agent"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.create_retrofit_agent">[docs]</a><span class="k">def</span> <span class="nf">create_retrofit_agent</span><span class="p">(</span>
+<div class="viewcode-block" id="create_retrofit_agent"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.create_retrofit_agent">[docs]</a><span class="k">def</span> <span class="nf">create_retrofit_agent</span><span class="p">(</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">share</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span>
@@ -127,7 +127,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="create_newcapa_agent"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.create_newcapa_agent">[docs]</a><span class="k">def</span> <span class="nf">create_newcapa_agent</span><span class="p">(</span>
+<div class="viewcode-block" id="create_newcapa_agent"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.create_newcapa_agent">[docs]</a><span class="k">def</span> <span class="nf">create_newcapa_agent</span><span class="p">(</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
     <span class="n">region</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span>
@@ -175,7 +175,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="create_agent"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.create_agent">[docs]</a><span class="k">def</span> <span class="nf">create_agent</span><span class="p">(</span><span class="n">agent_type</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Agent</span><span class="p">:</span>
+<div class="viewcode-block" id="create_agent"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.create_agent">[docs]</a><span class="k">def</span> <span class="nf">create_agent</span><span class="p">(</span><span class="n">agent_type</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Agent</span><span class="p">:</span>
     <span class="n">method</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;retrofit&quot;</span><span class="p">:</span> <span class="n">create_retrofit_agent</span><span class="p">,</span>
         <span class="s2">&quot;newcapa&quot;</span><span class="p">:</span> <span class="n">create_newcapa_agent</span><span class="p">,</span>
@@ -186,7 +186,7 @@
     <span class="k">return</span> <span class="n">method</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">existing_capacity_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="n">Text</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">agent_parameters_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="n">Text</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">technodata_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Path</span><span class="p">,</span> <span class="n">Text</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -265,7 +265,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="agents_factory"><a class="viewcode-back" href="../../../source/muse.agents.html#muse.agents.factories.agents_factory">[docs]</a><span class="k">def</span> <span class="nf">agents_factory</span><span class="p">(</span>
+<div class="viewcode-block" id="agents_factory"><a class="viewcode-back" href="../../../source/muse.agents 2.html#muse.agents.factories.agents_factory">[docs]</a><span class="k">def</span> <span class="nf">agents_factory</span><span class="p">(</span>
     <span class="n">params_or_path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">List</span><span class="p">],</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>

@@ -118,7 +118,7 @@
 <span class="sd">&quot;&quot;&quot;Dictionary of investment functions.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_investment"><a class="viewcode-back" href="../../source/muse.html#muse.investments.register_investment">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INVESTMENTS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_investment"><a class="viewcode-back" href="../../source/muse 2.html#muse.investments.register_investment">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INVESTMENTS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_investment</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">INVESTMENT_SIGNATURE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">INVESTMENT_SIGNATURE</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as an investment.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
@@ -202,7 +202,7 @@
     <span class="k">return</span> <span class="n">compute_investment</span>
 
 
-<div class="viewcode-block" id="cliff_retirement_profile"><a class="viewcode-back" href="../../source/muse.html#muse.investments.cliff_retirement_profile">[docs]</a><span class="k">def</span> <span class="nf">cliff_retirement_profile</span><span class="p">(</span>
+<div class="viewcode-block" id="cliff_retirement_profile"><a class="viewcode-back" href="../../source/muse 2.html#muse.investments.cliff_retirement_profile">[docs]</a><span class="k">def</span> <span class="nf">cliff_retirement_profile</span><span class="p">(</span>
     <span class="n">technical_life</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">current_year</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
     <span class="n">protected</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -268,7 +268,7 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="adhoc_match_demand"><a class="viewcode-back" href="../../source/muse.html#muse.investments.adhoc_match_demand">[docs]</a><span class="nd">@register_investment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;adhoc&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="adhoc_match_demand"><a class="viewcode-back" href="../../source/muse 2.html#muse.investments.adhoc_match_demand">[docs]</a><span class="nd">@register_investment</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;adhoc&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">adhoc_match_demand</span><span class="p">(</span>
     <span class="n">costs</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>

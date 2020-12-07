@@ -145,7 +145,7 @@
     <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]]]</span> <span class="o">=</span> <span class="s2">&quot;LCOE&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates a function computing multiple objectives.</span>
@@ -188,7 +188,7 @@
     <span class="k">return</span> <span class="n">objectives</span></div>
 
 
-<div class="viewcode-block" id="register_objective"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.register_objective">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OBJECTIVES</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_objective"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.register_objective">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OBJECTIVES</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_objective</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">OBJECTIVE_SIGNATURE</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a objective.</span>
 
@@ -233,7 +233,7 @@
     <span class="k">return</span> <span class="n">decorated_objective</span></div>
 
 
-<div class="viewcode-block" id="comfort"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.comfort">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="comfort"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.comfort">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">comfort</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -248,7 +248,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="efficiency"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.efficiency">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="efficiency"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.efficiency">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">efficiency</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -265,7 +265,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="capacity_to_service_demand"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.capacity_to_service_demand">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;capacity&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="capacity_to_service_demand"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.capacity_to_service_demand">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;capacity&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">capacity_to_service_demand</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -303,7 +303,7 @@
     <span class="k">return</span> <span class="n">max_demand</span> <span class="o">/</span> <span class="n">params</span><span class="o">.</span><span class="n">utilization_factor</span> <span class="o">/</span> <span class="n">max_hours</span></div>
 
 
-<div class="viewcode-block" id="fixed_costs"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.fixed_costs">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="fixed_costs"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.fixed_costs">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">fixed_costs</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -337,7 +337,7 @@
     <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">fix_par</span> <span class="o">*</span> <span class="p">(</span><span class="n">cfd</span> <span class="o">**</span> <span class="n">data</span><span class="o">.</span><span class="n">fix_exp</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="capital_costs"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.capital_costs">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="capital_costs"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.capital_costs">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">capital_costs</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -361,7 +361,7 @@
     <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">cap_par</span> <span class="o">*</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">scaling_size</span> <span class="o">**</span> <span class="n">data</span><span class="o">.</span><span class="n">cap_exp</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="emission_cost"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.emission_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emissions&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="emission_cost"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.emission_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emissions&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">emission_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -458,7 +458,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="s2">&quot;commodity&quot;</span><span class="p">,</span> <span class="s2">&quot;timeslice&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">technology</span><span class="o">=</span><span class="s2">&quot;replacement&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="fuel_consumption_cost"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.fuel_consumption_cost">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="fuel_consumption_cost"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.fuel_consumption_cost">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">fuel_consumption_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -489,7 +489,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="lifetime_levelized_cost_of_energy"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.lifetime_levelized_cost_of_energy">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LCOE&quot;</span><span class="p">,</span> <span class="s2">&quot;LLCOE&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="lifetime_levelized_cost_of_energy"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.lifetime_levelized_cost_of_energy">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LCOE&quot;</span><span class="p">,</span> <span class="s2">&quot;LLCOE&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">lifetime_levelized_cost_of_energy</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -554,7 +554,7 @@
     <span class="k">return</span> <span class="n">tech</span><span class="o">.</span><span class="n">interest_rate</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">tech</span><span class="o">.</span><span class="n">interest_rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">nyears</span><span class="p">))</span>
 
 
-<div class="viewcode-block" id="net_present_value"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.net_present_value">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NPV&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="net_present_value"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.net_present_value">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NPV&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">net_present_value</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -736,7 +736,7 @@
     <span class="k">return</span> <span class="n">mask</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest_rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">years</span>
 
 
-<div class="viewcode-block" id="equivalent_annual_cost"><a class="viewcode-back" href="../../source/muse.html#muse.objectives.equivalent_annual_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;EAC&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="equivalent_annual_cost"><a class="viewcode-back" href="../../source/muse 2.html#muse.objectives.equivalent_annual_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;EAC&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">equivalent_annual_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>

@@ -96,7 +96,7 @@
     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="read_technodictionary"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_technodictionary">[docs]</a><span class="k">def</span> <span class="nf">read_technodictionary</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="read_technodictionary"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_technodictionary">[docs]</a><span class="k">def</span> <span class="nf">read_technodictionary</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads and formats technodata into a dataset.</span>
 
 <span class="sd">    There are three axes: technologies, regions, and year.</span>
@@ -151,7 +151,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_io_technodata"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_io_technodata">[docs]</a><span class="k">def</span> <span class="nf">read_io_technodata</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="read_io_technodata"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_io_technodata">[docs]</a><span class="k">def</span> <span class="nf">read_io_technodata</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads process inputs or ouputs.</span>
 
 <span class="sd">    There are four axes: (technology, region, year, commodity)</span>
@@ -204,7 +204,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_initial_assets"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_initial_assets">[docs]</a><span class="k">def</span> <span class="nf">read_initial_assets</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
+<div class="viewcode-block" id="read_initial_assets"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_initial_assets">[docs]</a><span class="k">def</span> <span class="nf">read_initial_assets</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads and formats data about initial capacity into a dataframe.&quot;&quot;&quot;</span>
 
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">float_precision</span><span class="o">=</span><span class="s2">&quot;high&quot;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -239,7 +239,7 @@
     <span class="k">return</span> <span class="n">result</span>
 
 
-<div class="viewcode-block" id="read_technologies"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_technologies">[docs]</a><span class="k">def</span> <span class="nf">read_technologies</span><span class="p">(</span>
+<div class="viewcode-block" id="read_technologies"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_technologies">[docs]</a><span class="k">def</span> <span class="nf">read_technologies</span><span class="p">(</span>
     <span class="n">technodata_path_or_sector</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">comm_out_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">comm_in_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -348,7 +348,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_csv_timeslices"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_csv_timeslices">[docs]</a><span class="k">def</span> <span class="nf">read_csv_timeslices</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
+<div class="viewcode-block" id="read_csv_timeslices"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_csv_timeslices">[docs]</a><span class="k">def</span> <span class="nf">read_csv_timeslices</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads timeslice information from input.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
 
@@ -377,7 +377,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">timeslice</span></div>
 
 
-<div class="viewcode-block" id="read_global_commodities"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_global_commodities">[docs]</a><span class="k">def</span> <span class="nf">read_global_commodities</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="read_global_commodities"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_global_commodities">[docs]</a><span class="k">def</span> <span class="nf">read_global_commodities</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads commodities information from input.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
     <span class="kn">from</span> <span class="nn">muse.readers</span> <span class="kn">import</span> <span class="n">camel_to_snake</span>
@@ -407,7 +407,7 @@
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="read_timeslice_shares"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_timeslice_shares">[docs]</a><span class="k">def</span> <span class="nf">read_timeslice_shares</span><span class="p">(</span>
+<div class="viewcode-block" id="read_timeslice_shares"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_timeslice_shares">[docs]</a><span class="k">def</span> <span class="nf">read_timeslice_shares</span><span class="p">(</span>
     <span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">]</span> <span class="o">=</span> <span class="n">DEFAULT_SECTORS_DIRECTORY</span><span class="p">,</span>
     <span class="n">sector</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Text</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">timeslice</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Timeslices</span><span class="si">{sector}</span><span class="s2">.csv&quot;</span><span class="p">,</span>
@@ -458,7 +458,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">shares</span></div>
 
 
-<div class="viewcode-block" id="read_csv_agent_parameters"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_csv_agent_parameters">[docs]</a><span class="k">def</span> <span class="nf">read_csv_agent_parameters</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+<div class="viewcode-block" id="read_csv_agent_parameters"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_csv_agent_parameters">[docs]</a><span class="k">def</span> <span class="nf">read_csv_agent_parameters</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads standard MUSE agent-declaration csv-files.</span>
 
 <span class="sd">    Returns a list of dictionaries, where each dictionary can be used to instantiate an</span>
@@ -516,7 +516,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_macro_drivers"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_macro_drivers">[docs]</a><span class="k">def</span> <span class="nf">read_macro_drivers</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="read_macro_drivers"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_macro_drivers">[docs]</a><span class="k">def</span> <span class="nf">read_macro_drivers</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads a standard MUSE csv file for macro drivers.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
 
@@ -540,7 +540,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_initial_market"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_initial_market">[docs]</a><span class="k">def</span> <span class="nf">read_initial_market</span><span class="p">(</span>
+<div class="viewcode-block" id="read_initial_market"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_initial_market">[docs]</a><span class="k">def</span> <span class="nf">read_initial_market</span><span class="p">(</span>
     <span class="n">projections</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Text</span><span class="p">],</span>
     <span class="n">base_year_import</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">base_year_export</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -603,7 +603,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_attribute_table"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_attribute_table">[docs]</a><span class="k">def</span> <span class="nf">read_attribute_table</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
+<div class="viewcode-block" id="read_attribute_table"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_attribute_table">[docs]</a><span class="k">def</span> <span class="nf">read_attribute_table</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Read a standard MUSE csv file for price projections.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
     <span class="kn">from</span> <span class="nn">muse.readers</span> <span class="kn">import</span> <span class="n">camel_to_snake</span>
@@ -639,7 +639,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="read_regression_parameters"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_regression_parameters">[docs]</a><span class="k">def</span> <span class="nf">read_regression_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="read_regression_parameters"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_regression_parameters">[docs]</a><span class="k">def</span> <span class="nf">read_regression_parameters</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Reads the regression parameters from a standard MUSE csv file.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
     <span class="kn">from</span> <span class="nn">muse.readers</span> <span class="kn">import</span> <span class="n">camel_to_snake</span>
@@ -695,7 +695,7 @@
     <span class="k">return</span> <span class="n">coeffs</span></div>
 
 
-<div class="viewcode-block" id="read_csv_outputs"><a class="viewcode-back" href="../../../source/muse.readers.html#muse.readers.csv.read_csv_outputs">[docs]</a><span class="k">def</span> <span class="nf">read_csv_outputs</span><span class="p">(</span>
+<div class="viewcode-block" id="read_csv_outputs"><a class="viewcode-back" href="../../../source/muse.readers 2.html#muse.readers.csv.read_csv_outputs">[docs]</a><span class="k">def</span> <span class="nf">read_csv_outputs</span><span class="p">(</span>
     <span class="n">paths</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">]]],</span>
     <span class="n">columns</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;commodity&quot;</span><span class="p">,</span>
     <span class="n">indices</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;RegionName&quot;</span><span class="p">,</span> <span class="s2">&quot;ProcessName&quot;</span><span class="p">,</span> <span class="s2">&quot;Timeslice&quot;</span><span class="p">),</span>

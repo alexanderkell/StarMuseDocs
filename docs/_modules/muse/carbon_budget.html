@@ -68,19 +68,19 @@
 <span class="sd">&quot;&quot;&quot;Dictionary of carbon budget fitters.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_carbon_budget_fitter"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.register_carbon_budget_fitter">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CARBON_BUDGET_FITTERS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_carbon_budget_fitter"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.register_carbon_budget_fitter">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CARBON_BUDGET_FITTERS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_carbon_budget_fitter</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">CARBON_BUDGET_FITTERS_SIGNATURE</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a carbon budget function.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="register_carbon_budget_method"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.register_carbon_budget_method">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CARBON_BUDGET_METHODS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_carbon_budget_method"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.register_carbon_budget_method">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CARBON_BUDGET_METHODS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_carbon_budget_method</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">CARBON_BUDGET_METHODS_SIGNATURE</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a carbon budget function.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="update_carbon_budget"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.update_carbon_budget">[docs]</a><span class="k">def</span> <span class="nf">update_carbon_budget</span><span class="p">(</span>
+<div class="viewcode-block" id="update_carbon_budget"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.update_carbon_budget">[docs]</a><span class="k">def</span> <span class="nf">update_carbon_budget</span><span class="p">(</span>
     <span class="n">carbon_budget</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span>
     <span class="n">emissions</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
     <span class="n">year_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
@@ -102,7 +102,7 @@
     <span class="k">return</span> <span class="n">new_future_budget</span></div>
 
 
-<div class="viewcode-block" id="fitting"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.fitting">[docs]</a><span class="nd">@register_carbon_budget_method</span>
+<div class="viewcode-block" id="fitting"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.fitting">[docs]</a><span class="nd">@register_carbon_budget_method</span>
 <span class="k">def</span> <span class="nf">fitting</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">sectors</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
@@ -164,7 +164,7 @@
     <span class="k">return</span> <span class="n">new_price</span></div>
 
 
-<div class="viewcode-block" id="refine_new_price"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.refine_new_price">[docs]</a><span class="k">def</span> <span class="nf">refine_new_price</span><span class="p">(</span>
+<div class="viewcode-block" id="refine_new_price"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.refine_new_price">[docs]</a><span class="k">def</span> <span class="nf">refine_new_price</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">historic_price</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">carbon_budget</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -213,15 +213,15 @@
     <span class="k">return</span> <span class="n">price</span></div>
 
 
-<div class="viewcode-block" id="linear_fun"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.linear_fun">[docs]</a><span class="k">def</span> <span class="nf">linear_fun</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="viewcode-block" id="linear_fun"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.linear_fun">[docs]</a><span class="k">def</span> <span class="nf">linear_fun</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">x</span></div>
 
 
-<div class="viewcode-block" id="exponential_fun"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.exponential_fun">[docs]</a><span class="k">def</span> <span class="nf">exponential_fun</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<div class="viewcode-block" id="exponential_fun"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.exponential_fun">[docs]</a><span class="k">def</span> <span class="nf">exponential_fun</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span></div>
 
 
-<div class="viewcode-block" id="create_sample"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.create_sample">[docs]</a><span class="k">def</span> <span class="nf">create_sample</span><span class="p">(</span><span class="n">carbon_price</span><span class="p">,</span> <span class="n">current_emissions</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<div class="viewcode-block" id="create_sample"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.create_sample">[docs]</a><span class="k">def</span> <span class="nf">create_sample</span><span class="p">(</span><span class="n">carbon_price</span><span class="p">,</span> <span class="n">current_emissions</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Calculates a sample of carbon prices to estimate the adjusted carbon</span>
 <span class="sd">    price.</span>
 
@@ -246,7 +246,7 @@
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="linear"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.linear">[docs]</a><span class="nd">@register_carbon_budget_fitter</span>
+<div class="viewcode-block" id="linear"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.linear">[docs]</a><span class="nd">@register_carbon_budget_fitter</span>
 <span class="k">def</span> <span class="nf">linear</span><span class="p">(</span><span class="n">prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">emissions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">budget</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Fits the prices-emissions pairs to a linear function.</span>
 
@@ -271,7 +271,7 @@
     <span class="k">return</span> <span class="n">new_price</span></div>
 
 
-<div class="viewcode-block" id="linear_guess_and_weights"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.linear_guess_and_weights">[docs]</a><span class="k">def</span> <span class="nf">linear_guess_and_weights</span><span class="p">(</span>
+<div class="viewcode-block" id="linear_guess_and_weights"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.linear_guess_and_weights">[docs]</a><span class="k">def</span> <span class="nf">linear_guess_and_weights</span><span class="p">(</span>
     <span class="n">prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">emissions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">budget</span><span class="p">:</span> <span class="nb">int</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Estimates initial values for the linear fitting algorithm and the</span>
@@ -303,7 +303,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">weights</span></div>
 
 
-<div class="viewcode-block" id="exponential"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.exponential">[docs]</a><span class="nd">@register_carbon_budget_fitter</span>
+<div class="viewcode-block" id="exponential"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.exponential">[docs]</a><span class="nd">@register_carbon_budget_fitter</span>
 <span class="k">def</span> <span class="nf">exponential</span><span class="p">(</span><span class="n">prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">emissions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">budget</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Fits the prices-emissions pairs to an exponential function.</span>
 
@@ -328,7 +328,7 @@
     <span class="k">return</span> <span class="n">new_price</span></div>
 
 
-<div class="viewcode-block" id="exp_guess_and_weights"><a class="viewcode-back" href="../../source/muse.html#muse.carbon_budget.exp_guess_and_weights">[docs]</a><span class="k">def</span> <span class="nf">exp_guess_and_weights</span><span class="p">(</span>
+<div class="viewcode-block" id="exp_guess_and_weights"><a class="viewcode-back" href="../../source/muse 2.html#muse.carbon_budget.exp_guess_and_weights">[docs]</a><span class="k">def</span> <span class="nf">exp_guess_and_weights</span><span class="p">(</span>
     <span class="n">prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">emissions</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">budget</span><span class="p">:</span> <span class="nb">int</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Estimates initial values for the exponential fitting algorithm and the</span>

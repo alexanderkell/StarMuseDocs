@@ -115,7 +115,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_decision"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.register_decision">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">DECISIONS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_decision"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.register_decision">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">DECISIONS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_decision</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">DECISION_SIGNATURE</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a decision.</span>
 
@@ -143,7 +143,7 @@
     <span class="k">return</span> <span class="n">coeff</span> <span class="k">if</span> <span class="n">domin</span> <span class="k">else</span> <span class="o">-</span><span class="n">coeff</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mean&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;mean&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates a decision method based on the input settings.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
 
@@ -160,7 +160,7 @@
     <span class="k">return</span> <span class="n">decision</span></div>
 
 
-<div class="viewcode-block" id="mean"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.mean">[docs]</a><span class="nd">@register_decision</span>
+<div class="viewcode-block" id="mean"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.mean">[docs]</a><span class="nd">@register_decision</span>
 <span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Mean over objectives.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">xarray</span> <span class="kn">import</span> <span class="n">concat</span>
@@ -169,7 +169,7 @@
     <span class="k">return</span> <span class="n">allobjectives</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">allobjectives</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span> <span class="o">-</span> <span class="p">{</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;replacement&quot;</span><span class="p">})</span></div>
 
 
-<div class="viewcode-block" id="weighted_sum"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.weighted_sum">[docs]</a><span class="nd">@register_decision</span>
+<div class="viewcode-block" id="weighted_sum"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.weighted_sum">[docs]</a><span class="nd">@register_decision</span>
 <span class="k">def</span> <span class="nf">weighted_sum</span><span class="p">(</span><span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Weighted sum over normalized objectives.</span>
 
@@ -214,7 +214,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="lexical_comparison"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.lexical_comparison">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lexo&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="lexical_comparison"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.lexical_comparison">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;lexo&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">lexical_comparison</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PARAMS_TYPE</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
@@ -242,7 +242,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="retro_lexical_comparison"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.retro_lexical_comparison">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;retro_lexo&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="retro_lexical_comparison"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.retro_lexical_comparison">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;retro_lexo&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">retro_lexical_comparison</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PARAMS_TYPE</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
@@ -286,7 +286,7 @@
     <span class="k">return</span> <span class="n">objectives</span><span class="p">[</span><span class="n">optimize</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">constraints</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="epsilon_constraints"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.epsilon_constraints">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;epsilon&quot;</span><span class="p">,</span> <span class="s2">&quot;epsilon_con&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="epsilon_constraints"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.epsilon_constraints">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;epsilon&quot;</span><span class="p">,</span> <span class="s2">&quot;epsilon_con&quot;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">epsilon_constraints</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">PARAMS_TYPE</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]],</span>
@@ -325,7 +325,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="retro_epsilon_constraints"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.retro_epsilon_constraints">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;retro_epsilon&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="retro_epsilon_constraints"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.retro_epsilon_constraints">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;retro_epsilon&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">retro_epsilon_constraints</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">PARAMS_TYPE</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
@@ -349,7 +349,7 @@
     <span class="k">return</span> <span class="n">epsilon_constraints</span><span class="p">(</span><span class="n">objectives</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="single_objective"><a class="viewcode-back" href="../../source/muse.html#muse.decisions.single_objective">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;single&quot;</span><span class="p">,</span> <span class="s2">&quot;singleObj&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="single_objective"><a class="viewcode-back" href="../../source/muse 2.html#muse.decisions.single_objective">[docs]</a><span class="nd">@register_decision</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;single&quot;</span><span class="p">,</span> <span class="s2">&quot;singleObj&quot;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">single_objective</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
     <span class="n">parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">bool</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">float</span><span class="p">],</span> <span class="n">PARAMS_TYPE</span><span class="p">],</span>

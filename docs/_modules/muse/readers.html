@@ -54,7 +54,7 @@
 <span class="sd">&quot;&quot;&quot;Default settings path.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="camel_to_snake"><a class="viewcode-back" href="../../source/muse.readers.html#muse.readers.camel_to_snake">[docs]</a><span class="k">def</span> <span class="nf">camel_to_snake</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
+<div class="viewcode-block" id="camel_to_snake"><a class="viewcode-back" href="../../source/muse.readers 2.html#muse.readers.camel_to_snake">[docs]</a><span class="k">def</span> <span class="nf">camel_to_snake</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Transforms CamelCase to snake_case.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="n">sub</span>
 
@@ -67,11 +67,11 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="kebab_to_camel"><a class="viewcode-back" href="../../source/muse.readers.html#muse.readers.kebab_to_camel">[docs]</a><span class="k">def</span> <span class="nf">kebab_to_camel</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<div class="viewcode-block" id="kebab_to_camel"><a class="viewcode-back" href="../../source/muse.readers 2.html#muse.readers.kebab_to_camel">[docs]</a><span class="k">def</span> <span class="nf">kebab_to_camel</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="snake_to_kebab"><a class="viewcode-back" href="../../source/muse.readers.html#muse.readers.snake_to_kebab">[docs]</a><span class="k">def</span> <span class="nf">snake_to_kebab</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
+<div class="viewcode-block" id="snake_to_kebab"><a class="viewcode-back" href="../../source/muse.readers 2.html#muse.readers.snake_to_kebab">[docs]</a><span class="k">def</span> <span class="nf">snake_to_kebab</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Text</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="n">sub</span>
 
     <span class="n">result</span> <span class="o">=</span> <span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;((?&lt;=[a-z])[A-Z]|(?&lt;!\A)[A-Z](?=[a-z]))&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;-\1&quot;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>

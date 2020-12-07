@@ -19,9 +19,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Customising MUSE Tutorials" href="user-guide/index.html" />
-    <link rel="prev" title="MUSE Overview" href="overview.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -32,12 +30,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="user-guide/index.html" title="Customising MUSE Tutorials"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="overview.html" title="MUSE Overview"
-             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Key MUSE Components</a></li> 
       </ul>
@@ -77,7 +69,7 @@
 <li><p>Utilization factor</p></li>
 <li><p>Interest rate</p></li>
 </ul>
-<p>Technologies, and their parameters are defined in the Technodata.csv file. For a full description of the input files, please refer to the <a class="reference internal" href="inputs/technodata.html#inputs-technodata"><span class="std std-ref">Techno-data</span></a> file.</p>
+<p>Technologies, and their parameters are defined in the Technodata.csv file. For a full description of the input files, please refer to the <a class="reference internal" href="inputs/technodata 2.html#inputs-technodata"><span class="std std-ref">Techno-data</span></a> file.</p>
 </div>
 <div class="section" id="sectors">
 <h2>Sectors<a class="headerlink" href="#sectors" title="Permalink to this headline">¶</a></h2>
@@ -99,8 +91,8 @@
 <div class="section" id="market-clearing-algorithm">
 <h2>Market Clearing Algorithm<a class="headerlink" href="#market-clearing-algorithm" title="Permalink to this headline">¶</a></h2>
 <p>The market clearing algorithm (MCA) is the central component between the different supplies and demands of the energy system in question. The MCA iterates between the demand and supply of each of these sectors. Its role is to govern the endogenous price of commodities over the course of a simulation.</p>
-<p>For a hypothetical example, the price of electricity is set to $70/MWh. However, at this price, the majority of residential agents prefer to heat their homes using gas. As a result of this, residential agents consume less electricity and more gas. This reduction in demand reduces the electricity price to $50/MWh. However, at this lower electricity price, some agents decide to invest in electric heating as opposed to gas. Eventually, the price converges on $60/MWh, where supply and demand for both electricity and gas are equal.</p>
-<p>This is the principle of the MCA. It finds an equilibrium by iterating through each of the different sectors until an overall equilibrium is reached for each of the commodities. It is possible to run the MCA in a carbon budget mode, as well as exogenous mode. The carbon budget mode ensures that an endogenous carbon price is calculated to limit the emissions of the energy system to be below than a user-defined value. Whereas, the exogenous mode allows the carbon price to be set by the user.</p>
+<p>For a hypothetical example, the price of electricity is set in a first iteration to $70/MWh. However, at this price, the majority of residential agents prefer to heat their homes using gas. As a result of this, residential agents consume less electricity and more gas. This reduction in demand reduces the electricity price to $50/MWh in the second iteration. However, at this lower electricity price, some agents decide to invest in electric heating as opposed to gas. Eventually, the price converges on $60/MWh, where supply and demand for both electricity and gas are equal.</p>
+<p>This is the principle of the MCA. It finds an equilibrium by iterating through each of the different sectors until an overall equilibrium is reached for each of the commodities. It is possible to run the MCA in a carbon budget mode, as well as exogenous mode. The carbon budget mode ensures that an endogenous carbon price is calculated to limit the emissions of the energy system to be below a user-defined value. Whereas, the exogenous mode allows the carbon price to be set by the user.</p>
 </div>
 </div>
 
@@ -123,16 +115,10 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="overview.html"
-                        title="previous chapter">MUSE Overview</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="user-guide/index.html"
-                        title="next chapter">Customising MUSE Tutorials</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/muse-components.rst.txt"
+      <li><a href="_sources/muse-components 2.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -159,12 +145,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="user-guide/index.html" title="Customising MUSE Tutorials"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="overview.html" title="MUSE Overview"
-             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Key MUSE Components</a></li> 
       </ul>

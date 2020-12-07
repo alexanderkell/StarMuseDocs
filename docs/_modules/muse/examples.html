@@ -86,7 +86,7 @@
     <span class="k">return</span> <span class="n">Path</span><span class="p">(</span><span class="n">muse</span><span class="o">.</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;example&quot;</span>
 
 
-<div class="viewcode-block" id="model"><a class="viewcode-back" href="../../source/muse.html#muse.examples.model">[docs]</a><span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MCA</span><span class="p">:</span>
+<div class="viewcode-block" id="model"><a class="viewcode-back" href="../../source/muse 2.html#muse.examples.model">[docs]</a><span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MCA</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Fully constructs a given example model.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">TemporaryDirectory</span>
     <span class="kn">from</span> <span class="nn">muse.readers.toml</span> <span class="kn">import</span> <span class="n">read_settings</span>
@@ -149,7 +149,7 @@
     <span class="k">return</span> <span class="n">path</span>
 
 
-<div class="viewcode-block" id="technodata"><a class="viewcode-back" href="../../source/muse.html#muse.examples.technodata">[docs]</a><span class="k">def</span> <span class="nf">technodata</span><span class="p">(</span><span class="n">sector</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="technodata"><a class="viewcode-back" href="../../source/muse 2.html#muse.examples.technodata">[docs]</a><span class="k">def</span> <span class="nf">technodata</span><span class="p">(</span><span class="n">sector</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="n">model</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Technology for a sector of a given example model.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">tempfile</span> <span class="kn">import</span> <span class="n">TemporaryDirectory</span>
     <span class="kn">from</span> <span class="nn">muse.readers.toml</span> <span class="kn">import</span> <span class="n">read_technodata</span><span class="p">,</span> <span class="n">read_settings</span>

@@ -62,7 +62,7 @@
 <span class="kn">from</span> <span class="nn">muse.sectors.register</span> <span class="kn">import</span> <span class="n">register_sector</span>
 
 
-<div class="viewcode-block" id="LegacyMarket"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacyMarket">[docs]</a><span class="nd">@dataclass</span>
+<div class="viewcode-block" id="LegacyMarket"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacyMarket">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">LegacyMarket</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">BaseYear</span><span class="p">:</span> <span class="nb">int</span>
     <span class="n">EndYear</span><span class="p">:</span> <span class="nb">int</span>
@@ -78,9 +78,9 @@
     <span class="n">interpolation_mode</span><span class="p">:</span> <span class="n">Text</span></div>
 
 
-<div class="viewcode-block" id="LegacySector"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector">[docs]</a><span class="nd">@register_sector</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;legacy&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="LegacySector"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector">[docs]</a><span class="nd">@register_sector</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;legacy&quot;</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">LegacySector</span><span class="p">(</span><span class="n">AbstractSector</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
-<div class="viewcode-block" id="LegacySector.factory"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.factory">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="LegacySector.factory"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.factory">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;LegacySector&quot;</span><span class="p">:</span>
         <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
         <span class="kn">from</span> <span class="nn">muse_legacy.sectors</span> <span class="kn">import</span> <span class="n">SECTORS</span>
@@ -241,7 +241,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">calibrated</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="sd">&quot;&quot;&quot;Flag if the sector has gone through the calibration process.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="LegacySector.next"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="LegacySector.next"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Adapter between the old and the new.&quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">muse_legacy.sectors.sector</span> <span class="kn">import</span> <span class="n">Demand</span>
 
@@ -286,7 +286,7 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="LegacySector.runprocessmodule"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.runprocessmodule">[docs]</a>    <span class="k">def</span> <span class="nf">runprocessmodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consumption</span><span class="p">,</span> <span class="n">supplycost</span><span class="p">,</span> <span class="n">supply</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<div class="viewcode-block" id="LegacySector.runprocessmodule"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.runprocessmodule">[docs]</a>    <span class="k">def</span> <span class="nf">runprocessmodule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consumption</span><span class="p">,</span> <span class="n">supplycost</span><span class="p">,</span> <span class="n">supply</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
 
         <span class="n">params</span> <span class="o">=</span> <span class="p">[</span>
             <span class="n">consumption</span><span class="p">,</span>
@@ -317,7 +317,7 @@
 
         <span class="k">return</span> <span class="n">result</span></div>
 
-<div class="viewcode-block" id="LegacySector.load_timeslices_and_aggregation"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.load_timeslices_and_aggregation">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="LegacySector.load_timeslices_and_aggregation"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.load_timeslices_and_aggregation">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">load_timeslices_and_aggregation</span><span class="p">(</span><span class="n">timeslices</span><span class="p">,</span> <span class="n">sectors</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Loads all sector timeslices and finds the finest one.&quot;&quot;&quot;</span>
         <span class="n">timeslices</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;prices&quot;</span><span class="p">:</span> <span class="n">timeslices</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;prices timeslices&quot;</span><span class="p">)}</span>
@@ -387,7 +387,7 @@
             <span class="n">regions</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">regions</span><span class="p">,</span>
         <span class="p">)</span>
 
-<div class="viewcode-block" id="LegacySector.outputs"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.outputs">[docs]</a>    <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span>
+<div class="viewcode-block" id="LegacySector.outputs"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.outputs">[docs]</a>    <span class="k">def</span> <span class="nf">outputs</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">consumption</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">supply</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Converts MUSE numpy outputs to xarray.&quot;&quot;&quot;</span>
@@ -399,7 +399,7 @@
         <span class="n">p</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_to</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sector_timeslices</span><span class="p">,</span> <span class="n">prices_ts</span><span class="p">,</span> <span class="n">QuantityType</span><span class="o">.</span><span class="n">INTENSIVE</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">Dataset</span><span class="p">({</span><span class="s2">&quot;consumption&quot;</span><span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="s2">&quot;supply&quot;</span><span class="p">:</span> <span class="n">s</span><span class="p">,</span> <span class="s2">&quot;costs&quot;</span><span class="p">:</span> <span class="n">p</span><span class="p">})</span></div>
 
-<div class="viewcode-block" id="LegacySector.inputs"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.LegacySector.inputs">[docs]</a>    <span class="k">def</span> <span class="nf">inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consumption</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">supply</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">):</span>
+<div class="viewcode-block" id="LegacySector.inputs"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.LegacySector.inputs">[docs]</a>    <span class="k">def</span> <span class="nf">inputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">consumption</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">prices</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">supply</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Converts xarray to MUSE numpy input arrays.&quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">muse_legacy.sectors.sector</span> <span class="kn">import</span> <span class="n">Sector</span> <span class="k">as</span> <span class="n">OriginalSector</span>
 
@@ -413,7 +413,7 @@
         <span class="k">return</span> <span class="n">MarketVars</span><span class="p">(</span><span class="n">consumption</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">supply</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">supplycost</span><span class="o">=</span><span class="n">p</span><span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="ndarray_to_xarray"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.ndarray_to_xarray">[docs]</a><span class="k">def</span> <span class="nf">ndarray_to_xarray</span><span class="p">(</span>
+<div class="viewcode-block" id="ndarray_to_xarray"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.ndarray_to_xarray">[docs]</a><span class="k">def</span> <span class="nf">ndarray_to_xarray</span><span class="p">(</span>
     <span class="n">years</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
     <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="p">,</span>
@@ -439,7 +439,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">commodity</span><span class="o">=</span><span class="n">sector_commodities</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="o">*</span><span class="n">dims</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="xarray_to_ndarray"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.xarray_to_ndarray">[docs]</a><span class="k">def</span> <span class="nf">xarray_to_ndarray</span><span class="p">(</span>
+<div class="viewcode-block" id="xarray_to_ndarray"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.xarray_to_ndarray">[docs]</a><span class="k">def</span> <span class="nf">xarray_to_ndarray</span><span class="p">(</span>
     <span class="n">years</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
     <span class="n">xdata</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
     <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="p">,</span>
@@ -465,7 +465,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">values</span></div>
 
 
-<div class="viewcode-block" id="commodities_idx"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.legacy_sector.commodities_idx">[docs]</a><span class="k">def</span> <span class="nf">commodities_idx</span><span class="p">(</span><span class="n">sector</span><span class="p">,</span> <span class="n">comm</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">:</span>
+<div class="viewcode-block" id="commodities_idx"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.legacy_sector.commodities_idx">[docs]</a><span class="k">def</span> <span class="nf">commodities_idx</span><span class="p">(</span><span class="n">sector</span><span class="p">,</span> <span class="n">comm</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Sequence</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Gets the indeces of the commodities involved in the processes of the</span>
 <span class="sd">    sector.</span>
 

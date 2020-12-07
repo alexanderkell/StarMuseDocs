@@ -19,9 +19,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="MUSE Overview" href="overview.html" />
-    <link rel="prev" title="Installation" href="installing-muse.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -32,12 +30,6 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="overview.html" title="MUSE Overview"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="installing-muse.html" title="Installation"
-             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Running your first example</a></li> 
       </ul>
@@ -53,21 +45,35 @@
 /* CSS for nbsphinx extension */
 
 /* remove conflicting styling from Sphinx themes */
-div.nbinput.container,
-div.nbinput.container div.prompt,
-div.nbinput.container div.input_area,
-div.nbinput.container div[class*=highlight],
-div.nbinput.container div[class*=highlight] pre,
-div.nboutput.container,
-div.nboutput.container div.prompt,
-div.nboutput.container div.output_area,
-div.nboutput.container div[class*=highlight],
-div.nboutput.container div[class*=highlight] pre {
-    background: none;
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
     border: none;
-    padding: 0 0;
+    padding: 0;
     margin: 0;
     box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
 }
 
 /* avoid gaps between output lines */
@@ -168,7 +174,7 @@ div.nboutput.container div.output_area {
 div.nbinput.container div.input_area {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f5f5f5;
+    /*background: #f5f5f5;*/
 }
 
 /* override MathJax center alignment in output cells */
@@ -234,6 +240,7 @@ div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
     padding: 5px;
+    margin: 0;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -452,7 +459,7 @@ gas sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_1.png" src="_images/running-muse-example_11_1.png" />
+<img alt="_images/running-muse-example_3_11_1.png" src="_images/running-muse-example_3_11_1.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
@@ -467,7 +474,7 @@ power sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_3.png" src="_images/running-muse-example_11_3.png" />
+<img alt="_images/running-muse-example_3_11_3.png" src="_images/running-muse-example_3_11_3.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
@@ -482,7 +489,7 @@ residential sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_5.png" src="_images/running-muse-example_11_5.png" />
+<img alt="_images/running-muse-example_3_11_5.png" src="_images/running-muse-example_3_11_5.png" />
 </div>
 </div>
 <p>In this toy example, we can see that the end-use technology of choice in the residential sector becomes a heatpump. The heatpump displaces the gas boiler. Therefore, the supply of gas crashes due to a reduced demand. To account for the increase in demand for electricity, the agent invests heavily in wind turbines.</p>
@@ -511,16 +518,10 @@ residential sector
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="installing-muse.html"
-                        title="previous chapter">Installation</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="overview.html"
-                        title="next chapter">MUSE Overview</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/running-muse-example.ipynb.txt"
+      <li><a href="_sources/running-muse-example 3.ipynb.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -547,12 +548,6 @@ residential sector
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="overview.html" title="MUSE Overview"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="installing-muse.html" title="Installation"
-             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Running your first example</a></li> 
       </ul>

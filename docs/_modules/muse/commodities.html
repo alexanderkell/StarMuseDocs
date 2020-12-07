@@ -50,7 +50,7 @@
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">ndarray</span>
 
 
-<div class="viewcode-block" id="CommodityUsage"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.CommodityUsage">[docs]</a><span class="k">class</span> <span class="nc">CommodityUsage</span><span class="p">(</span><span class="n">IntFlag</span><span class="p">):</span>
+<div class="viewcode-block" id="CommodityUsage"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.CommodityUsage">[docs]</a><span class="k">class</span> <span class="nc">CommodityUsage</span><span class="p">(</span><span class="n">IntFlag</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Flags to specify the different kinds of commodities.</span>
 
 <span class="sd">    For details on how ``enum``&#39;s work, see `python&#39;s documentation`__. In practice,</span>
@@ -83,7 +83,7 @@
     <span class="sd">&quot;&quot;&quot;Commodity which is a fuel for this or another sector.&quot;&quot;&quot;</span>
     <span class="c1"># BYPRODUCT = auto()</span>
 
-<div class="viewcode-block" id="CommodityUsage.from_technologies"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.CommodityUsage.from_technologies">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="CommodityUsage.from_technologies"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.CommodityUsage.from_technologies">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">from_technologies</span><span class="p">(</span><span class="n">technologies</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
         <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">bitwise_or</span><span class="p">,</span> <span class="n">array</span>
 
@@ -150,7 +150,7 @@
         <span class="p">)</span></div></div>
 
 
-<div class="viewcode-block" id="check_usage"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.check_usage">[docs]</a><span class="k">def</span> <span class="nf">check_usage</span><span class="p">(</span>
+<div class="viewcode-block" id="check_usage"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.check_usage">[docs]</a><span class="k">def</span> <span class="nf">check_usage</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">],</span>
     <span class="n">flag</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">CommodityUsage</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
     <span class="n">match</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
@@ -245,7 +245,7 @@
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown match </span><span class="si">{</span><span class="n">match</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_pollutant"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_pollutant">[docs]</a><span class="k">def</span> <span class="nf">is_pollutant</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_pollutant"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_pollutant">[docs]</a><span class="k">def</span> <span class="nf">is_pollutant</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Environmental product.</span>
 
 <span class="sd">    Examples:</span>
@@ -266,7 +266,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_consumable"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_consumable">[docs]</a><span class="k">def</span> <span class="nf">is_consumable</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_consumable"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_consumable">[docs]</a><span class="k">def</span> <span class="nf">is_consumable</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Any consumable.</span>
 
 <span class="sd">    Examples:</span>
@@ -285,7 +285,7 @@
     <span class="k">return</span> <span class="n">check_usage</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">CommodityUsage</span><span class="o">.</span><span class="n">CONSUMABLE</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_fuel"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_fuel">[docs]</a><span class="k">def</span> <span class="nf">is_fuel</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_fuel"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_fuel">[docs]</a><span class="k">def</span> <span class="nf">is_fuel</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Any consumable energy.</span>
 
 <span class="sd">    Examples:</span>
@@ -308,7 +308,7 @@
     <span class="k">return</span> <span class="n">check_usage</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">CommodityUsage</span><span class="o">.</span><span class="n">ENERGY</span> <span class="o">|</span> <span class="n">CommodityUsage</span><span class="o">.</span><span class="n">CONSUMABLE</span><span class="p">,</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_material"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_material">[docs]</a><span class="k">def</span> <span class="nf">is_material</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_material"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_material">[docs]</a><span class="k">def</span> <span class="nf">is_material</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Any non-energy non-environmental consumable.</span>
 
 <span class="sd">    Examples:</span>
@@ -337,7 +337,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_enduse"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_enduse">[docs]</a><span class="k">def</span> <span class="nf">is_enduse</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_enduse"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_enduse">[docs]</a><span class="k">def</span> <span class="nf">is_enduse</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Non-environmental product.</span>
 
 <span class="sd">    Examples:</span>
@@ -361,7 +361,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="is_other"><a class="viewcode-back" href="../../source/muse.html#muse.commodities.is_other">[docs]</a><span class="k">def</span> <span class="nf">is_other</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
+<div class="viewcode-block" id="is_other"><a class="viewcode-back" href="../../source/muse 2.html#muse.commodities.is_other">[docs]</a><span class="k">def</span> <span class="nf">is_other</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">CommodityUsage</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ndarray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;No flags are set.</span>
 
 <span class="sd">    Examples:</span>

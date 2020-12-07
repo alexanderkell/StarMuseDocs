@@ -52,11 +52,11 @@
 <span class="kn">from</span> <span class="nn">muse.sectors.register</span> <span class="kn">import</span> <span class="n">AbstractSector</span><span class="p">,</span> <span class="n">register_sector</span>
 
 
-<div class="viewcode-block" id="PresetSector"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.preset_sector.PresetSector">[docs]</a><span class="nd">@register_sector</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;preset&quot;</span><span class="p">,</span> <span class="s2">&quot;presets&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="PresetSector"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.preset_sector.PresetSector">[docs]</a><span class="nd">@register_sector</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;preset&quot;</span><span class="p">,</span> <span class="s2">&quot;presets&quot;</span><span class="p">))</span>
 <span class="k">class</span> <span class="nc">PresetSector</span><span class="p">(</span><span class="n">AbstractSector</span><span class="p">):</span>  <span class="c1"># type: ignore</span>
     <span class="sd">&quot;&quot;&quot;Sector with outcomes fixed from the start.&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="PresetSector.factory"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.preset_sector.PresetSector.factory">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="PresetSector.factory"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.preset_sector.PresetSector.factory">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PresetSector</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Constructs a PresetSectors from input data.&quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">xarray</span> <span class="kn">import</span> <span class="n">zeros_like</span><span class="p">,</span> <span class="n">DataArray</span>
@@ -186,7 +186,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="sd">&quot;&quot;&quot;Name by which to identify a sector&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="PresetSector.next"><a class="viewcode-back" href="../../../source/muse.sectors.html#muse.sectors.preset_sector.PresetSector.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mca_market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
+<div class="viewcode-block" id="PresetSector.next"><a class="viewcode-back" href="../../../source/muse.sectors 2.html#muse.sectors.preset_sector.PresetSector.next">[docs]</a>    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mca_market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dataset</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Advance sector by one time period.&quot;&quot;&quot;</span>
         <span class="kn">from</span> <span class="nn">muse.timeslices</span> <span class="kn">import</span> <span class="n">convert_timeslice</span><span class="p">,</span> <span class="n">QuantityType</span>
 
