@@ -192,7 +192,7 @@ DecisionMethod
    - :py:func:`weighted_sum <weighted_sum>`: Computes a weighted average across several
      objectives.
    - :py:func:`lexical_comparion <lexical_comparison>`: Compares objectives using a
-     binned lexical comparison operator. Aliased to "lexo".
+     binned lexical comparison operator. Aliased to "lexo". This is a `lexicographic method <https://en.wikipedia.org/wiki/Lexicographic_order>`_ where objectives are compared in a specific order, for example first costs, then environmental emissions.
    - :py:func:`retro_lexical_comparion <retro_lexical_comparison>`: A binned lexical
      comparison function where the bin size is adjusted to ensure the current crop of
      technologies are competitive. Aliased to "retro_lexo".

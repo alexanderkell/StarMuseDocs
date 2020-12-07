@@ -36,7 +36,7 @@ A solution to this is to increase the limits of technologies in the relevant `Te
 
 
 
-What units should I be using with MUSE?
+What units should I be using within MUSE?
 -----------------------------------------
 
 The units within MUSE should be consistent. Therefore it is up to you which units you use. You could use, like the examples, petajoules (PJ), however, the units used must be the same across each of the sectors, and each of the input files. MUSE does not make any unit conversion internally.

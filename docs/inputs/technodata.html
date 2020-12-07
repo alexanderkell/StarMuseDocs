@@ -30,6 +30,9 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="timeslices.html" title="Time-slices"
              accesskey="N">next</a> |</li>
         <li class="right" >
@@ -118,7 +121,7 @@ such as:</p>
    \frac{\text{CAPEXref}}{\text{Capref}}
 \right)^{\text{cap\_exp}}\]</div>
 <p>Capref is decided by the modeller before filling the input data files.</p>
-<p>This allows the model to take into account economies of scale. ie. As <cite>Capacity</cite> increases, the price of the technology decreases.</p>
+<p>This allows the model to take into account economies of scale. ie. As <cite>Capacity</cite> increases, the price of the technology decreases. This does not include technological learning parameters, where prices may come down due to learning.</p>
 </dd>
 <dt>fix_par, fix_exp</dt><dd><p>are used in the fixed cost estimation. Fixed costs are calculated as:</p>
 <div class="math notranslate nohighlight">
@@ -143,10 +146,9 @@ such as:</p>
 \right)^{\text{var\_exp}}\]</div>
 <p>Capref is decided by the modeller before filling the input data files.</p>
 </dd>
-<dt>MaxCapacityAddition</dt><dd><p>represents the maximum addition of installed capacity per technology, region, year.</p>
+<dt>MaxCapacityAddition</dt><dd><p>represents the maximum addition of installed capacity per technology, per year in a period, per region.</p>
 </dd>
-<dt>MaxCapacityGrowth</dt><dd><p>represents the maximum growth in capacity as a fraction of the installed capacity per
-technology, region and year.</p>
+<dt>MaxCapacityGrowth</dt><dd><p>represents the percentage growth per year based on the available stock in a year, per region and technology.</p>
 </dd>
 <dt>TotalCapacityLimit</dt><dd><p>represents the total capacity limit per technology, region and year.</p>
 </dd>
@@ -161,13 +163,13 @@ technology, region and year.</p>
 <dt>AvailabiliyYear</dt><dd><p>defines the starting year of a technology; for example the value equals 1 when a
 technology would be available or 0 when a technology would not be available.</p>
 </dd>
-<dt>Type</dt><dd><p>defines the type of a technology.</p>
+<dt>Type</dt><dd><p>defines the type of a technology. This variable is used for the search space in the agents csv file. It allows for the agents to filter for technologies of a similar type, for example.</p>
 </dd>
 <dt>Fuel</dt><dd><p>defines the fuel used by a technology.</p>
 </dd>
 <dt>EndUse</dt><dd><p>defines the end use of a technology.</p>
 </dd>
-<dt>InterestRate</dt><dd><p>is the technology interest rate.</p>
+<dt>InterestRate</dt><dd><p>is the technology interest rate. This is used for the interest used in the discount rate.</p>
 </dd>
 <dt>Agent_0, …, Agent_N</dt><dd><p>represent the allocation of the initial capacity to the each agent.</p>
 </dd>
@@ -217,6 +219,9 @@ the values between the provided periods and assume a constant value afterwards.<
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
         <li class="right" >
           <a href="timeslices.html" title="Time-slices"
              >next</a> |</li>
