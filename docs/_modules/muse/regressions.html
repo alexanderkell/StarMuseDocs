@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.regressions &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.regressions &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.regressions</a></li> 
       </ul>
@@ -181,7 +178,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">interpolation</span><span class="o">=</span><span class="n">interpolation</span><span class="p">,</span> <span class="n">base_year</span><span class="o">=</span><span class="n">base_year</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">regression_parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">],</span>
     <span class="n">sector</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Regression</span><span class="p">:</span>
@@ -233,7 +230,7 @@
     <span class="k">return</span> <span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([a-z0-9])([A-Z])&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;\1-\2&quot;</span><span class="p">,</span> <span class="n">s1</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 
 
-<div class="viewcode-block" id="register_regression"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.register_regression">[docs]</a><span class="k">def</span> <span class="nf">register_regression</span><span class="p">(</span>
+<div class="viewcode-block" id="register_regression"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.register_regression">[docs]</a><span class="k">def</span> <span class="nf">register_regression</span><span class="p">(</span>
     <span class="n">Functor</span><span class="p">:</span> <span class="n">Regression</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Text</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Regression</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Registers a functor with MUSE regressions.</span>
@@ -397,7 +394,7 @@
     <span class="k">return</span> <span class="n">decorator</span>
 
 
-<div class="viewcode-block" id="Exponential"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.Exponential">[docs]</a><span class="nd">@register_regression</span>
+<div class="viewcode-block" id="Exponential"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.Exponential">[docs]</a><span class="nd">@register_regression</span>
 <span class="nd">@regression_functor</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPexp&quot;</span><span class="p">})</span>
 <span class="k">def</span> <span class="nf">Exponential</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> <span class="n">gdp</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">population</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
@@ -408,7 +405,7 @@
     <span class="k">return</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">b</span> <span class="o">*</span> <span class="n">population</span> <span class="o">/</span> <span class="n">gdp</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="ExponentialAdj"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.ExponentialAdj">[docs]</a><span class="nd">@register_regression</span>
+<div class="viewcode-block" id="ExponentialAdj"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.ExponentialAdj">[docs]</a><span class="nd">@register_regression</span>
 <span class="nd">@regression_functor</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPexp&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span> <span class="s2">&quot;ConstantAdjDem&quot;</span><span class="p">})</span>
 <span class="k">def</span> <span class="nf">ExponentialAdj</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span>
@@ -431,7 +428,7 @@
     <span class="k">return</span> <span class="n">unadjusted</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">p</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Logistic"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.Logistic">[docs]</a><span class="nd">@register_regression</span>
+<div class="viewcode-block" id="Logistic"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.Logistic">[docs]</a><span class="nd">@register_regression</span>
 <span class="nd">@regression_functor</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPscale&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPexp&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span> <span class="s2">&quot;timeEff&quot;</span><span class="p">})</span>
 <span class="k">def</span> <span class="nf">Logistic</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">,</span> <span class="n">gdp</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">population</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">forecast</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
@@ -448,7 +445,7 @@
     <span class="k">return</span> <span class="n">factor</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span><span class="n">gdp</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="n">population</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="Loglog"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.Loglog">[docs]</a><span class="nd">@register_regression</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;log-log&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="Loglog"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.Loglog">[docs]</a><span class="nd">@register_regression</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;log-log&quot;</span><span class="p">)</span>
 <span class="nd">@regression_functor</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPexp&quot;</span><span class="p">})</span>
 <span class="k">def</span> <span class="nf">Loglog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gdp</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="n">population</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot; 1e6 * e^a * population * (gpd/population)^b &quot;&quot;&quot;</span>
@@ -458,7 +455,7 @@
     <span class="k">return</span> <span class="n">factor</span> <span class="o">*</span> <span class="n">power</span><span class="p">(</span><span class="n">gdp</span> <span class="o">/</span> <span class="n">population</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">b</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="LogisticSigmoid"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.LogisticSigmoid">[docs]</a><span class="nd">@register_regression</span>
+<div class="viewcode-block" id="LogisticSigmoid"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.LogisticSigmoid">[docs]</a><span class="nd">@register_regression</span>
 <span class="nd">@regression_functor</span><span class="p">(</span>
     <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="s2">&quot;b0&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPscaleLess&quot;</span><span class="p">,</span> <span class="s2">&quot;b1&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPscaleGreater&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;GDPexp&quot;</span><span class="p">}</span>
 <span class="p">)</span>
@@ -493,7 +490,7 @@
     <span class="k">return</span> <span class="mf">1e6</span> <span class="o">*</span> <span class="p">(</span><span class="n">population</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">a</span> <span class="o">+</span> <span class="n">gdp</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">c</span> <span class="o">/</span> <span class="n">p</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="Linear"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.Linear">[docs]</a><span class="nd">@register_regression</span>
+<div class="viewcode-block" id="Linear"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.Linear">[docs]</a><span class="nd">@register_regression</span>
 <span class="k">class</span> <span class="nc">Linear</span><span class="p">(</span><span class="n">Regression</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; a * population + b * (gdp - gdp[2010]/population[2010] * population)&quot;&quot;&quot;</span>
 
@@ -546,7 +543,7 @@
         <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="endogenous_demand"><a class="viewcode-back" href="../../source/muse 2.html#muse.regressions.endogenous_demand">[docs]</a><span class="k">def</span> <span class="nf">endogenous_demand</span><span class="p">(</span>
+<div class="viewcode-block" id="endogenous_demand"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.regressions.endogenous_demand">[docs]</a><span class="k">def</span> <span class="nf">endogenous_demand</span><span class="p">(</span>
     <span class="n">regression_parameters</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">],</span>
     <span class="n">drivers</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Dataset</span><span class="p">],</span>
     <span class="n">sector</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -590,14 +587,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.regressions</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

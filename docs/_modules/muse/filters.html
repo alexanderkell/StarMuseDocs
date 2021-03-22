@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.filters &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.filters &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.filters</a></li> 
       </ul>
@@ -142,6 +139,7 @@
     <span class="n">Sequence</span><span class="p">,</span>
     <span class="n">Text</span><span class="p">,</span>
     <span class="n">Union</span><span class="p">,</span>
+    <span class="n">cast</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -164,7 +162,7 @@
 <span class="sd">&quot;&quot;&quot;Functions to create an initial search-space.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_filter"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.register_filter">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">SEARCH_SPACE_FILTERS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_filter"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.register_filter">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">SEARCH_SPACE_FILTERS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_filter</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">SSF_SIGNATURE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a filter.</span>
 
@@ -189,7 +187,7 @@
     <span class="k">return</span> <span class="n">decorated</span></div>
 
 
-<div class="viewcode-block" id="register_initializer"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.register_initializer">[docs]</a><span class="nd">@registrator</span><span class="p">(</span>
+<div class="viewcode-block" id="register_initializer"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.register_initializer">[docs]</a><span class="nd">@registrator</span><span class="p">(</span>
     <span class="n">registry</span><span class="o">=</span><span class="n">SEARCH_SPACE_INITIALIZERS</span><span class="p">,</span> <span class="n">logname</span><span class="o">=</span><span class="s2">&quot;initial search-space&quot;</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span>
 <span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_initializer</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">SSI_SIGNATURE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
@@ -206,7 +204,7 @@
     <span class="k">return</span> <span class="n">decorated</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">separator</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span>
 <span class="p">):</span>
@@ -249,11 +247,10 @@
         <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">item</span><span class="p">}</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">Text</span><span class="p">)</span> <span class="k">else</span> <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">settings</span>
         <span class="p">]</span>
-
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">SEARCH_SPACE_INITIALIZERS</span><span class="p">:</span>
-        <span class="n">initial_settings</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;initialize_from_technologies&quot;</span><span class="p">}</span>
+        <span class="n">initial_settings</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Text</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;initialize_from_technologies&quot;</span><span class="p">}</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">initial_settings</span><span class="p">,</span> <span class="n">parameters</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">initial_settings</span><span class="p">,</span> <span class="n">parameters</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Mapping</span><span class="p">,</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">parameters</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 
     <span class="n">functions</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">partial</span><span class="p">(</span>
@@ -271,15 +268,15 @@
 
     <span class="k">def</span> <span class="nf">filters</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Applies a series of filter to determine the search space.&quot;&quot;&quot;</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">demand</span>
-        <span class="k">for</span> <span class="n">function</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">functions</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">agent</span><span class="p">,</span> <span class="n">demand</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">function</span> <span class="ow">in</span> <span class="n">functions</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">agent</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">result</span>
 
     <span class="k">return</span> <span class="n">filters</span></div>
 
 
-<div class="viewcode-block" id="same_enduse"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.same_enduse">[docs]</a><span class="nd">@register_filter</span>
+<div class="viewcode-block" id="same_enduse"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.same_enduse">[docs]</a><span class="nd">@register_filter</span>
 <span class="k">def</span> <span class="nf">same_enduse</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -301,13 +298,13 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">&amp;</span> <span class="p">((</span><span class="n">tech_enduses</span> <span class="o">-</span> <span class="n">asset_enduses</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s2">&quot;commodity&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="identity"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.identity">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="identity"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.identity">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">identity</span><span class="p">(</span><span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Returns search space as given.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">search_space</span></div>
 
 
-<div class="viewcode-block" id="similar_technology"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.similar_technology">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;similar&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="similar_technology"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.similar_technology">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;similar&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">similar_technology</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
@@ -318,7 +315,7 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">asset_types</span> <span class="o">==</span> <span class="n">tech_types</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="same_fuels"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.same_fuels">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;fueltype&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="same_fuels"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.same_fuels">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;fueltype&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">same_fuels</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
@@ -329,7 +326,7 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">asset_fuel</span> <span class="o">==</span> <span class="n">tech_fuel</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="currently_existing_tech"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.currently_existing_tech">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;existing&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="currently_existing_tech"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.currently_existing_tech">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;existing&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">currently_existing_tech</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -353,7 +350,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="currently_referenced_tech"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.currently_referenced_tech">[docs]</a><span class="nd">@register_filter</span>
+<div class="viewcode-block" id="currently_referenced_tech"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.currently_referenced_tech">[docs]</a><span class="nd">@register_filter</span>
 <span class="k">def</span> <span class="nf">currently_referenced_tech</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -372,7 +369,7 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">&amp;</span> <span class="n">search_space</span><span class="o">.</span><span class="n">replacement</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">capacity</span><span class="o">.</span><span class="n">replacement</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="maturity"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.maturity">[docs]</a><span class="nd">@register_filter</span>
+<div class="viewcode-block" id="maturity"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.maturity">[docs]</a><span class="nd">@register_filter</span>
 <span class="k">def</span> <span class="nf">maturity</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -399,7 +396,7 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">enduse_market_share</span> <span class="o">&lt;=</span> <span class="n">capacity</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s2">&quot;commodity&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="compress"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.compress">[docs]</a><span class="nd">@register_filter</span>
+<div class="viewcode-block" id="compress"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.compress">[docs]</a><span class="nd">@register_filter</span>
 <span class="k">def</span> <span class="nf">compress</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -420,10 +417,11 @@
         <span class="n">condition</span> <span class="o">=</span> <span class="n">search_space</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">condition</span> <span class="o">=</span> <span class="n">search_space</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+
     <span class="k">return</span> <span class="n">search_space</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">replacement</span><span class="o">=</span><span class="n">condition</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="reduce_asset"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.reduce_asset">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;reduce_asset&quot;</span><span class="p">,</span> <span class="s2">&quot;reduce_assets&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="reduce_asset"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.reduce_asset">[docs]</a><span class="nd">@register_filter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;reduce_asset&quot;</span><span class="p">,</span> <span class="s2">&quot;reduce_assets&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">reduce_asset</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -435,7 +433,7 @@
     <span class="k">return</span> <span class="n">search_space</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="s2">&quot;asset&quot;</span> <span class="ow">in</span> <span class="n">search_space</span><span class="o">.</span><span class="n">dims</span> <span class="k">else</span> <span class="n">search_space</span></div>
 
 
-<div class="viewcode-block" id="with_asset_technology"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.with_asset_technology">[docs]</a><span class="nd">@register_filter</span>
+<div class="viewcode-block" id="with_asset_technology"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.with_asset_technology">[docs]</a><span class="nd">@register_filter</span>
 <span class="k">def</span> <span class="nf">with_asset_technology</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">search_space</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -447,7 +445,7 @@
     <span class="k">return</span> <span class="n">search_space</span> <span class="o">|</span> <span class="p">(</span><span class="n">search_space</span><span class="o">.</span><span class="n">asset</span> <span class="o">==</span> <span class="n">search_space</span><span class="o">.</span><span class="n">replacement</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="initialize_from_technologies"><a class="viewcode-back" href="../../source/muse 2.html#muse.filters.initialize_from_technologies">[docs]</a><span class="nd">@register_initializer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;from_techs&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="initialize_from_technologies"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.filters.initialize_from_technologies">[docs]</a><span class="nd">@register_initializer</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;from_techs&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">initialize_from_technologies</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
@@ -483,7 +481,9 @@
     <span class="p">)</span>
     <span class="k">if</span> <span class="s2">&quot;asset&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">agent</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">dims</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">asset</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">replacement</span>
-    <span class="n">assets</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">reduce_assets</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">asset</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+    <span class="n">assets</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span>
+        <span class="n">reduce_assets</span><span class="p">(</span><span class="n">agent</span><span class="o">.</span><span class="n">assets</span><span class="o">.</span><span class="n">asset</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="n">coords</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">technology</span><span class="o">=</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">assets</span> <span class="o">*</span> <span class="n">replacement</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;replacement&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -516,14 +516,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.filters</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

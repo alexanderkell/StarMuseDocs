@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Running your first example &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running your first example &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -38,7 +35,7 @@
         <li class="right" >
           <a href="installing-muse.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MUSE 0.9 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Running your first example</a></li> 
       </ul>
     </div>  
@@ -298,7 +295,7 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="section" id="Running-your-first-example">
 <h1>Running your first example<a class="headerlink" href="#Running-your-first-example" title="Permalink to this headline">¶</a></h1>
-<p>In this section we run an example simulation of MUSE and visualise the results. There are a number of different examples in the source code, which can be found <a class="reference external" href="dead-link">INSERT LINK HERE</a>.</p>
+<p>In this section we run an example simulation of MUSE and visualise the results. There are a number of different examples in the source code, which can be found <a class="reference external" href="tutorial-code/">INSERT LINK HERE</a>.</p>
 <p>Once python and MUSE have been installed, we can run an example. To do this open anaconda prompt. Then change directory to where you have downloaded the MUSE source code.</p>
 <p>Navigate to the following link for MacOS or Linux based operating systems:</p>
 <p><code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}/StarMuse/run/example/default/</span></code></p>
@@ -328,10 +325,34 @@ div.rendered_html tbody tr:hover {
 <p>Within each of the sector result folders, there is an output for <code class="docutils literal notranslate"><span class="pre">Capacity</span></code> for each commodity in each year. The years into the future, which the simulation has not run to, refers to the capacity as it retires. Within the <code class="docutils literal notranslate"><span class="pre">Residential</span></code> folder there is also a folder for <code class="docutils literal notranslate"><span class="pre">Supply</span></code> within each year. This refers to how much end-use commodity was output.</p>
 <p>The output can be fully configurable, as shown in the developer guide <a class="reference internal" href="advanced-guide/extending-muse.html"><span class="doc">here</span></a>.</p>
 </div>
+<div class="section" id="Using-Python">
+<h2>Using Python<a class="headerlink" href="#Using-Python" title="Permalink to this headline">¶</a></h2>
+<p>For the following parts of the tutorial, we will use python to run MUSE and visualise our results.</p>
+<p>A common approach for data visualisation is to use <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>. Jupyter Notebook is a method of running interactive computing across dozens of programming languages. However, you are free to visualise the results using the language or program of your choice, for example Excel, R, Matlab or Python.</p>
+<p>We will use Python, because MUSE is built using python, and so we can switch between running MUSE and visualisation rapidly.</p>
+<p>First, you will need to install jupyter notebook in your anaconda environment. You will need to ensure that you have a conda environment activated. If you are using the Anaconda Powershell Prompt, you will see something similar to the following if your conda environment called muse is activated:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(muse)</span> <span class="pre">PS</span> <span class="pre">C:\Users\my_name&gt;</span></code></p>
+<p>If your environment is not activated you will see:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(base)</span> <span class="pre">PS</span> <span class="pre">C:\Users\my_name&gt;</span></code></p>
+<p>Once your environment is activated, you can installed Jupyter Notebook by following the instructions showed <a class="reference external" href="https://jupyter.org/install">here</a>. We will install the classic Jupyter Notebook, and so we will run the following code:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">notebook</span></code></p>
+<p>Once this has been installed you can start Jupyter Notebook by running the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<p>A web browser should now open up with a URL such as the following: <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/tree</span></code>. If it doesn’t, copy and paste the command as directed in the Anaconda Powershell Prompt. This will likely take the form of:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost:8888/?token=xxxxxxxxxx</span></code></p>
+<p>Once you are on the page, you will be able to navigate to a location of your choice and create a new file, by clicking the <code class="docutils literal notranslate"><span class="pre">new</span></code> button in the top right, followed by clicking the <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> button.</p>
+<p>You should then be able to proceed and follow the tutorials in this documentation.</p>
+<p>If you get any errors such as:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">'pandas'</span></code></p>
+<p>It is possible to install the required packages by running the following in the Anaconda Powershell Prompt:</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<p>or running the following in jupyter notebook:</p>
+<p><code class="docutils literal notranslate"><span class="pre">!conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+</div>
 <div class="section" id="Visualisation">
 <h2>Visualisation<a class="headerlink" href="#Visualisation" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -467,7 +488,7 @@ gas sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_1.png" src="_images/running-muse-example_11_1.png" />
+<img alt="_images/running-muse-example_12_1.png" src="_images/running-muse-example_12_1.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
@@ -482,7 +503,7 @@ power sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_3.png" src="_images/running-muse-example_11_3.png" />
+<img alt="_images/running-muse-example_12_3.png" src="_images/running-muse-example_12_3.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
@@ -497,7 +518,7 @@ residential sector
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/running-muse-example_11_5.png" src="_images/running-muse-example_11_5.png" />
+<img alt="_images/running-muse-example_12_5.png" src="_images/running-muse-example_12_5.png" />
 </div>
 </div>
 <p>In this toy example, we can see that the end-use technology of choice in the residential sector becomes a heatpump. The heatpump displaces the gas boiler. Therefore, the supply of gas crashes due to a reduced demand. To account for the increase in demand for electricity, the agent invests heavily in wind turbines.</p>
@@ -520,6 +541,7 @@ residential sector
   <ul>
 <li><a class="reference internal" href="#">Running your first example</a><ul>
 <li><a class="reference internal" href="#Results">Results</a></li>
+<li><a class="reference internal" href="#Using-Python">Using Python</a></li>
 <li><a class="reference internal" href="#Visualisation">Visualisation</a></li>
 <li><a class="reference internal" href="#Next-steps">Next steps</a></li>
 </ul>
@@ -568,13 +590,13 @@ residential sector
         <li class="right" >
           <a href="installing-muse.html" title="Installation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MUSE 0.9 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Running your first example</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

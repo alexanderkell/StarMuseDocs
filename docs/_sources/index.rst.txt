@@ -1,9 +1,10 @@
-.. muse-documentation documentation master file, created by
-   sphinx-quickstart on Mon Oct 26 14:31:29 2020.
+.. MUSE documentation master file, created by
+   sphinx-quickstart on Mon Aug  5 15:27:19 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MUSE: ModUlar energy system Simulation Environment
+==================================================
+ModUlar energy system Simulation Environment: MUSE
 ==================================================
 
 .. toctree::
@@ -21,3 +22,11 @@ MUSE: ModUlar energy system Simulation Environment
    faq
    api
 
+
+Indices and tables
+------------------
+
+
+- :ref:`genindex`
+- :ref:`modindex`
+- :ref:`search`

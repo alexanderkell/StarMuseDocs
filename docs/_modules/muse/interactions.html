@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.interactions &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.interactions &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.interactions</a></li> 
       </ul>
@@ -96,7 +93,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_interaction_net"><a class="viewcode-back" href="../../source/muse 2.html#muse.interactions.register_interaction_net">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INTERACTION_NETS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_interaction_net"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.interactions.register_interaction_net">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">INTERACTION_NETS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_interaction_net</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">INTERACTION_NET_SIGNATURE</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function computing interaction nets.</span>
 
@@ -111,7 +108,7 @@
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="register_agent_interaction"><a class="viewcode-back" href="../../source/muse 2.html#muse.interactions.register_agent_interaction">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">AGENT_INTERACTIONS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_agent_interaction"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.interactions.register_agent_interaction">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">AGENT_INTERACTIONS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;debug&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_agent_interaction</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">AGENT_INTERACTION_SIGNATURE</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register an agent to agent(s) interaction function.</span>
 
@@ -127,7 +124,7 @@
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../source/muse 2.html#muse.interactions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.interactions.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">inputs</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Mapping</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Text</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractAgent</span><span class="p">]],</span> <span class="kc">None</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Creates an interaction functor.&quot;&quot;&quot;</span>
@@ -184,7 +181,7 @@
     <span class="k">return</span> <span class="n">result</span>
 
 
-<div class="viewcode-block" id="new_to_retro_net"><a class="viewcode-back" href="../../source/muse 2.html#muse.interactions.new_to_retro_net">[docs]</a><span class="nd">@register_interaction_net</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="s2">&quot;new_to_retro&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="new_to_retro_net"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.interactions.new_to_retro_net">[docs]</a><span class="nd">@register_interaction_net</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="s2">&quot;new_to_retro&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">new_to_retro_net</span><span class="p">(</span>
     <span class="n">agents</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Agent</span><span class="p">],</span> <span class="n">first_category</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;newcapa&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">INTERACTION_NET</span><span class="p">:</span>
@@ -208,7 +205,7 @@
     <span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="transfer_assets"><a class="viewcode-back" href="../../source/muse 2.html#muse.interactions.transfer_assets">[docs]</a><span class="nd">@register_agent_interaction</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="transfer_assets"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.interactions.transfer_assets">[docs]</a><span class="nd">@register_agent_interaction</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;transfer&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">transfer_assets</span><span class="p">(</span><span class="n">from_</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">to_</span><span class="p">:</span> <span class="n">Agent</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Transfer assets from first agent to second agent.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">xarray</span> <span class="kn">import</span> <span class="n">zeros_like</span>
@@ -247,14 +244,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.interactions</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

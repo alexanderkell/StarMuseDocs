@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.utilities &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.utilities &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.utilities</a></li> 
       </ul>
@@ -62,7 +59,7 @@
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
 
-<div class="viewcode-block" id="multiindex_to_coords"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.multiindex_to_coords">[docs]</a><span class="k">def</span> <span class="nf">multiindex_to_coords</span><span class="p">(</span>
+<div class="viewcode-block" id="multiindex_to_coords"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.multiindex_to_coords">[docs]</a><span class="k">def</span> <span class="nf">multiindex_to_coords</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Flattens multi-index dimension into multi-coord dimension.&quot;&quot;&quot;</span>
@@ -80,7 +77,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="coords_to_multiindex"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.coords_to_multiindex">[docs]</a><span class="k">def</span> <span class="nf">coords_to_multiindex</span><span class="p">(</span>
+<div class="viewcode-block" id="coords_to_multiindex"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.coords_to_multiindex">[docs]</a><span class="k">def</span> <span class="nf">coords_to_multiindex</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">dimension</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Creates a multi-index from flattened multiple coords.&quot;&quot;&quot;</span>
@@ -95,7 +92,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="reduce_assets"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.reduce_assets">[docs]</a><span class="k">def</span> <span class="nf">reduce_assets</span><span class="p">(</span>
+<div class="viewcode-block" id="reduce_assets"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.reduce_assets">[docs]</a><span class="k">def</span> <span class="nf">reduce_assets</span><span class="p">(</span>
     <span class="n">assets</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">]]],</span>
     <span class="n">coords</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">],</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Text</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">dim</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span><span class="p">,</span>
@@ -220,7 +217,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">drop_vars</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="broadcast_techs"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.broadcast_techs">[docs]</a><span class="k">def</span> <span class="nf">broadcast_techs</span><span class="p">(</span>
+<div class="viewcode-block" id="broadcast_techs"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.broadcast_techs">[docs]</a><span class="k">def</span> <span class="nf">broadcast_techs</span><span class="p">(</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span>
     <span class="n">template</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">],</span>
     <span class="n">dimension</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span><span class="p">,</span>
@@ -285,7 +282,7 @@
     <span class="k">return</span> <span class="n">techs</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">second_sel</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="clean_assets"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.clean_assets">[docs]</a><span class="k">def</span> <span class="nf">clean_assets</span><span class="p">(</span><span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">years</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
+<div class="viewcode-block" id="clean_assets"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.clean_assets">[docs]</a><span class="k">def</span> <span class="nf">clean_assets</span><span class="p">(</span><span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">years</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]]):</span>
     <span class="sd">&quot;&quot;&quot;Cleans up and prepares asset for current iteration.</span>
 
 <span class="sd">    - adds current and forecast year by backfilling missing entries</span>
@@ -303,7 +300,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">asset</span><span class="o">=</span><span class="n">result</span><span class="o">.</span><span class="n">capacity</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">not_asset</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="filter_input"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.filter_input">[docs]</a><span class="k">def</span> <span class="nf">filter_input</span><span class="p">(</span>
+<div class="viewcode-block" id="filter_input"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.filter_input">[docs]</a><span class="k">def</span> <span class="nf">filter_input</span><span class="p">(</span>
     <span class="n">dataset</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span>
     <span class="n">year</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">interpolation</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
@@ -340,7 +337,7 @@
     <span class="k">return</span> <span class="n">dataset</span></div>
 
 
-<div class="viewcode-block" id="filter_with_template"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.filter_with_template">[docs]</a><span class="k">def</span> <span class="nf">filter_with_template</span><span class="p">(</span>
+<div class="viewcode-block" id="filter_with_template"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.filter_with_template">[docs]</a><span class="k">def</span> <span class="nf">filter_with_template</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span>
     <span class="n">template</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">],</span>
     <span class="n">asset_dimension</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span><span class="p">,</span>
@@ -373,7 +370,7 @@
     <span class="k">return</span> <span class="n">filter_input</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">match</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore</span></div>
 
 
-<div class="viewcode-block" id="tupled_dimension"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.tupled_dimension">[docs]</a><span class="k">def</span> <span class="nf">tupled_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<div class="viewcode-block" id="tupled_dimension"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.tupled_dimension">[docs]</a><span class="k">def</span> <span class="nf">tupled_dimension</span><span class="p">(</span><span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">axis</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Transforms one axis into a tuples.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">axis</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">axis</span><span class="p">)</span>
@@ -388,7 +385,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">*</span><span class="n">shape</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></div>
 
 
-<div class="viewcode-block" id="lexical_comparison"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.lexical_comparison">[docs]</a><span class="k">def</span> <span class="nf">lexical_comparison</span><span class="p">(</span>
+<div class="viewcode-block" id="lexical_comparison"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.lexical_comparison">[docs]</a><span class="k">def</span> <span class="nf">lexical_comparison</span><span class="p">(</span>
     <span class="n">objectives</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">binsize</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">order</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="n">Hashable</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -429,7 +426,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">to_array</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">tupled_dimension</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="merge_assets"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.merge_assets">[docs]</a><span class="k">def</span> <span class="nf">merge_assets</span><span class="p">(</span>
+<div class="viewcode-block" id="merge_assets"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.merge_assets">[docs]</a><span class="k">def</span> <span class="nf">merge_assets</span><span class="p">(</span>
     <span class="n">capa_a</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">capa_b</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">interpolation</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span><span class="p">,</span>
@@ -439,6 +436,10 @@
     <span class="n">years</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">capa_a</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">capa_b</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
 
     <span class="n">levels</span> <span class="o">=</span> <span class="p">(</span><span class="n">coord</span> <span class="k">for</span> <span class="n">coord</span> <span class="ow">in</span> <span class="n">capa_a</span><span class="o">.</span><span class="n">coords</span> <span class="k">if</span> <span class="n">capa_a</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span> <span class="o">==</span> <span class="p">(</span><span class="n">dimension</span><span class="p">,))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_a</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_b</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">capa_a</span><span class="p">,</span> <span class="n">capa_b</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">capa_a</span><span class="p">,</span> <span class="n">capa_b</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_a</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_b</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">capa_a</span><span class="p">,</span> <span class="n">capa_b</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">broadcast</span><span class="p">(</span><span class="n">capa_a</span><span class="p">,</span> <span class="n">capa_b</span><span class="p">)</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
         <span class="p">(</span>
             <span class="n">capa_a</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">years</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">interpolation</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span>
@@ -458,7 +459,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="avoid_repetitions"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.avoid_repetitions">[docs]</a><span class="k">def</span> <span class="nf">avoid_repetitions</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;year&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
+<div class="viewcode-block" id="avoid_repetitions"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.avoid_repetitions">[docs]</a><span class="k">def</span> <span class="nf">avoid_repetitions</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">dim</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;year&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;list of years such that there is no repetition in the data.</span>
 
 <span class="sd">    It removes the central year of any three consecutive years where all data is</span>
@@ -472,7 +473,7 @@
     <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">year</span><span class="p">[</span><span class="n">years</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="nametuple_to_dict"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.nametuple_to_dict">[docs]</a><span class="k">def</span> <span class="nf">nametuple_to_dict</span><span class="p">(</span><span class="n">nametup</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Mapping</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">:</span>
+<div class="viewcode-block" id="nametuple_to_dict"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.nametuple_to_dict">[docs]</a><span class="k">def</span> <span class="nf">nametuple_to_dict</span><span class="p">(</span><span class="n">nametup</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Mapping</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Transforms a nametuple of type GenericDict into an OrderDict.&quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">is_dataclass</span><span class="p">,</span> <span class="n">asdict</span>
     <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">OrderedDict</span>
@@ -489,7 +490,7 @@
     <span class="k">return</span> <span class="n">out</span></div>
 
 
-<div class="viewcode-block" id="future_propagation"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.future_propagation">[docs]</a><span class="k">def</span> <span class="nf">future_propagation</span><span class="p">(</span>
+<div class="viewcode-block" id="future_propagation"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.future_propagation">[docs]</a><span class="k">def</span> <span class="nf">future_propagation</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">future</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">threshhold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1e-12</span><span class="p">,</span>
@@ -567,7 +568,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="agent_concatenation"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.agent_concatenation">[docs]</a><span class="k">def</span> <span class="nf">agent_concatenation</span><span class="p">(</span>
+<div class="viewcode-block" id="agent_concatenation"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.agent_concatenation">[docs]</a><span class="k">def</span> <span class="nf">agent_concatenation</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Hashable</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">]],</span>
     <span class="n">dim</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;agent&quot;</span><span class="p">,</span>
@@ -632,7 +633,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="aggregate_technology_model"><a class="viewcode-back" href="../../source/muse 2.html#muse.utilities.aggregate_technology_model">[docs]</a><span class="k">def</span> <span class="nf">aggregate_technology_model</span><span class="p">(</span>
+<div class="viewcode-block" id="aggregate_technology_model"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.utilities.aggregate_technology_model">[docs]</a><span class="k">def</span> <span class="nf">aggregate_technology_model</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">],</span>
     <span class="n">dim</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;asset&quot;</span><span class="p">,</span>
     <span class="n">drop</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;installed&quot;</span><span class="p">,</span>
@@ -715,14 +716,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.utilities</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.demand_matching &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.demand_matching &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.demand_matching</a></li> 
       </ul>
@@ -94,7 +91,7 @@
 <span class="kn">from</span> <span class="nn">xarray</span> <span class="kn">import</span> <span class="n">DataArray</span>
 
 
-<div class="viewcode-block" id="demand_matching"><a class="viewcode-back" href="../../source/muse 2.html#muse.demand_matching.demand_matching">[docs]</a><span class="k">def</span> <span class="nf">demand_matching</span><span class="p">(</span>
+<div class="viewcode-block" id="demand_matching"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.demand_matching.demand_matching">[docs]</a><span class="k">def</span> <span class="nf">demand_matching</span><span class="p">(</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
     <span class="n">cost</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
     <span class="o">*</span><span class="n">constraints</span><span class="p">:</span> <span class="n">DataArray</span><span class="p">,</span>
@@ -228,6 +225,7 @@
     <span class="n">extra_dims</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">demand</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span>
         <span class="n">cost</span><span class="o">.</span><span class="n">dims</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">cons</span><span class="o">.</span><span class="n">dims</span> <span class="k">for</span> <span class="n">cons</span> <span class="ow">in</span> <span class="n">constraints</span><span class="p">)</span>
     <span class="p">)</span>
+
     <span class="k">if</span> <span class="n">extra_dims</span><span class="p">:</span>
         <span class="n">summed_demand</span> <span class="o">=</span> <span class="n">demand</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">extra_dims</span><span class="p">)</span>
         <span class="n">demand_share</span> <span class="o">=</span> <span class="p">(</span><span class="n">demand</span> <span class="o">/</span> <span class="n">summed_demand</span><span class="p">)</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">demand</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -268,7 +266,9 @@
             <span class="s2">&quot;demand&quot;</span><span class="p">:</span> <span class="n">demand</span><span class="p">,</span>
         <span class="p">}</span>
     <span class="p">)</span>
+
     <span class="n">nocoords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
     <span class="k">if</span> <span class="n">nocoords</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">coord</span> <span class="ow">in</span> <span class="n">nocoords</span><span class="p">:</span>
             <span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span> <span class="o">=</span> <span class="n">coord</span><span class="p">,</span> <span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="n">coord</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -338,7 +338,6 @@
         <span class="n">delta_x</span> <span class="o">=</span> <span class="n">expand_dims</span><span class="p">(</span>
             <span class="p">(</span><span class="n">remove_dims</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">demand</span><span class="p">,</span> <span class="n">demand</span><span class="p">)</span> <span class="o">-</span> <span class="n">result</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">idims</span><span class="p">))</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">current</span>
         <span class="p">)</span>
-
         <span class="k">for</span> <span class="n">cname</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
             <span class="n">constraint</span> <span class="o">=</span> <span class="n">remove_dims</span><span class="p">(</span><span class="n">current</span><span class="p">[</span><span class="n">cname</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">cname</span><span class="p">])</span>
             <span class="n">delta_x</span><span class="p">,</span> <span class="n">constraint</span> <span class="o">=</span> <span class="n">align</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">constraint</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -354,7 +353,6 @@
                 <span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
             <span class="n">delta_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">delta_x</span><span class="p">,</span> <span class="n">excess_share</span><span class="p">)</span> <span class="o">-</span> <span class="n">excess_share</span><span class="p">)</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-
         <span class="n">result</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">align</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">delta_x</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">result</span>
 </pre></div>
@@ -388,14 +386,14 @@
         <li class="right" >
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.demand_matching</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

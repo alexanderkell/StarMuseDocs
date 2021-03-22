@@ -47,7 +47,7 @@ three examples are equivalent:
 Additionally, TOML files can contain tabular data, specified row-by-row using double
 square bracket. For instance, below we define a table with two rows and a single
 *column* called `some_table_of_data` (though column is not quite the right term, TOML tables are made more
-flexible than most tabular formats. Each row can be considered a
+flexible than most tabular formats. Rather, each row can be considered a
 dictionary).
 
 .. code-block:: TOML

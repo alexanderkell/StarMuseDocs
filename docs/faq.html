@@ -4,24 +4,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API" href="api.html" />
-    <link rel="prev" title="Further extending MUSE" href="advanced-guide/further-extending-muse.html" /> 
+    <link rel="prev" title="API" href="advanced-guide/api.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -33,12 +29,9 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="api.html" title="API"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="advanced-guide/further-extending-muse.html" title="Further extending MUSE"
+          <a href="advanced-guide/api.html" title="API"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MUSE 0.9 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FAQs</a></li> 
       </ul>
     </div>  
@@ -81,6 +74,35 @@
 <h2>What units should I be using within MUSE?<a class="headerlink" href="#what-units-should-i-be-using-within-muse" title="Permalink to this headline">¶</a></h2>
 <p>The units within MUSE should be consistent. Therefore it is up to you which units you use. You could use, like the examples, petajoules (PJ), however, the units used must be the same across each of the sectors, and each of the input files. MUSE does not make any unit conversion internally.</p>
 </div>
+<div class="section" id="how-do-i-activate-my-conda-environment">
+<h2>How do I activate my conda environment?<a class="headerlink" href="#how-do-i-activate-my-conda-environment" title="Permalink to this headline">¶</a></h2>
+<p>To activate your conda environment, run the following command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate &lt;name-of-environment&gt;</span>
+</pre></div>
+</div>
+<p>For example, if you want to activate your conda environment called muse run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda activate muse</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-i-know-my-conda-environment-is-activated">
+<h2>How do I know my conda environment is activated?<a class="headerlink" href="#how-do-i-know-my-conda-environment-is-activated" title="Permalink to this headline">¶</a></h2>
+<p>Your conda environment is activated if you see something similar to the following in your Anaconda Powershell Prompt or command line:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp gp-VirtualEnv">(muse)</span> <span class="go">PS C:/Users/&lt;my-username&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="i-get-a-cannot-find-command-git-do-you-have-git-insrtalled-in-your-path-error">
+<h2>I get a “Cannot find command ‘git’ - do you have ‘git’ insrtalled in your PATH?” error<a class="headerlink" href="#i-get-a-cannot-find-command-git-do-you-have-git-insrtalled-in-your-path-error" title="Permalink to this headline">¶</a></h2>
+<p>This is because you do not have git installed in your conda environment. To resolve this, run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">conda install git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="when-i-input-my-github-password-into-anaconda-powershell-prompt-to-download-muse-i-don-t-see-any-input">
+<h2>When I input my GitHub password into Anaconda Powershell Prompt to download MUSE, I don’t see any input<a class="headerlink" href="#when-i-input-my-github-password-into-anaconda-powershell-prompt-to-download-muse-i-don-t-see-any-input" title="Permalink to this headline">¶</a></h2>
+<p>This is normal behaviour. It is done to stop people watching as you type your password over your shoulder. Just continue typing in your password as you would on a website.</p>
+</div>
 </div>
 
 
@@ -95,16 +117,17 @@
 <li><a class="reference internal" href="#">FAQs</a><ul>
 <li><a class="reference internal" href="#i-get-a-demand-matching-error">I get a demand matching error</a></li>
 <li><a class="reference internal" href="#what-units-should-i-be-using-within-muse">What units should I be using within MUSE?</a></li>
+<li><a class="reference internal" href="#how-do-i-activate-my-conda-environment">How do I activate my conda environment?</a></li>
+<li><a class="reference internal" href="#how-do-i-know-my-conda-environment-is-activated">How do I know my conda environment is activated?</a></li>
+<li><a class="reference internal" href="#i-get-a-cannot-find-command-git-do-you-have-git-insrtalled-in-your-path-error">I get a “Cannot find command ‘git’ - do you have ‘git’ insrtalled in your PATH?” error</a></li>
+<li><a class="reference internal" href="#when-i-input-my-github-password-into-anaconda-powershell-prompt-to-download-muse-i-don-t-see-any-input">When I input my GitHub password into Anaconda Powershell Prompt to download MUSE, I don’t see any input</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="advanced-guide/further-extending-muse.html"
-                        title="previous chapter">Further extending MUSE</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="api.html"
-                        title="next chapter">API</a></p>
+  <p class="topless"><a href="advanced-guide/api.html"
+                        title="previous chapter">API</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -136,18 +159,15 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="api.html" title="API"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="advanced-guide/further-extending-muse.html" title="Further extending MUSE"
+          <a href="advanced-guide/api.html" title="API"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MUSE 0.9 documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">FAQs</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>

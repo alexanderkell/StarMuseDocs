@@ -4,19 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>muse.outputs.sinks &#8212; MUSE Documentation 0.8 documentation</title>
-    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>muse.outputs.sinks &#8212; MUSE 0.9 documentation</title>
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -30,7 +27,7 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.outputs.sinks</a></li> 
       </ul>
@@ -61,7 +58,17 @@
 <span class="sd">        pass</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">MutableMapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">MutableMapping</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Sequence</span><span class="p">,</span>
+    <span class="n">Text</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+    <span class="n">cast</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
@@ -78,7 +85,7 @@
 <span class="sd">&quot;&quot;&quot;Stores a quantity somewhere.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="n">parameters</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">sector_name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="n">parameters</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">sector_name</span><span class="p">:</span> <span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
     <span class="kn">from</span> <span class="nn">inspect</span> <span class="kn">import</span> <span class="n">isclass</span>
     <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
@@ -122,14 +129,14 @@
         <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">sink</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="register_output_sink"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.register_output_sink">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_SINKS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="viewcode-block" id="register_output_sink"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.register_output_sink">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OUTPUT_SINKS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_output_sink</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">OUTPUT_SINK_SIGNATURE</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Registers a function to save quantities.&quot;&quot;&quot;</span>
     <span class="k">assert</span> <span class="n">function</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="sink_to_file"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.sink_to_file">[docs]</a><span class="k">def</span> <span class="nf">sink_to_file</span><span class="p">(</span><span class="n">suffix</span><span class="p">:</span> <span class="n">Text</span><span class="p">):</span>
+<div class="viewcode-block" id="sink_to_file"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.sink_to_file">[docs]</a><span class="k">def</span> <span class="nf">sink_to_file</span><span class="p">(</span><span class="n">suffix</span><span class="p">:</span> <span class="n">Text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Simplifies sinks to files.</span>
 
 <span class="sd">    The decorator takes care of figuring out the path to the file, as well as trims the</span>
@@ -195,8 +202,72 @@
     <span class="k">return</span> <span class="n">decorator</span></div>
 
 
-<div class="viewcode-block" id="to_csv"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.to_csv">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="standardize_quantity"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.standardize_quantity">[docs]</a><span class="k">def</span> <span class="nf">standardize_quantity</span><span class="p">(</span>
+    <span class="n">function</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">Text</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
+<span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Helps standardize how the quantities are specified.</span>
+
+<span class="sd">    This decorator adds three keyword arguments to an input function:</span>
+
+<span class="sd">    - set_index: A dictionary or any argument accepted by</span>
+<span class="sd">      :py:meth:`pandas.DataFrame.set_index`. Ignored if not specified. If specified, a</span>
+<span class="sd">      call to :py:meth:`pandas.DataFrame.reset_index` is made first.</span>
+<span class="sd">    - sort_index: A dictionary or any argument accepted by</span>
+<span class="sd">      :py:meth:`pandas.DataFrame.sort_index`. Ignored if not specified.</span>
+<span class="sd">    - keep_columns: a string or a list of strings with the names of the columns to keep.</span>
+<span class="sd">      Ignored if not specified.</span>
+
+<span class="sd">    The three functions are applied in the order given, assuming an input is specified.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+    <span class="k">class</span> <span class="nc">NotSpecified</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">function</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">decorated</span><span class="p">(</span>
+        <span class="n">quantity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span>
+        <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+        <span class="n">set_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">NotSpecified</span><span class="p">]</span> <span class="o">=</span> <span class="n">NotSpecified</span><span class="p">,</span>
+        <span class="n">sort_index</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">NotSpecified</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="n">NotSpecified</span><span class="p">,</span>
+        <span class="n">keep_columns</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">],</span> <span class="n">NotSpecified</span><span class="p">]</span> <span class="o">=</span> <span class="n">NotSpecified</span><span class="p">,</span>
+        <span class="n">group_by</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">NotSpecified</span><span class="p">]</span> <span class="o">=</span> <span class="n">NotSpecified</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">config</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">any_calls</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">set_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span>
+            <span class="ow">or</span> <span class="n">set_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span>
+            <span class="ow">or</span> <span class="n">keep_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">any_calls</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="s2">&quot;to_dataframe&quot;</span><span class="p">):</span>
+            <span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">quantity</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">set_index</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="o">**</span><span class="n">set_index</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">set_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">set_index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sort_index</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="o">**</span><span class="n">sort_index</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">sort_index</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">sort_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span> <span class="ow">and</span> <span class="n">sort_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">sort_index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">keep_columns</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">keep_columns</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">group_by</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">group_by</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">group_by</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">NotSpecified</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">group_by</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">config</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">decorated</span></div>
+
+
+<div class="viewcode-block" id="to_csv"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.to_csv">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;csv&quot;</span><span class="p">)</span>
 <span class="nd">@sink_to_file</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">)</span>
+<span class="nd">@standardize_quantity</span>
 <span class="k">def</span> <span class="nf">to_csv</span><span class="p">(</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -210,10 +281,14 @@
     <span class="n">params</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;float_format&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%.11f</span><span class="s2">&quot;</span><span class="p">})</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">quantity</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">):</span>
         <span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+    <span class="n">par_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">par_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s2">&quot;columns&quot;</span> <span class="ow">in</span> <span class="n">par_list</span><span class="p">:</span>
+            <span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
     <span class="n">quantity</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="to_netcdf"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.to_netcdf">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;nc&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="to_netcdf"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.to_netcdf">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;netcdf&quot;</span><span class="p">,</span> <span class="s2">&quot;nc&quot;</span><span class="p">))</span>
 <span class="nd">@sink_to_file</span><span class="p">(</span><span class="s2">&quot;.nc&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">to_netcdf</span><span class="p">(</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span>
@@ -234,8 +309,9 @@
     <span class="n">dataset</span><span class="o">.</span><span class="n">to_netcdf</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="to_excel"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.to_excel">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;excel&quot;</span><span class="p">,</span> <span class="s2">&quot;xlsx&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="to_excel"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.to_excel">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;excel&quot;</span><span class="p">,</span> <span class="s2">&quot;xlsx&quot;</span><span class="p">))</span>
 <span class="nd">@sink_to_file</span><span class="p">(</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span>
+<span class="nd">@standardize_quantity</span>
 <span class="k">def</span> <span class="nf">to_excel</span><span class="p">(</span>
     <span class="n">quantity</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Text</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -258,7 +334,7 @@
         <span class="k">raise</span></div>
 
 
-<div class="viewcode-block" id="YearlyAggregate"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.YearlyAggregate">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;aggregate&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="YearlyAggregate"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.YearlyAggregate">[docs]</a><span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;aggregate&quot;</span><span class="p">)</span>
 <span class="k">class</span> <span class="nc">YearlyAggregate</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Incrementally aggregates data from year to year.&quot;&quot;&quot;</span>
 
@@ -301,11 +377,11 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sink</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">aggregate</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">year</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="FiniteResourceException"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.FiniteResourceException">[docs]</a><span class="k">class</span> <span class="nc">FiniteResourceException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+<div class="viewcode-block" id="FiniteResourceException"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.FiniteResourceException">[docs]</a><span class="k">class</span> <span class="nc">FiniteResourceException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Raised when a finite resource is exceeded.&quot;&quot;&quot;</span></div>
 
 
-<div class="viewcode-block" id="finite_resource_logger"><a class="viewcode-back" href="../../../source/muse.outputs 2.html#muse.outputs.finite_resource_logger">[docs]</a><span class="nd">@register_output_sink</span>
+<div class="viewcode-block" id="finite_resource_logger"><a class="viewcode-back" href="../../../source/muse.outputs.html#muse.outputs.finite_resource_logger">[docs]</a><span class="nd">@register_output_sink</span>
 <span class="k">def</span> <span class="nf">finite_resource_logger</span><span class="p">(</span>
     <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">],</span> <span class="n">year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">early_exit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">):</span>
@@ -354,14 +430,14 @@
         <li class="right" >
           <a href="../../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">MUSE Documentation 0.8 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">MUSE 0.9 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >Module code</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">muse.outputs.sinks</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2020, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+        &#169; Copyright 2019, Sustainable Gas Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
     </div>
   </body>
 </html>
