@@ -333,7 +333,9 @@ div.rendered_html tbody tr:hover {
 <div class="section" id="Addition-of-solar-PV">
 <h2><span class="section-number">1.2. </span>Addition of solar PV<a class="headerlink" href="#Addition-of-solar-PV" title="Permalink to this headline">¶</a></h2>
 <p>In this section, we will add solar photovoltaics to the default model seen in the <a class="reference internal" href="../running-muse-example.html"><span class="doc">example page</span></a>. To achieve this, we must modify some of the input files shown in the above section. These files can be found in the <code class="docutils literal notranslate"><span class="pre">StarMuse</span></code> folder at the following location:</p>
-<p><code class="docutils literal notranslate"><span class="pre">{muse_install_location}/src/muse/data/example/default</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>muse_install_location<span class="o">}</span>/src/muse/data/example/default
+</pre></div>
+</div>
 <p>Change <code class="docutils literal notranslate"><span class="pre">{muse_install_location}</span></code> to the location where you installed MUSE using your file browser. You can modify the files in your favourite spreadsheet editor or text editor such as VSCODE, Excel, Numbers, Notepad or TextEdit.</p>
 </div>
 <div class="section" id="Technodata-Input">
@@ -670,7 +672,10 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="section" id="Global-inputs">
 <h2><span class="section-number">1.4. </span>Global inputs<a class="headerlink" href="#Global-inputs" title="Permalink to this headline">¶</a></h2>
-<p>Next, navigate to the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder, found at <code class="docutils literal notranslate"><span class="pre">{muse_installation_location}src/muse/data/example/default/input</span></code>.</p>
+<p>Next, navigate to the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder, found at</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>muse_installation_location<span class="o">}</span>src/muse/data/example/default/input
+</pre></div>
+</div>
 <p>We must now edit each of the files found here to add the new solar commodity. Due to space constraints we will not display all of the entries contained in the input files. The edited files can be viewed <a class="reference external" href="here">here INSERT LINK HERE</a> however.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">BaseYearExport.csv</span></code> file defines the exports in the base year. For our example we add a column to indicate that there is no export for solar. However, it is important that a column exists for our new commodity.</p>
 <p>It is noted, however, that the <code class="docutils literal notranslate"><span class="pre">BaseYearImport.csv</span></code> as well as the <code class="docutils literal notranslate"><span class="pre">BaseYearExport.csv</span></code> files are optional files to define exogenous imports and exports; all values are set to zero if they are not used.</p>
@@ -986,7 +991,9 @@ div.rendered_html tbody tr:hover {
 <h2><span class="section-number">1.5. </span>Running our customised simulation<a class="headerlink" href="#Running-our-customised-simulation" title="Permalink to this headline">¶</a></h2>
 <p>Now we are able to run our simulation, with the new solar power technology.</p>
 <p>To do this we run the same run command as previously in the anaconda command prompt:</p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">muse</span> <span class="pre">settings.toml</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m muse settings.toml
+</pre></div>
+</div>
 <p>The output should be similar to the output <a class="reference internal" href="../example-output.html"><span class="doc">here</span></a>. However, expect the simulation to take slightly longer to run. This is due to the additional calculations made.</p>
 <p>If the simulation has run successfully, you should now have a folder in the same location as your <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file called <code class="docutils literal notranslate"><span class="pre">Results</span></code>. The next step is to visualise the results using the python visualisation package <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> as well as the data analysis library <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <div class="nbinput nblast docutils container">

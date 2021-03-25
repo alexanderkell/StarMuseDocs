@@ -298,9 +298,13 @@ div.rendered_html tbody tr:hover {
 <p>In this section we run an example simulation of MUSE and visualise the results. There are a number of different examples in the source code, which can be found <a class="reference external" href="tutorial-code/">INSERT LINK HERE</a>.</p>
 <p>Once python and MUSE have been installed, we can run an example. To do this open anaconda prompt. Then change directory to where you have downloaded the MUSE source code.</p>
 <p>Navigate to the following link for MacOS or Linux based operating systems:</p>
-<p><code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}/StarMuse/run/example/default/</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>MUSE_download_location<span class="o">}</span>/StarMuse/run/example/default/
+</pre></div>
+</div>
 <p>Change <code class="docutils literal notranslate"><span class="pre">{MUSE_download_location}</span></code> to the location you downloaded MUSE to, for example <code class="docutils literal notranslate"><span class="pre">Users/{my_name}/Documents/</span></code> using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, or “change directory” command. Once we have navigated to the directory containing the example settings <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> we can run the simulation using the following command in the anaconda prompt or terminal:</p>
-<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">muse</span> <span class="pre">settings.toml</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m muse settings.toml
+</pre></div>
+</div>
 <p>If running correctly, your prompt should output text similar to that which can be found <a class="reference internal" href="example-output.html"><span class="doc">here</span></a>.</p>
 <p>It is also possible to run MUSE directly in python using the following code:</p>
 <div class="nbinput nblast docutils container">
@@ -331,23 +335,39 @@ div.rendered_html tbody tr:hover {
 <p>A common approach for data visualisation is to use <a class="reference external" href="https://jupyter.org">Jupyter Notebook</a>. Jupyter Notebook is a method of running interactive computing across dozens of programming languages. However, you are free to visualise the results using the language or program of your choice, for example Excel, R, Matlab or Python.</p>
 <p>We will use Python, because MUSE is built using python, and so we can switch between running MUSE and visualisation rapidly.</p>
 <p>First, you will need to install jupyter notebook in your anaconda environment. You will need to ensure that you have a conda environment activated. If you are using the Anaconda Powershell Prompt, you will see something similar to the following if your conda environment called muse is activated:</p>
-<p><code class="docutils literal notranslate"><span class="pre">(muse)</span> <span class="pre">PS</span> <span class="pre">C:\Users\my_name&gt;</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>muse<span class="o">)</span> PS C:<span class="se">\U</span>sers<span class="se">\m</span>y_name&gt;
+</pre></div>
+</div>
 <p>If your environment is not activated you will see:</p>
-<p><code class="docutils literal notranslate"><span class="pre">(base)</span> <span class="pre">PS</span> <span class="pre">C:\Users\my_name&gt;</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span> PS C:<span class="se">\U</span>sers<span class="se">\m</span>y_name&gt;
+</pre></div>
+</div>
 <p>Once your environment is activated, you can installed Jupyter Notebook by following the instructions showed <a class="reference external" href="https://jupyter.org/install">here</a>. We will install the classic Jupyter Notebook, and so we will run the following code:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">notebook</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge notebook
+</pre></div>
+</div>
 <p>Once this has been installed you can start Jupyter Notebook by running the following command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter notebook
+</pre></div>
+</div>
 <p>A web browser should now open up with a URL such as the following: <code class="docutils literal notranslate"><span class="pre">http://localhost:8888/tree</span></code>. If it doesn’t, copy and paste the command as directed in the Anaconda Powershell Prompt. This will likely take the form of:</p>
-<p><code class="docutils literal notranslate"><span class="pre">http://localhost:8888/?token=xxxxxxxxxx</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://localhost:8888/?token<span class="o">=</span>xxxxxxxxxx
+</pre></div>
+</div>
 <p>Once you are on the page, you will be able to navigate to a location of your choice and create a new file, by clicking the <code class="docutils literal notranslate"><span class="pre">new</span></code> button in the top right, followed by clicking the <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> button.</p>
 <p>You should then be able to proceed and follow the tutorials in this documentation.</p>
 <p>If you get any errors such as:</p>
-<p><code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">'pandas'</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ModuleNotFoundError: No module named <span class="s1">&#39;pandas&#39;</span>
+</pre></div>
+</div>
 <p>It is possible to install the required packages by running the following in the Anaconda Powershell Prompt:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install pandas
+</pre></div>
+</div>
 <p>or running the following in jupyter notebook:</p>
-<p><code class="docutils literal notranslate"><span class="pre">!conda</span> <span class="pre">install</span> <span class="pre">pandas</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!conda install pandas
+</pre></div>
+</div>
 </div>
 <div class="section" id="Visualisation">
 <h2>Visualisation<a class="headerlink" href="#Visualisation" title="Permalink to this headline">¶</a></h2>

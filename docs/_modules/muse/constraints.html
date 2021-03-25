@@ -206,7 +206,7 @@
 <span class="sd">&quot;&quot;&quot;Registry of constraint functions.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_constraints"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.register_constraints">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CONSTRAINTS</span><span class="p">)</span>
+<div class="viewcode-block" id="register_constraints"><a class="viewcode-back" href="../../api.html#muse.constraints.register_constraints">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">CONSTRAINTS</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_constraints</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">CONSTRAINT_SIGNATURE</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CONSTRAINT_SIGNATURE</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Registers a constraint with MUSE.</span>
 
@@ -253,7 +253,7 @@
     <span class="k">return</span> <span class="n">decorated</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../api.html#muse.constraints.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
         <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Text</span><span class="p">],</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]]]</span>
     <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
@@ -305,7 +305,7 @@
     <span class="k">return</span> <span class="n">constraints</span></div>
 
 
-<div class="viewcode-block" id="max_capacity_expansion"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.max_capacity_expansion">[docs]</a><span class="nd">@register_constraints</span>
+<div class="viewcode-block" id="max_capacity_expansion"><a class="viewcode-back" href="../../api.html#muse.constraints.max_capacity_expansion">[docs]</a><span class="nd">@register_constraints</span>
 <span class="k">def</span> <span class="nf">max_capacity_expansion</span><span class="p">(</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -426,7 +426,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="demand"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.demand">[docs]</a><span class="nd">@register_constraints</span>
+<div class="viewcode-block" id="demand"><a class="viewcode-back" href="../../api.html#muse.constraints.demand">[docs]</a><span class="nd">@register_constraints</span>
 <span class="k">def</span> <span class="nf">demand</span><span class="p">(</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -451,7 +451,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="search_space"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.search_space">[docs]</a><span class="nd">@register_constraints</span>
+<div class="viewcode-block" id="search_space"><a class="viewcode-back" href="../../api.html#muse.constraints.search_space">[docs]</a><span class="nd">@register_constraints</span>
 <span class="k">def</span> <span class="nf">search_space</span><span class="p">(</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -471,7 +471,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="max_production"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.max_production">[docs]</a><span class="nd">@register_constraints</span>
+<div class="viewcode-block" id="max_production"><a class="viewcode-back" href="../../api.html#muse.constraints.max_production">[docs]</a><span class="nd">@register_constraints</span>
 <span class="k">def</span> <span class="nf">max_production</span><span class="p">(</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">assets</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -573,7 +573,7 @@
     <span class="p">)</span>
 
 
-<div class="viewcode-block" id="lp_costs"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.lp_costs">[docs]</a><span class="k">def</span> <span class="nf">lp_costs</span><span class="p">(</span>
+<div class="viewcode-block" id="lp_costs"><a class="viewcode-back" href="../../api.html#muse.constraints.lp_costs">[docs]</a><span class="k">def</span> <span class="nf">lp_costs</span><span class="p">(</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">costs</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">timeslices</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates costs for solving with scipy&#39;s LP solver.</span>
@@ -682,7 +682,7 @@
     <span class="k">return</span> <span class="n">unified_costs</span><span class="p">,</span> <span class="n">unified_constraints</span>
 
 
-<div class="viewcode-block" id="lp_constraint"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.lp_constraint">[docs]</a><span class="k">def</span> <span class="nf">lp_constraint</span><span class="p">(</span><span class="n">constraint</span><span class="p">:</span> <span class="n">Constraint</span><span class="p">,</span> <span class="n">lpcosts</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Constraint</span><span class="p">:</span>
+<div class="viewcode-block" id="lp_constraint"><a class="viewcode-back" href="../../api.html#muse.constraints.lp_constraint">[docs]</a><span class="k">def</span> <span class="nf">lp_constraint</span><span class="p">(</span><span class="n">constraint</span><span class="p">:</span> <span class="n">Constraint</span><span class="p">,</span> <span class="n">lpcosts</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Constraint</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Transforms the constraint to LP data.</span>
 
 <span class="sd">    The goal is to create from ``lpcosts.capacity``, ``constraint.capacity``, and</span>
@@ -720,7 +720,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="lp_constraint_matrix"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.lp_constraint_matrix">[docs]</a><span class="k">def</span> <span class="nf">lp_constraint_matrix</span><span class="p">(</span>
+<div class="viewcode-block" id="lp_constraint_matrix"><a class="viewcode-back" href="../../api.html#muse.constraints.lp_constraint_matrix">[docs]</a><span class="k">def</span> <span class="nf">lp_constraint_matrix</span><span class="p">(</span>
     <span class="n">b</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">constraint</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">lpcosts</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span>
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Transforms one constraint block into an lp matrix.</span>
@@ -853,7 +853,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="ScipyAdapter"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.constraints.ScipyAdapter">[docs]</a><span class="nd">@dataclass</span>
+<div class="viewcode-block" id="ScipyAdapter"><a class="viewcode-back" href="../../api.html#muse.constraints.ScipyAdapter">[docs]</a><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">ScipyAdapter</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates the input for the scipy solvers.</span>
 

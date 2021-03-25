@@ -91,7 +91,7 @@
 <span class="sd">&quot;&quot;&quot;Dictionary of production methods. &quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_production"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.production.register_production">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">PRODUCTION_METHODS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_production"><a class="viewcode-back" href="../../api.html#muse.production.register_production">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">PRODUCTION_METHODS</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_production</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">PRODUCTION_SIGNATURE</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a production method.</span>
 
@@ -102,7 +102,7 @@
     <span class="k">return</span> <span class="n">function</span></div>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.production.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../api.html#muse.production.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;maximum_production&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PRODUCTION_SIGNATURE</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates a production functor.</span>
@@ -135,7 +135,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="maximum_production"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.production.maximum_production">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;maximum&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="maximum_production"><a class="viewcode-back" href="../../api.html#muse.production.maximum_production">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;max&quot;</span><span class="p">,</span> <span class="s2">&quot;maximum&quot;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">maximum_production</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
@@ -149,7 +149,7 @@
     <span class="k">return</span> <span class="n">maximum_production</span><span class="p">(</span><span class="n">technologies</span><span class="p">,</span> <span class="n">capacity</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.production.supply">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;share&quot;</span><span class="p">,</span> <span class="s2">&quot;shares&quot;</span><span class="p">))</span>
+<div class="viewcode-block" id="supply"><a class="viewcode-back" href="../../api.html#muse.production.supply">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;share&quot;</span><span class="p">,</span> <span class="s2">&quot;shares&quot;</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">supply</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span> <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span> <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">:</span>
@@ -163,7 +163,7 @@
     <span class="k">return</span> <span class="n">supply</span><span class="p">(</span><span class="n">capacity</span><span class="p">,</span> <span class="n">market</span><span class="o">.</span><span class="n">consumption</span><span class="p">,</span> <span class="n">technologies</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="demand_matched_production"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.production.demand_matched_production">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;match&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="demand_matched_production"><a class="viewcode-back" href="../../api.html#muse.production.demand_matched_production">[docs]</a><span class="nd">@register_production</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;match&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">demand_matched_production</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>

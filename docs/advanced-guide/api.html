@@ -178,7 +178,7 @@ sectors do, the carbon budget limit is not exceeded.</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">SingleYearIterationResult</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">market</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sectors</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/mca.html#SingleYearIterationResult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.mca.SingleYearIterationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Result of iterating over sectors for a year.</p>
 <p>Convenience tuple naming naming the return values from  of
-<a class="reference internal" href="#muse.mca.single_year_iteration" title="muse.mca.single_year_iteration"><code class="xref py py-func docutils literal notranslate"><span class="pre">single_year_iteration()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.mca.single_year_iteration" title="muse.mca.single_year_iteration"><code class="xref py py-func docutils literal notranslate"><span class="pre">single_year_iteration()</span></code></a>.</p>
 <dl class="py method">
 <dt id="muse.mca.SingleYearIterationResult.market">
 <em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">market</span></code><a class="headerlink" href="#muse.mca.SingleYearIterationResult.market" title="Permalink to this definition">¶</a></dt>
@@ -566,7 +566,7 @@ agents, and maket make-up from <em>retro</em> to <em>new</em>.</p>
 expected to modify the agents in-place.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#module-muse.interactions" title="muse.interactions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.interactions</span></code></a></p>
+<p><a class="reference internal" href="../api.html#module-muse.interactions" title="muse.interactions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.interactions</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -624,7 +624,7 @@ expected to modify the agents in-place.</p>
 <code class="sig-name descname"><span class="pre">supply_prod</span></code><a class="headerlink" href="#muse.sectors.sector.Sector.supply_prod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes production as used to return the supply to the MCA.</p>
 <p>It can be anything registered with
-<a class="reference internal" href="#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -844,7 +844,7 @@ expected to modify the agents in-place.</p>
 context, it could be computed several ways. For  instace, it can be obtained straight
 from the capacity of the asset. Or it can be obtained by matching for the same
 commodities with a set of assets.</p>
-<p>Production methods can be registered via the <a class="reference internal" href="#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a> production decorator.  Registering a function makes the function
+<p>Production methods can be registered via the <a class="reference internal" href="../api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a> production decorator.  Registering a function makes the function
 accessible from MUSE’s input file. Production methods are not expected to modify their
 arguments. Furthermore they should conform the
 following signatures:</p>
@@ -908,7 +908,7 @@ function yet to be registered when this factory method is called.</p></li>
 <code class="sig-name descname"><span class="pre">maximum_production</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">market</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">technologies</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/production.html#maximum_production"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.production.maximum_production" title="Permalink to this definition">¶</a></dt>
 <dd><p>Production when running at full capacity.</p>
 <p><em>Full capacity</em> is limited by the utilitization factor. For more details, see
-<a class="reference internal" href="#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.quantities.maximum_production()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.quantities.maximum_production()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -917,7 +917,7 @@ function yet to be registered when this factory method is called.</p></li>
 <dd><p>Decorator to register a function as a production method.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="#module-muse.production" title="muse.production"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.production</span></code></a></p>
+<p><a class="reference internal" href="../api.html#module-muse.production" title="muse.production"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.production</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -940,7 +940,7 @@ their respective capacity.</p>
 interaction.</p></li>
 </ul>
 <p>Hence, there are two registrators in this this module,
-<a class="reference internal" href="#muse.interactions.register_interaction_net" title="muse.interactions.register_interaction_net"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_interaction_net()</span></code></a>, and <a class="reference internal" href="#muse.interactions.register_agent_interaction" title="muse.interactions.register_agent_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_agent_interaction()</span></code></a>. The
+<a class="reference internal" href="../api.html#muse.interactions.register_interaction_net" title="muse.interactions.register_interaction_net"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_interaction_net()</span></code></a>, and <a class="reference internal" href="../api.html#muse.interactions.register_agent_interaction" title="muse.interactions.register_agent_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_agent_interaction()</span></code></a>. The
 first registers functions that take the full set of agents as input and returns a
 sequence of nets. It is expected each net of the sequence will be applied the same
 interaction. The second registrator registers the interaction proper: it takes agents as
@@ -1092,7 +1092,7 @@ and by how much.</p>
 <p>It could mean keeping the assets as are, or removing assets with no
 capacity in the current year and beyond, etc…
 It can be any function registered with
-<a class="reference internal" href="#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initial_asset_transform()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initial_asset_transform()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1159,7 +1159,7 @@ to market share.</p>
 <dd><p>Tranforms applied on the old and new assets.</p>
 <p>It could mean using only the new assets, or merging old and new, etc…
 It can be any function registered with
-<a class="reference internal" href="#muse.hooks.register_final_asset_transform" title="muse.hooks.register_final_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_final_asset_transform()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.hooks.register_final_asset_transform" title="muse.hooks.register_final_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_final_asset_transform()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1234,9 +1234,9 @@ never modified.</p>
 a single well defined economic concept. Multiple objectives can later be combined
 via decision functions.</p>
 <p>Objectives should be registered via the
-<a class="reference internal" href="#muse.objectives.register_objective" title="muse.objectives.register_objective"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_objective</span></code></a> decorator. This makes it possible to
+<a class="reference internal" href="../api.html#muse.objectives.register_objective" title="muse.objectives.register_objective"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_objective</span></code></a> decorator. This makes it possible to
 refer to them by name in agent input files, and nominally to set extra input parameters.</p>
-<p>The <a class="reference internal" href="#muse.objectives.factory" title="muse.objectives.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">factory()</span></code></a> function creates a function that calls all objectives defined in
+<p>The <a class="reference internal" href="../api.html#muse.objectives.factory" title="muse.objectives.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">factory()</span></code></a> function creates a function that calls all objectives defined in
 its input argument and returns a dataset with each objective as a separate data array.</p>
 <p>Objectives are not expected to modify their arguments. Furthermore they should
 conform the following signatures:</p>
@@ -1368,7 +1368,7 @@ objectives defined by name or by dictionary.</p>
 <code class="sig-name descname"><span class="pre">fixed_costs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demand</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_space</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">technologies</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">market</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/objectives.html#fixed_costs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.objectives.fixed_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fixed costs associated with a technology.</p>
 <p>Given a factor <span class="math notranslate nohighlight">\(\alpha\)</span> and an  exponent <span class="math notranslate nohighlight">\(\beta\)</span>, the fixed costs
-<span class="math notranslate nohighlight">\(F\)</span> are computed from the <a class="reference internal" href="#muse.objectives.capacity_to_service_demand" title="muse.objectives.capacity_to_service_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">capacity</span> <span class="pre">fulfilling</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">demand</span></code></a> <span class="math notranslate nohighlight">\(C\)</span> as:</p>
+<span class="math notranslate nohighlight">\(F\)</span> are computed from the <a class="reference internal" href="../api.html#muse.objectives.capacity_to_service_demand" title="muse.objectives.capacity_to_service_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">capacity</span> <span class="pre">fulfilling</span> <span class="pre">the</span> <span class="pre">current</span> <span class="pre">demand</span></code></a> <span class="math notranslate nohighlight">\(C\)</span> as:</p>
 <div class="math notranslate nohighlight">
 \[F = \alpha * C^\beta\]</div>
 <p><span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are “fix_par” and “fix_exp” in
@@ -1462,7 +1462,7 @@ registered.</p>
 <cite>(asset, replacement)</cite>, where <cite>asset</cite> refer to technologies currently managed by
 the agent, and <cite>replacement</cite> to all technologies the agent could consider, prior
 to filtering.</p>
-<p>Filters should be registered using the decorator <a class="reference internal" href="#muse.filters.register_filter" title="muse.filters.register_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_filter()</span></code></a>. The
+<p>Filters should be registered using the decorator <a class="reference internal" href="../api.html#muse.filters.register_filter" title="muse.filters.register_filter"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_filter()</span></code></a>. The
 registration makes it possible to call then from the agent by specifying the
 <cite>search_rule</cite> attribute. The <cite>search_rule</cite> attribute is string or list of
 strings specifying the filters to apply one after the other when considering the
@@ -1502,9 +1502,9 @@ with potentially different values.</p>
 </dd>
 </dl>
 <p>In practice, an initial search space is created by calling a function with the signature
-given below, and registered with <a class="reference internal" href="#muse.filters.register_initializer" title="muse.filters.register_initializer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initializer()</span></code></a>. The initializer
+given below, and registered with <a class="reference internal" href="../api.html#muse.filters.register_initializer" title="muse.filters.register_initializer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initializer()</span></code></a>. The initializer
 function returns a search space which is passed on to a chain of filters, as done in the
-<a class="reference internal" href="#muse.filters.factory" title="muse.filters.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">factory()</span></code></a> function.</p>
+<a class="reference internal" href="../api.html#muse.filters.factory" title="muse.filters.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">factory()</span></code></a> function.</p>
 <p>Functions creating initial search spaces should have the following signature:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_initializer</span>
 <span class="k">def</span> <span class="nf">search_space_initializer</span><span class="p">(</span>
@@ -1590,8 +1590,8 @@ In other words the process is more or less:</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">initial_filter</span></code> is simply first filter given on input, if that filter is
-registered with <a class="reference internal" href="#muse.filters.register_initializer" title="muse.filters.register_initializer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initializer()</span></code></a>. Otherwise,
-<a class="reference internal" href="#muse.filters.initialize_from_technologies" title="muse.filters.initialize_from_technologies"><code class="xref py py-func docutils literal notranslate"><span class="pre">initialize_from_technologies()</span></code></a> is automatically inserted.</p>
+registered with <a class="reference internal" href="../api.html#muse.filters.register_initializer" title="muse.filters.register_initializer"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_initializer()</span></code></a>. Otherwise,
+<a class="reference internal" href="../api.html#muse.filters.initialize_from_technologies" title="muse.filters.initialize_from_technologies"><code class="xref py py-func docutils literal notranslate"><span class="pre">initialize_from_technologies()</span></code></a> is automatically inserted.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -1840,7 +1840,7 @@ replacement technologies for each asset</p>
 technologies.</p>
 </dd>
 <dt class="field-even">param constraints</dt>
-<dd class="field-even"><p>a list of constraints as defined in <a class="reference internal" href="#module-muse.constraints" title="muse.constraints"><code class="xref py py-mod docutils literal notranslate"><span class="pre">constraints</span></code></a>.</p>
+<dd class="field-even"><p>a list of constraints as defined in <a class="reference internal" href="../api.html#module-muse.constraints" title="muse.constraints"><code class="xref py py-mod docutils literal notranslate"><span class="pre">constraints</span></code></a>.</p>
 </dd>
 <dt class="field-odd">param year</dt>
 <dd class="field-odd"><p>the current year.</p>
@@ -1933,7 +1933,7 @@ shared. These keyword arguments can be modified from the TOML file.</p>
 <dt class="field-odd">returns</dt>
 <dd class="field-odd"><p>The unmet consumption. Unless indicated, all agents will compete for a the full
 demand. However, if there exists a coordinate “agent” of dimension “asset” giving
-the <a class="reference internal" href="../source/muse.agents.html#muse.agents.agent.AbstractAgent.uuid" title="muse.agents.agent.AbstractAgent.uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uuid</span></code></a> of the agent, then agents will
+the <a class="reference internal" href="../api.html#muse.agents.agent.AbstractAgent.uuid" title="muse.agents.agent.AbstractAgent.uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uuid</span></code></a> of the agent, then agents will
 only service that par of the demand.</p>
 </dd>
 </dl>
@@ -1972,9 +1972,9 @@ quantity) and aggregated over agents. Generally:</p>
 <div class="math notranslate nohighlight">
 \[A_{a, s}^r = w_s\sum_i A_a^{r, i}\]</div>
 <p>with <span class="math notranslate nohighlight">\(w_s\)</span> a weight associated with each timeslice and determined via
-<a class="reference internal" href="#muse.timeslices.convert_timeslice" title="muse.timeslices.convert_timeslice"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.timeslices.convert_timeslice()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.timeslices.convert_timeslice" title="muse.timeslices.convert_timeslice"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.timeslices.convert_timeslice()</span></code></a>.</p>
 </li>
-<li><p>An intermediate quantity, the <a class="reference internal" href="#muse.demand_share.unmet_demand" title="muse.demand_share.unmet_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">unmet</span> <span class="pre">demand</span></code></a> <span class="math notranslate nohighlight">\(U\)</span> is defined from
+<li><p>An intermediate quantity, the <a class="reference internal" href="../api.html#muse.demand_share.unmet_demand" title="muse.demand_share.unmet_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">unmet</span> <span class="pre">demand</span></code></a> <span class="math notranslate nohighlight">\(U\)</span> is defined from
 <span class="math notranslate nohighlight">\(P[\mathcal{M}, \mathcal{A}]\)</span>, a function giving the production for a given
 market <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, the associated consumption <span class="math notranslate nohighlight">\(\mathcal{C}\)</span>, and
 aggregate assets <span class="math notranslate nohighlight">\(\mathcal{A}\)</span>:</p>
@@ -1985,7 +1985,7 @@ aggregate assets <span class="math notranslate nohighlight">\(\mathcal{A}\)</spa
 simplicity. The resulting expression has the same indices as the consumption
 <span class="math notranslate nohighlight">\(\mathcal{C}_{c, s}^r\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(P\)</span> is any function registered with
-<a class="reference internal" href="#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
 </li>
 <li><p>the <em>new</em> demand <span class="math notranslate nohighlight">\(N\)</span> is defined as:</p>
 <blockquote>
@@ -2007,7 +2007,7 @@ neither by the current assets still present in the forecast year, nor by the
 <em>new</em> agent.</p>
 </li>
 <li><dl>
-<dt>then each <em>new</em> agent gets a share of <span class="math notranslate nohighlight">\(N\)</span> proportional to it’s</dt><dd><p>share of the <a class="reference internal" href="#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">production</span></code></a>,
+<dt>then each <em>new</em> agent gets a share of <span class="math notranslate nohighlight">\(N\)</span> proportional to it’s</dt><dd><p>share of the <a class="reference internal" href="../api.html#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">production</span></code></a>,
 <span class="math notranslate nohighlight">\(P[\mathcal{A}_{a, s}^{r, i}(y)]\)</span>.  Then the share of the demand for new
 agent <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 <div class="math notranslate nohighlight">
@@ -2018,7 +2018,7 @@ agent <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 </dl>
 </li>
 <li><dl>
-<dt>similarly, each <em>retrofit</em> agent gets a share of <span class="math notranslate nohighlight">\(N\)</span> proportional to it’s</dt><dd><p>share of the <a class="reference internal" href="#muse.quantities.decommissioning_demand" title="muse.quantities.decommissioning_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">decommissioning</span> <span class="pre">demand</span></code></a>, <span class="math notranslate nohighlight">\(D^{r, i}_{t, c}\)</span>.
+<dt>similarly, each <em>retrofit</em> agent gets a share of <span class="math notranslate nohighlight">\(N\)</span> proportional to it’s</dt><dd><p>share of the <a class="reference internal" href="../api.html#muse.quantities.decommissioning_demand" title="muse.quantities.decommissioning_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">decommissioning</span> <span class="pre">demand</span></code></a>, <span class="math notranslate nohighlight">\(D^{r, i}_{t, c}\)</span>.
 Then the share of the demand for retrofit agent <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 <div class="math notranslate nohighlight">
 \[R_{c, s, t}^{i, r}(y) = R_{c, s}^r
@@ -2036,8 +2036,8 @@ technology.</p>
 <p class="admonition-title">See also</p>
 <p><span class="xref std std-ref">indices</span>, <span class="xref std std-ref">quantities</span>,
 <span class="xref std std-ref">Agent investments</span>,
-<a class="reference internal" href="#muse.quantities.decommissioning_demand" title="muse.quantities.decommissioning_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">decommissioning_demand()</span></code></a>,
-<a class="reference internal" href="#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">maximum_production()</span></code></a></p>
+<a class="reference internal" href="../api.html#muse.quantities.decommissioning_demand" title="muse.quantities.decommissioning_demand"><code class="xref py py-func docutils literal notranslate"><span class="pre">decommissioning_demand()</span></code></a>,
+<a class="reference internal" href="../api.html#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">maximum_production()</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -2058,7 +2058,7 @@ technology.</p>
 The resulting expression has the same indices as the consumption
 <span class="math notranslate nohighlight">\(\mathcal{C}_{c, s}^r\)</span>.</p>
 <p><span class="math notranslate nohighlight">\(P\)</span> is any function registered with
-<a class="reference internal" href="#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_production</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2075,7 +2075,7 @@ The resulting expression has the same indices as the consumption
 instance, the constraints could ensure that only so much of a new asset can be built
 every year.</p>
 <p>Functions to compute constraints should be registered via the decorator
-<a class="reference internal" href="#muse.constraints.register_constraints" title="muse.constraints.register_constraints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_constraints()</span></code></a>. This registration step makes it
+<a class="reference internal" href="../api.html#muse.constraints.register_constraints" title="muse.constraints.register_constraints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_constraints()</span></code></a>. This registration step makes it
 possible for constraints to be declared in the TOML file.</p>
 <p>Generally, LP solvers accept linear constraint defined as:</p>
 <div class="math notranslate nohighlight">
@@ -2122,7 +2122,7 @@ only in <span class="math notranslate nohighlight">\(A_c\)</span>, then the prob
 <span class="math notranslate nohighlight">\(b\)</span> is added by repeating the resulting row in <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ul>
 <p>Constraints are registered using the decorator
-<a class="reference internal" href="#muse.constraints.register_constraints" title="muse.constraints.register_constraints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_constraints()</span></code></a>. The decorated functions must follow
+<a class="reference internal" href="../api.html#muse.constraints.register_constraints" title="muse.constraints.register_constraints"><code class="xref py py-meth docutils literal notranslate"><span class="pre">register_constraints()</span></code></a>. The decorated functions must follow
 the following signature:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_constraints</span>
 <span class="k">def</span> <span class="nf">constraints</span><span class="p">(</span>
@@ -2139,7 +2139,7 @@ the following signature:</p>
 </div>
 <dl class="simple">
 <dt>demand:</dt><dd><p>The demand for the sectors products. In practice it is a demand share obtained in
-<a class="reference internal" href="#module-muse.demand_share" title="muse.demand_share"><code class="xref py py-mod docutils literal notranslate"><span class="pre">demand_share</span></code></a>. It is a data-array with dimensions including <cite>asset</cite>,
+<a class="reference internal" href="../api.html#module-muse.demand_share" title="muse.demand_share"><code class="xref py py-mod docutils literal notranslate"><span class="pre">demand_share</span></code></a>. It is a data-array with dimensions including <cite>asset</cite>,
 <cite>commodity</cite>, <cite>timeslice</cite>.</p>
 </dd>
 <dt>assets:</dt><dd><p>The capacity of the assets owned by the agent.</p>
@@ -2162,7 +2162,7 @@ will be considered for each existing asset.</p>
 <dd><p>Creates the input for the scipy solvers.</p>
 <p class="rubric">Example</p>
 <p>Lets give a fist simple example. The constraint
-<a class="reference internal" href="#muse.constraints.max_capacity_expansion" title="muse.constraints.max_capacity_expansion"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_capacity_expansion()</span></code></a> limits how much each
+<a class="reference internal" href="../api.html#muse.constraints.max_capacity_expansion" title="muse.constraints.max_capacity_expansion"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_capacity_expansion()</span></code></a> limits how much each
 capacity can be expanded in a given year.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">muse</span> <span class="kn">import</span> <span class="n">examples</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">muse.quantities</span> <span class="kn">import</span> <span class="n">maximum_production</span>
@@ -2235,7 +2235,7 @@ dimensions:</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="n">inputs</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>In practice, <a class="reference internal" href="#muse.constraints.lp_costs" title="muse.constraints.lp_costs"><code class="xref py py-func docutils literal notranslate"><span class="pre">lp_costs()</span></code></a> helps us define the decision
+<p>In practice, <a class="reference internal" href="../api.html#muse.constraints.lp_costs" title="muse.constraints.lp_costs"><code class="xref py py-func docutils literal notranslate"><span class="pre">lp_costs()</span></code></a> helps us define the decision
 variables (and <code class="docutils literal notranslate"><span class="pre">c</span></code>). We can verify that the sizes are consistent:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lpcosts</span> <span class="o">=</span> <span class="n">cs</span><span class="o">.</span><span class="n">lp_costs</span><span class="p">(</span><span class="n">technologies</span><span class="p">,</span> <span class="n">costs</span><span class="p">,</span> <span class="n">market</span><span class="o">.</span><span class="n">timeslice</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">capsize</span> <span class="o">=</span> <span class="n">lpcosts</span><span class="o">.</span><span class="n">capacity</span><span class="o">.</span><span class="n">size</span>
@@ -2309,7 +2309,7 @@ capacity or the production</p>
 </dl>
 </li>
 </ol>
-<p>See <a class="reference internal" href="#muse.constraints.lp_constraint_matrix" title="muse.constraints.lp_constraint_matrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.constraints.lp_constraint_matrix()</span></code></a> for a more detailed explanation
+<p>See <a class="reference internal" href="../api.html#muse.constraints.lp_constraint_matrix" title="muse.constraints.lp_constraint_matrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.constraints.lp_constraint_matrix()</span></code></a> for a more detailed explanation
 of the transformations applied here.</p>
 </dd></dl>
 
@@ -2394,10 +2394,10 @@ ought to be a single row of a matrix, or a vector with only decision variables:<
 </pre></div>
 </div>
 <p>As expected, the capacity vector is 1, whereas the production vector is -1.
-These are the values the <a class="reference internal" href="#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> is set up
+These are the values the <a class="reference internal" href="../api.html#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> is set up
 to create.</p>
 <p>Now, let’s check the case where <code class="docutils literal notranslate"><span class="pre">b</span></code> is the one from the
-<a class="reference internal" href="#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> constraint. In that case, all the
+<a class="reference internal" href="../api.html#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> constraint. In that case, all the
 dimensions should end up as constraint dimensions: the production for each
 timeslice, region, asset, and replacement technology should not outstrip the
 capacity assigned for the asset and replacement technology.</p>
@@ -2411,7 +2411,7 @@ capacity assigned for the asset and replacement technology.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span> <span class="o">==</span> <span class="n">decision_dims</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">constraint_dims</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <a class="reference internal" href="#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> constraint on the production
+<p>The <a class="reference internal" href="../api.html#muse.constraints.max_production" title="muse.constraints.max_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">max_production()</span></code></a> constraint on the production
 side is the identy matrix with a factor <span class="math notranslate nohighlight">\(-1\)</span>. We can easily check this
 by stacking the decision and constraint dimensions in the result:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">cs</span><span class="o">.</span><span class="n">lp_constraint_matrix</span><span class="p">(</span>
@@ -2520,7 +2520,7 @@ capacity.</p>
 <dt id="muse.constraints.register_constraints">
 <code class="sig-name descname"><span class="pre">register_constraints</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/constraints.html#register_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.constraints.register_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a constraint with MUSE.</p>
-<p>See <a class="reference internal" href="#module-muse.constraints" title="muse.constraints"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.constraints</span></code></a>.</p>
+<p>See <a class="reference internal" href="../api.html#module-muse.constraints" title="muse.constraints"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.constraints</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2538,7 +2538,7 @@ capacity.</p>
 <code class="sig-name descname"><span class="pre">asset_merge_factory</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">settings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'new'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/hooks.html#asset_merge_factory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.hooks.asset_merge_factory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a function for merging new investments into assets.</p>
 <p>Available merging functions should be registered with
-<a class="reference internal" href="#muse.hooks.register_final_asset_transform" title="muse.hooks.register_final_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_final_asset_transform</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.hooks.register_final_asset_transform" title="muse.hooks.register_final_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_final_asset_transform</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2553,7 +2553,7 @@ capacity.</p>
 <dd><p>Returns a function for performing initial housekeeping.</p>
 <p>For instance, remove technologies with no capacity now or in the future.
 Available housekeeping functions should be registered with
-<a class="reference internal" href="#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_initial_asset_transform</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.hooks.register_initial_asset_transform" title="muse.hooks.register_initial_asset_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">&#64;register_initial_asset_transform</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2595,8 +2595,8 @@ did not take into account) are set to zero.</p>
 function which takes as input the current set of assets, the new assets, and any
 number of keyword arguments. The function must return a “merge” of the two assets.</p>
 <p>For instance, the new assets could completely replace the old assets
-(<a class="reference internal" href="#muse.hooks.new_assets_only" title="muse.hooks.new_assets_only"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_assets_only()</span></code></a>), or they could be summed to the old assets
-(<a class="reference internal" href="#muse.hooks.merge_assets" title="muse.hooks.merge_assets"><code class="xref py py-func docutils literal notranslate"><span class="pre">merge_assets()</span></code></a>).</p>
+(<a class="reference internal" href="../api.html#muse.hooks.new_assets_only" title="muse.hooks.new_assets_only"><code class="xref py py-func docutils literal notranslate"><span class="pre">new_assets_only()</span></code></a>), or they could be summed to the old assets
+(<a class="reference internal" href="../api.html#muse.hooks.merge_assets" title="muse.hooks.merge_assets"><code class="xref py py-func docutils literal notranslate"><span class="pre">merge_assets()</span></code></a>).</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2643,7 +2643,7 @@ settings_file: A string or a Path to the settings file</p>
 <code class="sig-name descname"><span class="pre">read_csv_agent_parameters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/readers/csv.html#read_csv_agent_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.readers.csv.read_csv_agent_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads standard MUSE agent-declaration csv-files.</p>
 <p>Returns a list of dictionaries, where each dictionary can be used to instantiate an
-agent in <a class="reference internal" href="../source/muse.agents.html#muse.agents.factories.factory" title="muse.agents.factories.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.agents.factories.factory()</span></code></a>.</p>
+agent in <a class="reference internal" href="../api.html#muse.agents.factories.factory" title="muse.agents.factories.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.agents.factories.factory()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2839,10 +2839,10 @@ decorated function returns the path to the output file.</p>
 <p>This decorator adds three keyword arguments to an input function:</p>
 <ul class="simple">
 <li><p>set_index: A dictionary or any argument accepted by
-<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index" title="(in pandas v1.3.0.dev0+1092.g00a622401e)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.set_index()</span></code></a>. Ignored if not specified. If specified, a
-call to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index" title="(in pandas v1.3.0.dev0+1092.g00a622401e)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.reset_index()</span></code></a> is made first.</p></li>
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.set_index()</span></code></a>. Ignored if not specified. If specified, a
+call to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.reset_index()</span></code></a> is made first.</p></li>
 <li><p>sort_index: A dictionary or any argument accepted by
-<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index" title="(in pandas v1.3.0.dev0+1092.g00a622401e)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.sort_index()</span></code></a>. Ignored if not specified.</p></li>
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.sort_index()</span></code></a>. Ignored if not specified.</p></li>
 <li><p>keep_columns: a string or a list of strings with the names of the columns to keep.
 Ignored if not specified.</p></li>
 </ul>
@@ -3102,8 +3102,8 @@ is :</p>
 <p>Furthermore, decommissioning demand is non-zero only for end-use commodities.</p>
 <dl class="simple">
 <dt>ncsearch-nohlsearch).. SeeAlso:</dt><dd><p><span class="xref std std-ref">indices</span>, <span class="xref std std-ref">quantities</span>,
-<a class="reference internal" href="#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">maximum_production()</span></code></a>
-<a class="reference internal" href="#muse.commodities.is_enduse" title="muse.commodities.is_enduse"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_enduse()</span></code></a></p>
+<a class="reference internal" href="../api.html#muse.quantities.maximum_production" title="muse.quantities.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">maximum_production()</span></code></a>
+<a class="reference internal" href="../api.html#muse.commodities.is_enduse" title="muse.commodities.is_enduse"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_enduse()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -3295,7 +3295,7 @@ sets of indices.</p>
 <p>Where <span class="math notranslate nohighlight">\(\alpha\)</span> is an index running over constraints,
 <span class="math notranslate nohighlight">\(\mathcal{R}^{(\alpha)}\subseteq\mathcal{D}\cup\mathcal{I}\)</span> is a subset of
 indices.</p>
-<p>The algorithm proceeds as described in <a class="reference internal" href="#module-muse.demand_matching" title="muse.demand_matching"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.demand_matching</span></code></a>.
+<p>The algorithm proceeds as described in <a class="reference internal" href="../api.html#module-muse.demand_matching" title="muse.demand_matching"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.demand_matching</span></code></a>.
 However, an extra step is added to ensure that the solutions falls within the
 convex-hull formed by the constraints. This projects the current solution onto the
 constraint. Hence, the solution will depend on the order in which the constraints
@@ -3744,7 +3744,7 @@ own:</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-name descname"><span class="pre">CommodityUsage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/commodities.html#CommodityUsage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.commodities.CommodityUsage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flags to specify the different kinds of commodities.</p>
 <p>For details on how <code class="docutils literal notranslate"><span class="pre">enum</span></code>’s work, see <a class="reference external" href="https://docs.python.org/3/library/enum.html#intflag">python’s documentation</a>. In practice,
-<a class="reference internal" href="#muse.commodities.CommodityUsage" title="muse.commodities.CommodityUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommodityUsage</span></code></a> centralizes in one place the different kinds of
+<a class="reference internal" href="../api.html#muse.commodities.CommodityUsage" title="muse.commodities.CommodityUsage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommodityUsage</span></code></a> centralizes in one place the different kinds of
 commodities that are meaningfull to the generalized sector, e.g. commodities that
 are consumed by the sector, and commodities that produced by the sectors, as well
 commodities that are, somehow, <em>environmental</em>.</p>
