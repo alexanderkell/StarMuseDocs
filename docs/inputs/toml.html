@@ -52,7 +52,7 @@
 described in this <a class="reference internal" href="toml_primer.html#toml-primer"><span class="std std-ref">previous section</span></a>. Here, however, we focus on sections and
 attributes that are specific to MUSE.</p>
 <p>The TOML file can be read using <a class="reference internal" href="../source/muse.readers.html#muse.readers.toml.read_settings" title="muse.readers.toml.read_settings"><code class="xref py py-func docutils literal notranslate"><span class="pre">read_settings()</span></code></a>. The resulting
-data is used to construt the market clearing algorithm directly in the <a class="reference internal" href="../advanced-guide/api.html#muse.mca.MCA.factory" title="muse.mca.MCA.factory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MCA's</span>
+data is used to construt the market clearing algorithm directly in the <a class="reference internal" href="../api.html#muse.mca.MCA.factory" title="muse.mca.MCA.factory"><code class="xref py py-meth docutils literal notranslate"><span class="pre">MCA's</span>
 <span class="pre">factory</span> <span class="pre">function</span></code></a>.</p>
 <div class="section" id="main-section">
 <h2>Main section<a class="headerlink" href="#main-section" title="Permalink to this headline">¶</a></h2>
@@ -280,11 +280,11 @@ instance:</p>
 <span class="n">costing</span> <span class="o">=</span> <span class="s">&quot;prices&quot;</span>
 </pre></div>
 </div>
-<p>MUSE provides two methods in <a class="reference internal" href="../advanced-guide/api.html#module-muse.production" title="muse.production"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.production</span></code></a>:</p>
+<p>MUSE provides two methods in <a class="reference internal" href="../api.html#module-muse.production" title="muse.production"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.production</span></code></a>:</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>share: the production is the maximum production for the existing capacity and</dt><dd><p>the technology’s utilization factor.
-See <a class="reference internal" href="../advanced-guide/api.html#muse.production.maximum_production" title="muse.production.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.maximum_production()</span></code></a>.</p>
+See <a class="reference internal" href="../api.html#muse.production.maximum_production" title="muse.production.maximum_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.maximum_production()</span></code></a>.</p>
 </dd>
 </dl>
 </li>
@@ -292,13 +292,13 @@ See <a class="reference internal" href="../advanced-guide/api.html#muse.producti
 <dt>match: production and demand are matched according to a given cost metric. The</dt><dd><p>cost metric defaults to “prices”. It can be modified by using the general form
 given above, with a “costing” attribute. The latter can be “prices”,
 “gross_margin”, or “lcoe”.
-See <a class="reference internal" href="../advanced-guide/api.html#muse.production.demand_matched_production" title="muse.production.demand_matched_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.demand_matched_production()</span></code></a>.</p>
+See <a class="reference internal" href="../api.html#muse.production.demand_matched_production" title="muse.production.demand_matched_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.demand_matched_production()</span></code></a>.</p>
 </dd>
 </dl>
 </li>
 </ul>
 <p><em>production</em> can also refer to any custom production method registered with MUSE via
-<a class="reference internal" href="../advanced-guide/api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.register_production()</span></code></a>.</p>
+<a class="reference internal" href="../api.html#muse.production.register_production" title="muse.production.register_production"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.production.register_production()</span></code></a>.</p>
 <p>Defaults to “share”.</p>
 </dd>
 <dt>dispatch_production</dt><dd><p>The name of the production method used to compute the sector’s output, as returned
@@ -323,9 +323,9 @@ adding an extra interaction row.</p>
 <ul class="simple">
 <li><p>a <em>net</em> defines the set of agents that interact. A set can contain any
 number of agents, whether zero, two, or all agents in a sector. See
-<a class="reference internal" href="../advanced-guide/api.html#muse.interactions.register_interaction_net" title="muse.interactions.register_interaction_net"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.interactions.register_interaction_net()</span></code></a>.</p></li>
+<a class="reference internal" href="../api.html#muse.interactions.register_interaction_net" title="muse.interactions.register_interaction_net"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.interactions.register_interaction_net()</span></code></a>.</p></li>
 <li><p>an <em>interaction</em> defines how the net actually interacts.  See
-<a class="reference internal" href="../advanced-guide/api.html#muse.interactions.register_agent_interaction" title="muse.interactions.register_agent_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.interactions.register_agent_interaction()</span></code></a>.</p></li>
+<a class="reference internal" href="../api.html#muse.interactions.register_agent_interaction" title="muse.interactions.register_agent_interaction"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.interactions.register_agent_interaction()</span></code></a>.</p></li>
 </ul>
 <p>In practice, we always consider sequences of nets (i.e. more than one net) that
 interact using the same interaction function.</p>
@@ -347,7 +347,7 @@ as follows:</p>
 </div>
 <p>The parameters will depend on the net and interaction functions. Neither
 “new_to_retro” nor “transfer” take any arguments at this point. MUSE interaction
-facilities are defined in <a class="reference internal" href="../advanced-guide/api.html#module-muse.interactions" title="muse.interactions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.interactions</span></code></a>.</p>
+facilities are defined in <a class="reference internal" href="../api.html#module-muse.interactions" title="muse.interactions"><code class="xref py py-mod docutils literal notranslate"><span class="pre">muse.interactions</span></code></a>.</p>
 </dd>
 <dt>output</dt><dd><p>Outputs are made up of several components. MUSE is designed to allow users to
 mix-and-match both how and what to save.</p>

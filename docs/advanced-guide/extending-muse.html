@@ -416,13 +416,13 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
--- 2020-11-26 16:49:14 - muse.sectors.register - INFO
+-- 2021-03-29 10:52:22 - muse.sectors.register - INFO
 Sector legacy registered.
 
--- 2020-11-26 16:49:14 - muse.sectors.register - INFO
+-- 2021-03-29 10:52:22 - muse.sectors.register - INFO
 Sector preset registered, with alias presets.
 
--- 2020-11-26 16:49:14 - muse.sectors.register - INFO
+-- 2021-03-29 10:52:22 - muse.sectors.register - INFO
 Sector default registered.
 
 </pre></div></div>
@@ -448,7 +448,8 @@ Sector default registered.
    &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;},
   {&#39;quantity&#39;: &#39;capacity&#39;,
    &#39;sink&#39;: &#39;aggregate&#39;,
-   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;}],
+   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;,
+   &#39;index&#39;: False}],
  &#39;carbon_budget_control&#39;: {&#39;budget&#39;: []},
  &#39;global_input_files&#39;: {&#39;projections&#39;: &#39;{path}/input/Projections.csv&#39;,
   &#39;global_commodities&#39;: &#39;{path}/input/GlobalCommodities.csv&#39;},
@@ -470,7 +471,8 @@ Sector default registered.
    &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: &#39;capacity&#39;,
      &#39;sink&#39;: &#39;csv&#39;,
-     &#39;overwrite&#39;: True},
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False},
     {&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: {&#39;name&#39;: &#39;supply&#39;,
       &#39;sum_over&#39;: &#39;timeslice&#39;,
@@ -494,7 +496,8 @@ Sector default registered.
    &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: &#39;capacity&#39;,
      &#39;sink&#39;: &#39;csv&#39;,
-     &#39;overwrite&#39;: True}],
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
    &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
   &#39;gas&#39;: {&#39;type&#39;: &#39;default&#39;,
    &#39;priority&#39;: 3,
@@ -508,7 +511,8 @@ Sector default registered.
    &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: &#39;capacity&#39;,
      &#39;sink&#39;: &#39;csv&#39;,
-     &#39;overwrite&#39;: True}],
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
    &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
   &#39;residential_presets&#39;: {&#39;type&#39;: &#39;presets&#39;,
    &#39;priority&#39;: 0,
@@ -540,48 +544,792 @@ Sector default registered.
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:52:41 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:52:58 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:53:15 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:53:24 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=6.8525e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07867e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.79131e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.35187e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.90398e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.00332e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.32553e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.41585e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.28764e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.8327e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:53:35 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=6.8525e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07867e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.79131e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.35187e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.90398e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.00332e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.32553e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.41585e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.28764e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.8327e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:53:47 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.16482e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.73828e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.82431e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.89122e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.45871e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:00 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.16482e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.73828e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.82431e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.89122e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.45871e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:13 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.19848e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.27989e-22): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.231e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.51859e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:23 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.19848e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.27989e-22): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.231e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.51859e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:31 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07669e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.29419e-17): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:42 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07669e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.29419e-17): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:50 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.87287e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=7.9855e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.08355e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.49191e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.05667e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:54:59 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.87287e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=7.9855e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.08355e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.49191e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.05667e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
--- 2020-11-26 16:49:20 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:25 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:29 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:34 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:39 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:43 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:47 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:53 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:49:58 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:05 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:10 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:15 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:20 - muse.mca - WARNING
+-- 2021-03-29 10:55:10 - muse.mca - WARNING
 Check growth constraints for wind.
 
 </pre></div></div>
@@ -723,7 +1471,8 @@ Check growth constraints for wind.
    &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;},
   {&#39;quantity&#39;: &#39;capacity&#39;,
    &#39;sink&#39;: &#39;aggregate&#39;,
-   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;}],
+   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;,
+   &#39;index&#39;: False}],
  &#39;carbon_budget_control&#39;: {&#39;budget&#39;: []},
  &#39;global_input_files&#39;: {&#39;projections&#39;: &#39;{path}/input/Projections.csv&#39;,
   &#39;global_commodities&#39;: &#39;{path}/input/GlobalCommodities.csv&#39;},
@@ -761,7 +1510,8 @@ Check growth constraints for wind.
    &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: &#39;capacity&#39;,
      &#39;sink&#39;: &#39;csv&#39;,
-     &#39;overwrite&#39;: True}],
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
    &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
   &#39;gas&#39;: {&#39;type&#39;: &#39;default&#39;,
    &#39;priority&#39;: 3,
@@ -775,7 +1525,8 @@ Check growth constraints for wind.
    &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
      &#39;quantity&#39;: &#39;capacity&#39;,
      &#39;sink&#39;: &#39;csv&#39;,
-     &#39;overwrite&#39;: True}],
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
    &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
   &#39;residential_presets&#39;: {&#39;type&#39;: &#39;presets&#39;,
    &#39;priority&#39;: 0,
@@ -800,48 +1551,792 @@ Check growth constraints for wind.
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:55:16 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:55:22 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:55:34 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:55:50 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=6.8525e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07867e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.79131e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.35187e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.90398e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.00332e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.32553e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.41585e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.28764e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.8327e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:04 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=6.8525e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07867e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.79131e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.35187e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.90398e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.00332e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.32553e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.41585e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.28764e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.8327e-23): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:13 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.16482e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.73828e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.82431e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.89122e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.45871e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:26 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.16482e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.73828e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.82431e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.89122e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.45871e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:35 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.19848e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.27989e-22): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.231e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.51859e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:47 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=4.19848e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.27989e-22): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=2.231e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=3.51859e-21): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:56:56 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07669e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.29419e-17): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:57:08 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.07669e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.29419e-17): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:57:21 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.87287e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=7.9855e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.08355e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.49191e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.05667e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+-- 2021-03-29 10:57:31 - muse.mca - WARNING
+Check growth constraints for wind.
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+A1 newcapa
+A1 newcapa
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=5.87287e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=7.9855e-18): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.08355e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=1.49191e-19): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+/opt/anaconda3/envs/muse/lib/python3.7/site-packages/scipy/optimize/_linprog_ip.py:117: LinAlgWarning: Ill-conditioned matrix (rcond=8.05667e-20): result may not be accurate.
+  return sp.linalg.solve(M, r, sym_pos=sym_pos)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A1 newcapa
+A1 newcapa
+A1 retrofit
+A1 retrofit
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
--- 2020-11-26 16:50:27 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:33 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:39 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:44 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:49 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:53 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:50:56 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:01 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:07 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:14 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:20 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:24 - muse.mca - WARNING
-Check growth constraints for wind.
-
--- 2020-11-26 16:51:29 - muse.mca - WARNING
+-- 2021-03-29 10:57:39 - muse.mca - WARNING
 Check growth constraints for wind.
 
 </pre></div></div>
@@ -876,6 +2371,150 @@ Check growth constraints for wind.
 </div>
 <p>Again, we can see that the number of output files generated were as we expected and that our new message “Hello, you!” was found within these files. This means that our output and sink functions worked as expected.</p>
 </div>
+<div class="section" id="Where-to-store-new-functionality">
+<h2>Where to store new functionality<a class="headerlink" href="#Where-to-store-new-functionality" title="Permalink to this headline">¶</a></h2>
+<p>As previously demonstrated, we can easily add new functionality to MUSE. However, running a jupyter notebook is not always the best approach. It is also possible to store functions in an arbitrary pthon file, such as the following:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="o">%%writefile</span> mynewfunctions.py
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Text</span>
+<span class="kn">from</span> <span class="nn">muse.outputs.sinks</span> <span class="kn">import</span> <span class="n">register_output_sink</span><span class="p">,</span> <span class="n">sink_to_file</span>
+
+<span class="nd">@register_output_sink</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;txt&quot;</span><span class="p">)</span>
+<span class="nd">@sink_to_file</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">text_dump</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="n">Text</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+    <span class="n">Path</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello world!</span><span class="se">\n\n</span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Overwriting mynewfunctions.py
+</pre></div></div>
+</div>
+<p>We can then tell the TOML file where to find it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plugins</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{cwd}</span><span class="s2">/mynewfunctions.py&quot;</span>
+
+<span class="p">[[</span><span class="n">sectors</span><span class="o">.</span><span class="n">commercial</span><span class="o">.</span><span class="n">outputs</span><span class="p">]]</span>
+<span class="n">quantity</span> <span class="o">=</span> <span class="s2">&quot;capacity&quot;</span>
+<span class="n">sink</span> <span class="o">=</span> <span class="s2">&quot;dummy&quot;</span>
+<span class="n">overwrite</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>Alternatively, <code class="docutils literal notranslate"><span class="pre">plugin</span></code> can also be given a list of paths rather than just a single one, as done below.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">settings</span> <span class="o">=</span> <span class="n">load</span><span class="p">(</span><span class="n">model_path</span> <span class="o">/</span> <span class="s2">&quot;settings.toml&quot;</span><span class="p">)</span>
+<span class="n">settings</span><span class="p">[</span><span class="s2">&quot;plugins&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">{cwd}</span><span class="s2">/mynewfunctions.py&quot;</span><span class="p">]</span>
+<span class="n">settings</span><span class="p">[</span><span class="s2">&quot;sectors&quot;</span><span class="p">][</span><span class="s2">&quot;residential&quot;</span><span class="p">][</span><span class="s2">&quot;outputs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="s2">&quot;capacity&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sink&quot;</span><span class="p">:</span>  <span class="s2">&quot;dummy&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;overwrite&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+<span class="n">dump</span><span class="p">(</span><span class="n">settings</span><span class="p">,</span> <span class="p">(</span><span class="n">model_path</span> <span class="o">/</span> <span class="s2">&quot;modified_settings.toml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">))</span>
+<span class="n">settings</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;time_framework&#39;: [2020, 2025, 2030, 2035, 2040, 2045, 2050],
+ &#39;foresight&#39;: 5,
+ &#39;regions&#39;: [&#39;R1&#39;],
+ &#39;interest_rate&#39;: 0.1,
+ &#39;interpolation_mode&#39;: &#39;Active&#39;,
+ &#39;log_level&#39;: &#39;info&#39;,
+ &#39;equilibrium_variable&#39;: &#39;demand&#39;,
+ &#39;maximum_iterations&#39;: 100,
+ &#39;tolerance&#39;: 0.1,
+ &#39;tolerance_unmet_demand&#39;: -0.1,
+ &#39;outputs&#39;: [{&#39;quantity&#39;: &#39;prices&#39;,
+   &#39;sink&#39;: &#39;aggregate&#39;,
+   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;},
+  {&#39;quantity&#39;: &#39;capacity&#39;,
+   &#39;sink&#39;: &#39;aggregate&#39;,
+   &#39;filename&#39;: &#39;{cwd}/{default_output_dir}/MCA{Quantity}.csv&#39;,
+   &#39;index&#39;: False}],
+ &#39;carbon_budget_control&#39;: {&#39;budget&#39;: []},
+ &#39;global_input_files&#39;: {&#39;projections&#39;: &#39;{path}/input/Projections.csv&#39;,
+  &#39;global_commodities&#39;: &#39;{path}/input/GlobalCommodities.csv&#39;},
+ &#39;sectors&#39;: {&#39;residential&#39;: {&#39;type&#39;: &#39;default&#39;,
+   &#39;priority&#39;: 1,
+   &#39;dispatch_production&#39;: &#39;share&#39;,
+   &#39;technodata&#39;: &#39;{path}/technodata/residential/Technodata.csv&#39;,
+   &#39;commodities_in&#39;: &#39;{path}/technodata/residential/CommIn.csv&#39;,
+   &#39;commodities_out&#39;: &#39;{path}/technodata/residential/CommOut.csv&#39;,
+   &#39;subsectors&#39;: {&#39;retro_and_new&#39;: {&#39;agents&#39;: &#39;{path}/technodata/Agents.csv&#39;,
+     &#39;existing_capacity&#39;: &#39;{path}/technodata/residential/ExistingCapacity.csv&#39;,
+     &#39;lpsolver&#39;: &#39;scipy&#39;,
+     &#39;constraints&#39;: [&#39;max_production&#39;,
+      &#39;max_capacity_expansion&#39;,
+      &#39;demand&#39;,
+      &#39;search_space&#39;],
+     &#39;demand_share&#39;: &#39;new_and_retro&#39;,
+     &#39;forecast&#39;: 5}},
+   &#39;outputs&#39;: [{&#39;quantity&#39;: &#39;capacity&#39;, &#39;sink&#39;: &#39;dummy&#39;, &#39;overwrite&#39;: &#39;true&#39;}],
+   &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
+  &#39;power&#39;: {&#39;type&#39;: &#39;default&#39;,
+   &#39;priority&#39;: 2,
+   &#39;dispatch_production&#39;: &#39;share&#39;,
+   &#39;technodata&#39;: &#39;{path}/technodata/power/Technodata.csv&#39;,
+   &#39;commodities_in&#39;: &#39;{path}/technodata/power/CommIn.csv&#39;,
+   &#39;commodities_out&#39;: &#39;{path}/technodata/power/CommOut.csv&#39;,
+   &#39;subsectors&#39;: {&#39;retro_and_new&#39;: {&#39;agents&#39;: &#39;{path}/technodata/Agents.csv&#39;,
+     &#39;existing_capacity&#39;: &#39;{path}/technodata/power/ExistingCapacity.csv&#39;,
+     &#39;lpsolver&#39;: &#39;scipy&#39;}},
+   &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
+     &#39;quantity&#39;: &#39;capacity&#39;,
+     &#39;sink&#39;: &#39;csv&#39;,
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
+   &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
+  &#39;gas&#39;: {&#39;type&#39;: &#39;default&#39;,
+   &#39;priority&#39;: 3,
+   &#39;dispatch_production&#39;: &#39;share&#39;,
+   &#39;technodata&#39;: &#39;{path}/technodata/gas/Technodata.csv&#39;,
+   &#39;commodities_in&#39;: &#39;{path}/technodata/gas/CommIn.csv&#39;,
+   &#39;commodities_out&#39;: &#39;{path}/technodata/gas/CommOut.csv&#39;,
+   &#39;subsectors&#39;: {&#39;retro_and_new&#39;: {&#39;agents&#39;: &#39;{path}/technodata/Agents.csv&#39;,
+     &#39;existing_capacity&#39;: &#39;{path}/technodata/gas/ExistingCapacity.csv&#39;,
+     &#39;lpsolver&#39;: &#39;scipy&#39;}},
+   &#39;outputs&#39;: [{&#39;filename&#39;: &#39;{cwd}/{default_output_dir}/{Sector}/{Quantity}/{year}{suffix}&#39;,
+     &#39;quantity&#39;: &#39;capacity&#39;,
+     &#39;sink&#39;: &#39;csv&#39;,
+     &#39;overwrite&#39;: True,
+     &#39;index&#39;: False}],
+   &#39;interactions&#39;: [{&#39;net&#39;: &#39;new_to_retro&#39;, &#39;interaction&#39;: &#39;transfer&#39;}]},
+  &#39;residential_presets&#39;: {&#39;type&#39;: &#39;presets&#39;,
+   &#39;priority&#39;: 0,
+   &#39;consumption_path&#39;: &#39;{path}/technodata/preset/*Consumption.csv&#39;}},
+ &#39;timeslices&#39;: {&#39;all-year&#39;: {&#39;all-week&#39;: {&#39;night&#39;: 1460,
+    &#39;morning&#39;: 1460,
+    &#39;afternoon&#39;: 1460,
+    &#39;early-peak&#39;: 1460,
+    &#39;late-peak&#39;: 1460,
+    &#39;evening&#39;: 1460}},
+  &#39;level_names&#39;: [&#39;month&#39;, &#39;day&#39;, &#39;hour&#39;]},
+ &#39;plugins&#39;: [&#39;{cwd}/mynewfunctions.py&#39;]}
+</pre></div></div>
+</div>
+</div>
 <div class="section" id="Next-steps">
 <h2>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
 <p>In the next section we will output a technology filter, to stop agents from investing in a certain technology, and a new metric to combine multiple objectives.</p>
@@ -897,6 +2536,7 @@ Check growth constraints for wind.
 </ul>
 </li>
 <li><a class="reference internal" href="#Adding-TOML-parameters-to-the-outputs">Adding TOML parameters to the outputs</a></li>
+<li><a class="reference internal" href="#Where-to-store-new-functionality">Where to store new functionality</a></li>
 <li><a class="reference internal" href="#Next-steps">Next steps</a></li>
 </ul>
 </li>

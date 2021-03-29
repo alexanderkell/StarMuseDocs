@@ -1933,7 +1933,7 @@ shared. These keyword arguments can be modified from the TOML file.</p>
 <dt class="field-odd">returns</dt>
 <dd class="field-odd"><p>The unmet consumption. Unless indicated, all agents will compete for a the full
 demand. However, if there exists a coordinate “agent” of dimension “asset” giving
-the <a class="reference internal" href="../api.html#muse.agents.agent.AbstractAgent.uuid" title="muse.agents.agent.AbstractAgent.uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uuid</span></code></a> of the agent, then agents will
+the <a class="reference internal" href="../source/muse.agents.html#muse.agents.agent.AbstractAgent.uuid" title="muse.agents.agent.AbstractAgent.uuid"><code class="xref py py-attr docutils literal notranslate"><span class="pre">uuid</span></code></a> of the agent, then agents will
 only service that par of the demand.</p>
 </dd>
 </dl>
@@ -2643,7 +2643,7 @@ settings_file: A string or a Path to the settings file</p>
 <code class="sig-name descname"><span class="pre">read_csv_agent_parameters</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/muse/readers/csv.html#read_csv_agent_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#muse.readers.csv.read_csv_agent_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads standard MUSE agent-declaration csv-files.</p>
 <p>Returns a list of dictionaries, where each dictionary can be used to instantiate an
-agent in <a class="reference internal" href="../api.html#muse.agents.factories.factory" title="muse.agents.factories.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.agents.factories.factory()</span></code></a>.</p>
+agent in <a class="reference internal" href="../source/muse.agents.html#muse.agents.factories.factory" title="muse.agents.factories.factory"><code class="xref py py-func docutils literal notranslate"><span class="pre">muse.agents.factories.factory()</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py function">
@@ -2839,10 +2839,10 @@ decorated function returns the path to the output file.</p>
 <p>This decorator adds three keyword arguments to an input function:</p>
 <ul class="simple">
 <li><p>set_index: A dictionary or any argument accepted by
-<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.set_index()</span></code></a>. Ignored if not specified. If specified, a
-call to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.reset_index()</span></code></a> is made first.</p></li>
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index" title="(in pandas v1.3.0.dev0+1171.g5282bef8c7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.set_index()</span></code></a>. Ignored if not specified. If specified, a
+call to <a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.reset_index.html#pandas.DataFrame.reset_index" title="(in pandas v1.3.0.dev0+1171.g5282bef8c7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.reset_index()</span></code></a> is made first.</p></li>
 <li><p>sort_index: A dictionary or any argument accepted by
-<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index" title="(in pandas v1.3.0.dev0+1161.gacacff35b1)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.sort_index()</span></code></a>. Ignored if not specified.</p></li>
+<a class="reference external" href="https://pandas.pydata.org/pandas-docs/dev/reference/api/pandas.DataFrame.sort_index.html#pandas.DataFrame.sort_index" title="(in pandas v1.3.0.dev0+1171.g5282bef8c7)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pandas.DataFrame.sort_index()</span></code></a>. Ignored if not specified.</p></li>
 <li><p>keep_columns: a string or a list of strings with the names of the columns to keep.
 Ignored if not specified.</p></li>
 </ul>
