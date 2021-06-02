@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.outputs.mca &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -256,24 +259,32 @@
         <span class="n">capa_agent</span><span class="p">[</span><span class="s2">&quot;sector&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">sector</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;unnamed&quot;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_agent</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_agent</span><span class="o">.</span><span class="n">technology</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="s2">&quot;dst_region&quot;</span> <span class="ow">in</span> <span class="n">capa_agent</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
-                <span class="n">capa_sector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                    <span class="n">capa_agent</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;technology&quot;</span><span class="p">)</span>
-                    <span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;dst_region&quot;</span><span class="p">])</span>
-                    <span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;dst_region&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">capa_agent</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
+                <span class="n">capa_agent</span><span class="p">[</span><span class="s2">&quot;dst_region&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">agent</span><span class="o">.</span><span class="n">region</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">capa_agent</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span>
+                    <span class="p">[</span>
+                        <span class="s2">&quot;technology&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;dst_region&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;agent&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sector&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;year&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;installed&quot;</span><span class="p">,</span>
+                    <span class="p">]</span>
                 <span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">capa_sector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-                    <span class="n">capa_agent</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;technology&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-                <span class="p">)</span>
+                <span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;asset&quot;</span><span class="p">)</span>
+                <span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+            <span class="n">capa_sector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">capa_sector</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">DataFrame</span><span class="p">()</span>
 
-    <span class="n">capacity</span> <span class="o">=</span> <span class="n">concat</span><span class="p">([</span><span class="n">u</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">capa_sector</span><span class="p">])</span>
+    <span class="n">capacity</span> <span class="o">=</span> <span class="n">concat</span><span class="p">([</span><span class="n">u</span> <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">capa_sector</span><span class="p">])</span>
     <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="p">[</span><span class="n">capacity</span><span class="o">.</span><span class="n">capacity</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
-
-    <span class="k">if</span> <span class="s2">&quot;year&quot;</span> <span class="ow">in</span> <span class="n">capacity</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
-        <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="o">.</span><span class="n">ffill</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">)</span>
 
     <span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">capacity</span></div>
@@ -1167,7 +1178,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

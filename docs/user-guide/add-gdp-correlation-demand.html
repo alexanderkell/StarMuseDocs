@@ -6,18 +6,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6. Adding a service demand by correlation &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Input Files" href="../inputs/index.html" />
+    <link rel="next" title="7. Production constraints by timeslice" href="min-max-timeslice-constraints.html" />
     <link rel="prev" title="5. Adding a service demand" href="addition-service-demand.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -30,7 +33,7 @@
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../inputs/index.html" title="Input Files"
+          <a href="min-max-timeslice-constraints.html" title="7. Production constraints by timeslice"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="addition-service-demand.html" title="5. Adding a service demand"
@@ -325,20 +328,20 @@ div.rendered_html tbody tr:hover {
 <h2><span class="section-number">6.2. </span>TOML file<a class="headerlink" href="#TOML-file" title="Permalink to this headline">¶</a></h2>
 <p>Editting the TOML file to include this can be done relatively quickly if we know the variable names.</p>
 <p>In the second bottom section of the toml file, you will see the following section:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">sectors</span><span class="o">.</span><span class="n">residential_presets</span><span class="p">]</span>
-<span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;presets&#39;</span>
-<span class="n">priority</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">consumption_path</span><span class="o">=</span> <span class="s2">&quot;</span><span class="si">{path}</span><span class="s2">/technodata/preset/*Consumption.csv&quot;</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[sectors.residential_presets]
+type = &#39;presets&#39;
+priority = 0
+consumption_path= &quot;{path}/technodata/preset/*Consumption.csv&quot;
 </pre></div>
 </div>
 <p>This enables us to run the model in exogenous mode, but now we would like to run the model from the files previously mentioned. This can be done by linking new variables to the new files, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">sectors</span><span class="o">.</span><span class="n">residential_presets</span><span class="p">]</span>
-<span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;presets&#39;</span>
-<span class="n">priority</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[sectors.residential_presets]
+type = &#39;presets&#39;
+priority = 0
 
-<span class="n">timeslice_shares_path</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{path}</span><span class="s1">/technodata/preset/TimesliceSharepreset.csv&#39;</span>
-<span class="n">macrodrivers_path</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{path}</span><span class="s1">/technodata/preset/Macrodrivers.csv&#39;</span>
-<span class="n">regression_path</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{path}</span><span class="s1">/technodata/preset/regressionparameters.csv&#39;</span>
+timeslice_shares_path = &#39;{path}/technodata/preset/TimesliceSharepreset.csv&#39;
+macrodrivers_path = &#39;{path}/technodata/preset/Macrodrivers.csv&#39;
+regression_path = &#39;{path}/technodata/preset/regressionparameters.csv&#39;
 </pre></div>
 </div>
 <p>We effectively linked the new files to MUSE.</p>
@@ -528,8 +531,7 @@ residential sector:
 </div>
 <div class="section" id="Next-steps">
 <h2><span class="section-number">6.5. </span>Next steps<a class="headerlink" href="#Next-steps" title="Permalink to this headline">¶</a></h2>
-<p>This brings us to the end of the user guide! Using the information explained in this tutorial, or following similar steps, you will be able to create complex scenarios of your choosing.</p>
-<p>For the full code to generate the final results, see <a class="reference external" href="dead-link">here INSERT LINK HERE</a>.</p>
+<p>In the next section we will see how we can enforce outputs of technologies by timeslice. For instance, we can prevent solar photovoltaics from producing electricity at night, or ensure that a nuclear power plant runs at a minimum capacity during the day.</p>
 </div>
 </div>
 
@@ -556,8 +558,8 @@ residential sector:
   <p class="topless"><a href="addition-service-demand.html"
                         title="previous chapter"><span class="section-number">5. </span>Adding a service demand</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../inputs/index.html"
-                        title="next chapter">Input Files</a></p>
+  <p class="topless"><a href="min-max-timeslice-constraints.html"
+                        title="next chapter"><span class="section-number">7. </span>Production constraints by timeslice</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -589,7 +591,7 @@ residential sector:
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../inputs/index.html" title="Input Files"
+          <a href="min-max-timeslice-constraints.html" title="7. Production constraints by timeslice"
              >next</a> |</li>
         <li class="right" >
           <a href="addition-service-demand.html" title="5. Adding a service demand"
@@ -601,7 +603,7 @@ residential sector:
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>4. Modification of time &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -303,16 +306,16 @@ div.rendered_html tbody tr:hover {
 <p>To achieve this, we have to modify the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, as well as the files within the preset folder: <code class="docutils literal notranslate"><span class="pre">Residential2020Consumption.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">Residential2050Consumption.csv</span></code>. This is so that we can edit the demand for the residential sector for the new timeslices.</p>
 <p>First we edit the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file to add two additional timeslices: early-morning and late-afternoon. We also rename afternoon to mid-afternoon. These settings can be found at the bottom of the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file.</p>
 <p>An example of the changes is shown below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">timeslices</span><span class="p">]</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">night</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">morning</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">mid</span><span class="o">-</span><span class="n">afternoon</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">early</span><span class="o">-</span><span class="n">peak</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">late</span><span class="o">-</span><span class="n">peak</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">evening</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">early</span><span class="o">-</span><span class="n">morning</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="nb">all</span><span class="o">-</span><span class="n">year</span><span class="o">.</span><span class="n">all</span><span class="o">-</span><span class="n">week</span><span class="o">.</span><span class="n">late</span><span class="o">-</span><span class="n">afternoon</span> <span class="o">=</span> <span class="mi">1095</span>
-<span class="n">level_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;month&quot;</span><span class="p">,</span> <span class="s2">&quot;day&quot;</span><span class="p">,</span> <span class="s2">&quot;hour&quot;</span><span class="p">]</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[timeslices]
+all-year.all-week.night = 1095
+all-year.all-week.morning = 1095
+all-year.all-week.mid-afternoon = 1095
+all-year.all-week.early-peak = 1095
+all-year.all-week.late-peak = 1095
+all-year.all-week.evening = 1095
+all-year.all-week.early-morning = 1095
+all-year.all-week.late-afternoon = 1095
+level_names = [&quot;month&quot;, &quot;day&quot;, &quot;hour&quot;]
 </pre></div>
 </div>
 <p>The number of timeslices within this should add up to 8760; the number of hours in a benchmark year. Whilst this is required, MUSE does not check and enforce this.</p>
@@ -590,9 +593,9 @@ residential sector:
 <h2><span class="section-number">4.2. </span>Modify time horizon and time periods<a class="headerlink" href="#Modify-time-horizon-and-time-periods" title="Permalink to this headline">¶</a></h2>
 <p>For the previous examples, we have run the scenario from 2020 to 2050, in 5 year time steps per benchmark year. This has been set at the top of the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file. However, we may want to run a more detailed scenario, with 2 year time steps, and up until the year 2040.</p>
 <p>Making this change is quite simple as we only have two lines to change. We will modify line 2 and 3 of the <code class="docutils literal notranslate"><span class="pre">settings.toml</span></code> file, as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Global settings - most REQUIRED</span>
-<span class="n">time_framework</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2022</span><span class="p">,</span> <span class="mi">2024</span><span class="p">,</span> <span class="mi">2026</span><span class="p">,</span> <span class="mi">2028</span><span class="p">,</span> <span class="mi">2030</span><span class="p">,</span> <span class="mi">2032</span><span class="p">,</span> <span class="mi">2034</span><span class="p">,</span> <span class="mi">2036</span><span class="p">,</span> <span class="mi">2038</span><span class="p">,</span> <span class="mi">2040</span><span class="p">]</span>
-<span class="n">foresight</span> <span class="o">=</span> <span class="mi">2</span>   <span class="c1"># Has to be a multiple of the minimum separation between the benchmark years</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span># Global settings - most REQUIRED
+time_framework = [2020, 2022, 2024, 2026, 2028, 2030, 2032, 2034, 2036, 2038, 2040]
+foresight = 2   # Has to be a multiple of the minimum separation between the benchmark years
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">time_framework</span></code> details each benchmark year in which we run the simulation. The <code class="docutils literal notranslate"><span class="pre">foresight</span></code> variable details how much foresight an agent has when making investments.</p>
@@ -917,7 +920,7 @@ residential sector:
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

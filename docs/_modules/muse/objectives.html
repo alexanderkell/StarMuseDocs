@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.objectives &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -142,7 +145,7 @@
     <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
+<div class="viewcode-block" id="factory"><a class="viewcode-back" href="../../api.html#muse.objectives.factory">[docs]</a><span class="k">def</span> <span class="nf">factory</span><span class="p">(</span>
     <span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">]]]</span> <span class="o">=</span> <span class="s2">&quot;LCOE&quot;</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Callable</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Creates a function computing multiple objectives.</span>
@@ -185,7 +188,7 @@
     <span class="k">return</span> <span class="n">objectives</span></div>
 
 
-<div class="viewcode-block" id="register_objective"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.register_objective">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OBJECTIVES</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_objective"><a class="viewcode-back" href="../../api.html#muse.objectives.register_objective">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">OBJECTIVES</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_objective</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">OBJECTIVE_SIGNATURE</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a objective.</span>
 
@@ -230,7 +233,7 @@
     <span class="k">return</span> <span class="n">decorated_objective</span></div>
 
 
-<div class="viewcode-block" id="comfort"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.comfort">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="comfort"><a class="viewcode-back" href="../../api.html#muse.objectives.comfort">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">comfort</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -245,7 +248,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="efficiency"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.efficiency">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="efficiency"><a class="viewcode-back" href="../../api.html#muse.objectives.efficiency">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">efficiency</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -264,7 +267,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="capacity_to_service_demand"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.capacity_to_service_demand">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;capacity&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="capacity_to_service_demand"><a class="viewcode-back" href="../../api.html#muse.objectives.capacity_to_service_demand">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;capacity&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">capacity_to_service_demand</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -302,7 +305,7 @@
     <span class="k">return</span> <span class="n">max_demand</span> <span class="o">/</span> <span class="n">params</span><span class="o">.</span><span class="n">utilization_factor</span> <span class="o">/</span> <span class="n">max_hours</span></div>
 
 
-<div class="viewcode-block" id="fixed_costs"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.fixed_costs">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="fixed_costs"><a class="viewcode-back" href="../../api.html#muse.objectives.fixed_costs">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">fixed_costs</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -341,7 +344,7 @@
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="capital_costs"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.capital_costs">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="capital_costs"><a class="viewcode-back" href="../../api.html#muse.objectives.capital_costs">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">capital_costs</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -372,7 +375,7 @@
     <span class="k">return</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="emission_cost"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.emission_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emissions&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="emission_cost"><a class="viewcode-back" href="../../api.html#muse.objectives.emission_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;emissions&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">emission_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -469,7 +472,7 @@
     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="s2">&quot;commodity&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">technology</span><span class="o">=</span><span class="s2">&quot;replacement&quot;</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="fuel_consumption_cost"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.fuel_consumption_cost">[docs]</a><span class="nd">@register_objective</span>
+<div class="viewcode-block" id="fuel_consumption_cost"><a class="viewcode-back" href="../../api.html#muse.objectives.fuel_consumption_cost">[docs]</a><span class="nd">@register_objective</span>
 <span class="k">def</span> <span class="nf">fuel_consumption_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -563,7 +566,7 @@
     <span class="k">return</span> <span class="n">tech</span><span class="o">.</span><span class="n">interest_rate</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">tech</span><span class="o">.</span><span class="n">interest_rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">nyears</span><span class="p">))</span>
 
 
-<div class="viewcode-block" id="lifetime_levelized_cost_of_energy"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.lifetime_levelized_cost_of_energy">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LCOE&quot;</span><span class="p">,</span> <span class="s2">&quot;LLCOE&quot;</span><span class="p">])</span>
+<div class="viewcode-block" id="lifetime_levelized_cost_of_energy"><a class="viewcode-back" href="../../api.html#muse.objectives.lifetime_levelized_cost_of_energy">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;LCOE&quot;</span><span class="p">,</span> <span class="s2">&quot;LLCOE&quot;</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">lifetime_levelized_cost_of_energy</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -699,7 +702,7 @@
     <span class="k">return</span> <span class="n">results</span></div>
 
 
-<div class="viewcode-block" id="net_present_value"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.net_present_value">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NPV&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="net_present_value"><a class="viewcode-back" href="../../api.html#muse.objectives.net_present_value">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;NPV&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">net_present_value</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -901,7 +904,7 @@
     <span class="k">return</span> <span class="n">mask</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest_rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">years</span>
 
 
-<div class="viewcode-block" id="equivalent_annual_cost"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.objectives.equivalent_annual_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;EAC&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="equivalent_annual_cost"><a class="viewcode-back" href="../../api.html#muse.objectives.equivalent_annual_cost">[docs]</a><span class="nd">@register_objective</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;EAC&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">equivalent_annual_cost</span><span class="p">(</span>
     <span class="n">agent</span><span class="p">:</span> <span class="n">Agent</span><span class="p">,</span>
     <span class="n">demand</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
@@ -971,7 +974,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

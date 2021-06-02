@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.constraints &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -725,95 +728,95 @@
 <span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Transforms one constraint block into an lp matrix.</span>
 
-<span class="sd">   The goal is to create from ``lpcosts``, ``constraint``, and ``b`` a 2d-matrix of</span>
-<span class="sd">   constraints vs decision variables.</span>
+<span class="sd">    The goal is to create from ``lpcosts``, ``constraint``, and ``b`` a 2d-matrix of</span>
+<span class="sd">    constraints vs decision variables.</span>
 
-<span class="sd">    #. The dimensions of ``b`` are the constraint dimensions. They are renamed</span>
-<span class="sd">        ``&quot;c(xxx)&quot;``.</span>
-<span class="sd">    #. The dimensions of ``lpcosts`` are the decision-variable dimensions. They are</span>
-<span class="sd">        renamed ``&quot;d(xxx)&quot;``.</span>
-<span class="sd">    #. ``set(b.dims).intersection(lpcosts.dims)`` are diagonal</span>
-<span class="sd">        in constraint dimensions and decision variables dimension</span>
-<span class="sd">    #. ``set(constraint.dims) - set(lpcosts.dims) - set(b.dims)`` are reduced by</span>
-<span class="sd">        summation</span>
-<span class="sd">    #. ``set(lpcosts.dims) - set(constraint.dims) - set(b.dims)`` are added for</span>
-<span class="sd">        expansion</span>
-<span class="sd">    #. ``set(b.dims) - set(constraint.dims) - set(lpcosts.dims)`` are added for</span>
-<span class="sd">        expansion. Such dimensions only make sense if they consist of one point.</span>
+<span class="sd">     #. The dimensions of ``b`` are the constraint dimensions. They are renamed</span>
+<span class="sd">         ``&quot;c(xxx)&quot;``.</span>
+<span class="sd">     #. The dimensions of ``lpcosts`` are the decision-variable dimensions. They are</span>
+<span class="sd">         renamed ``&quot;d(xxx)&quot;``.</span>
+<span class="sd">     #. ``set(b.dims).intersection(lpcosts.dims)`` are diagonal</span>
+<span class="sd">         in constraint dimensions and decision variables dimension</span>
+<span class="sd">     #. ``set(constraint.dims) - set(lpcosts.dims) - set(b.dims)`` are reduced by</span>
+<span class="sd">         summation</span>
+<span class="sd">     #. ``set(lpcosts.dims) - set(constraint.dims) - set(b.dims)`` are added for</span>
+<span class="sd">         expansion</span>
+<span class="sd">     #. ``set(b.dims) - set(constraint.dims) - set(lpcosts.dims)`` are added for</span>
+<span class="sd">         expansion. Such dimensions only make sense if they consist of one point.</span>
 
-<span class="sd">    The result is the constraint matrix, expanded, reduced and diagonalized for the</span>
-<span class="sd">    conditions above.</span>
+<span class="sd">     The result is the constraint matrix, expanded, reduced and diagonalized for the</span>
+<span class="sd">     conditions above.</span>
 
-<span class="sd">    Example:</span>
+<span class="sd">     Example:</span>
 
-<span class="sd">        Lets first setup a constraint and a cost matrix:</span>
+<span class="sd">         Lets first setup a constraint and a cost matrix:</span>
 
-<span class="sd">        &gt;&gt;&gt; from muse import examples</span>
-<span class="sd">        &gt;&gt;&gt; from muse import constraints as cs</span>
-<span class="sd">        &gt;&gt;&gt; res = examples.sector(&quot;residential&quot;, model=&quot;medium&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; technologies = res.technologies</span>
-<span class="sd">        &gt;&gt;&gt; market = examples.residential_market(&quot;medium&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; search = examples.search_space(&quot;residential&quot;, model=&quot;medium&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; assets = next(a.assets for a in res.agents if a.category == &quot;retrofit&quot;)</span>
-<span class="sd">        &gt;&gt;&gt; demand = None # not used in max production</span>
-<span class="sd">        &gt;&gt;&gt; constraint = cs.max_production(demand, assets, search, market, technologies)</span>
-<span class="sd">        &gt;&gt;&gt; lpcosts = cs.lp_costs(</span>
-<span class="sd">        ...     (</span>
-<span class="sd">        ...         technologies</span>
-<span class="sd">        ...         .interp(year=market.year.min() + 5)</span>
-<span class="sd">        ...         .drop_vars(&quot;year&quot;)</span>
-<span class="sd">        ...         .sel(region=assets.region)</span>
-<span class="sd">        ...     ),</span>
-<span class="sd">        ...     costs=search * np.arange(np.prod(search.shape)).reshape(search.shape),</span>
-<span class="sd">        ...     timeslices=market.timeslice,</span>
-<span class="sd">        ... )</span>
+<span class="sd">         &gt;&gt;&gt; from muse import examples</span>
+<span class="sd">         &gt;&gt;&gt; from muse import constraints as cs</span>
+<span class="sd">         &gt;&gt;&gt; res = examples.sector(&quot;residential&quot;, model=&quot;medium&quot;)</span>
+<span class="sd">         &gt;&gt;&gt; technologies = res.technologies</span>
+<span class="sd">         &gt;&gt;&gt; market = examples.residential_market(&quot;medium&quot;)</span>
+<span class="sd">         &gt;&gt;&gt; search = examples.search_space(&quot;residential&quot;, model=&quot;medium&quot;)</span>
+<span class="sd">         &gt;&gt;&gt; assets = next(a.assets for a in res.agents if a.category == &quot;retrofit&quot;)</span>
+<span class="sd">         &gt;&gt;&gt; demand = None # not used in max production</span>
+<span class="sd">         &gt;&gt;&gt; constraint = cs.max_production(demand, assets, search, market, technologies) # noqa: E501</span>
+<span class="sd">         &gt;&gt;&gt; lpcosts = cs.lp_costs(</span>
+<span class="sd">         ...     (</span>
+<span class="sd">         ...         technologies</span>
+<span class="sd">         ...         .interp(year=market.year.min() + 5)</span>
+<span class="sd">         ...         .drop_vars(&quot;year&quot;)</span>
+<span class="sd">         ...         .sel(region=assets.region)</span>
+<span class="sd">         ...     ),</span>
+<span class="sd">         ...     costs=search * np.arange(np.prod(search.shape)).reshape(search.shape),</span>
+<span class="sd">         ...     timeslices=market.timeslice,</span>
+<span class="sd">         ... )</span>
 
-<span class="sd">        For a simple example, we can first check the case where b is scalar. The result</span>
-<span class="sd">        ought to be a single row of a matrix, or a vector with only decision variables:</span>
+<span class="sd">         For a simple example, we can first check the case where b is scalar. The result</span>
+<span class="sd">         ought to be a single row of a matrix, or a vector with only decision variables:</span>
 
-<span class="sd">        &gt;&gt;&gt; from pytest import approx</span>
-<span class="sd">        &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
-<span class="sd">        ...     xr.DataArray(1), constraint.capacity, lpcosts.capacity</span>
-<span class="sd">        ... )</span>
-<span class="sd">        &gt;&gt;&gt; assert result.values == approx(-1)</span>
-<span class="sd">        &gt;&gt;&gt; assert set(result.dims) == {f&quot;d({x})&quot; for x in lpcosts.capacity.dims}</span>
-<span class="sd">        &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
-<span class="sd">        ...     xr.DataArray(1), constraint.production, lpcosts.production</span>
-<span class="sd">        ... )</span>
-<span class="sd">        &gt;&gt;&gt; assert set(result.dims) == {f&quot;d({x})&quot; for x in lpcosts.production.dims}</span>
-<span class="sd">        &gt;&gt;&gt; assert result.values == approx(1)</span>
+<span class="sd">         &gt;&gt;&gt; from pytest import approx</span>
+<span class="sd">         &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
+<span class="sd">         ...     xr.DataArray(1), constraint.capacity, lpcosts.capacity</span>
+<span class="sd">         ... )</span>
+<span class="sd">         &gt;&gt;&gt; assert result.values == approx(-1)</span>
+<span class="sd">         &gt;&gt;&gt; assert set(result.dims) == {f&quot;d({x})&quot; for x in lpcosts.capacity.dims}</span>
+<span class="sd">         &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
+<span class="sd">         ...     xr.DataArray(1), constraint.production, lpcosts.production</span>
+<span class="sd">         ... )</span>
+<span class="sd">         &gt;&gt;&gt; assert set(result.dims) == {f&quot;d({x})&quot; for x in lpcosts.production.dims}</span>
+<span class="sd">         &gt;&gt;&gt; assert result.values == approx(1)</span>
 
-<span class="sd">        As expected, the capacity vector is 1, whereas the production vector is -1.</span>
-<span class="sd">        These are the values the :py:func:`~muse.constraints.max_production` is set up</span>
-<span class="sd">        to create.</span>
+<span class="sd">         As expected, the capacity vector is 1, whereas the production vector is -1.</span>
+<span class="sd">         These are the values the :py:func:`~muse.constraints.max_production` is set up</span>
+<span class="sd">         to create.</span>
 
-<span class="sd">        Now, let&#39;s check the case where ``b`` is the one from the</span>
-<span class="sd">        :py:func:`~muse.constraints.max_production` constraint. In that case, all the</span>
-<span class="sd">        dimensions should end up as constraint dimensions: the production for each</span>
-<span class="sd">        timeslice, region, asset, and replacement technology should not outstrip the</span>
-<span class="sd">        capacity assigned for the asset and replacement technology.</span>
+<span class="sd">         Now, let&#39;s check the case where ``b`` is the one from the</span>
+<span class="sd">         :py:func:`~muse.constraints.max_production` constraint. In that case, all the</span>
+<span class="sd">         dimensions should end up as constraint dimensions: the production for each</span>
+<span class="sd">         timeslice, region, asset, and replacement technology should not outstrip the</span>
+<span class="sd">         capacity assigned for the asset and replacement technology.</span>
 
-<span class="sd">        &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
-<span class="sd">        ...     constraint.b, constraint.capacity, lpcosts.capacity</span>
-<span class="sd">        ... )</span>
-<span class="sd">        &gt;&gt;&gt; decision_dims = {f&quot;d({x})&quot; for x in lpcosts.capacity.dims}</span>
-<span class="sd">        &gt;&gt;&gt; constraint_dims = {</span>
-<span class="sd">        ...     f&quot;c({x})&quot; for x in set(lpcosts.production.dims).union(constraint.b.dims)</span>
-<span class="sd">        ... }</span>
-<span class="sd">        &gt;&gt;&gt; assert set(result.dims) == decision_dims.union(constraint_dims)</span>
+<span class="sd">         &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
+<span class="sd">         ...     constraint.b, constraint.capacity, lpcosts.capacity</span>
+<span class="sd">         ... )</span>
+<span class="sd">         &gt;&gt;&gt; decision_dims = {f&quot;d({x})&quot; for x in lpcosts.capacity.dims}</span>
+<span class="sd">         &gt;&gt;&gt; constraint_dims = {</span>
+<span class="sd">         ...     f&quot;c({x})&quot; for x in set(lpcosts.production.dims).union(constraint.b.dims) # noqa: E501</span>
+<span class="sd">         ... }</span>
+<span class="sd">         &gt;&gt;&gt; assert set(result.dims) == decision_dims.union(constraint_dims)</span>
 
-<span class="sd">        The :py:func:`~muse.constraints.max_production` constraint on the production</span>
-<span class="sd">        side is the identy matrix with a factor :math:`-1`. We can easily check this</span>
-<span class="sd">        by stacking the decision and constraint dimensions in the result:</span>
+<span class="sd">         The :py:func:`~muse.constraints.max_production` constraint on the production</span>
+<span class="sd">         side is the identy matrix with a factor :math:`-1`. We can easily check this</span>
+<span class="sd">         by stacking the decision and constraint dimensions in the result:</span>
 
-<span class="sd">        &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
-<span class="sd">        ...     constraint.b, constraint.production, lpcosts.production</span>
-<span class="sd">        ... )</span>
-<span class="sd">        &gt;&gt;&gt; decision_dims = {f&quot;d({x})&quot; for x in lpcosts.production.dims}</span>
-<span class="sd">        &gt;&gt;&gt; assert set(result.dims) == decision_dims.union(constraint_dims)</span>
-<span class="sd">        &gt;&gt;&gt; stacked = result.stack(d=sorted(decision_dims), c=sorted(constraint_dims))</span>
-<span class="sd">        &gt;&gt;&gt; assert stacked.shape[0] == stacked.shape[1]</span>
-<span class="sd">        &gt;&gt;&gt; assert stacked.values == approx(np.eye(stacked.shape[0]))</span>
+<span class="sd">         &gt;&gt;&gt; result = cs.lp_constraint_matrix(</span>
+<span class="sd">         ...     constraint.b, constraint.production, lpcosts.production</span>
+<span class="sd">         ... )</span>
+<span class="sd">         &gt;&gt;&gt; decision_dims = {f&quot;d({x})&quot; for x in lpcosts.production.dims}</span>
+<span class="sd">         &gt;&gt;&gt; assert set(result.dims) == decision_dims.union(constraint_dims)</span>
+<span class="sd">         &gt;&gt;&gt; stacked = result.stack(d=sorted(decision_dims), c=sorted(constraint_dims))</span>
+<span class="sd">         &gt;&gt;&gt; assert stacked.shape[0] == stacked.shape[1]</span>
+<span class="sd">         &gt;&gt;&gt; assert stacked.values == approx(np.eye(stacked.shape[0]))</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">eye</span>
     <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
@@ -1142,7 +1145,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

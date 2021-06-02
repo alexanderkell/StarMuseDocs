@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Further extending MUSE &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -452,19 +455,19 @@ Check growth constraints for wind.
 </div>
 <p>After importing the decorator function, <code class="docutils literal notranslate"><span class="pre">register_decision</span></code>, and ensuring that we decorate our new function with <code class="docutils literal notranslate"><span class="pre">&#64;register_decision</span></code>, we are able to create our new function as above.</p>
 <p>Our new function <code class="docutils literal notranslate"><span class="pre">median_objective</span></code> modifies the <code class="docutils literal notranslate"><span class="pre">mean</span></code> function already built into MUSE, with one difference. Replacing the return value, from <code class="docutils literal notranslate"><span class="pre">allobjectives.mean</span></code> to <code class="docutils literal notranslate"><span class="pre">allobjectives.mean</span></code>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@register_decision</span>
-<span class="k">def</span> <span class="nf">mean</span><span class="p">(</span><span class="n">objectives</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataArray</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Mean over objectives.&quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">xarray</span> <span class="kn">import</span> <span class="n">concat</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@register_decision
+def mean(objectives: Dataset, *args, **kwargs) -&gt; DataArray:
+    &quot;&quot;&quot;Mean over objectives.&quot;&quot;&quot;
+    from xarray import concat
 
-    <span class="n">allobjectives</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">objectives</span><span class="o">.</span><span class="n">data_vars</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">dim</span><span class="o">=</span><span class="s2">&quot;concat_var&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">allobjectives</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">allobjectives</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span> <span class="o">-</span> <span class="p">{</span><span class="s2">&quot;asset&quot;</span><span class="p">,</span> <span class="s2">&quot;replacement&quot;</span><span class="p">})</span>
+    allobjectives = concat(objectives.data_vars.values(), dim=&quot;concat_var&quot;)
+    return allobjectives.mean(set(allobjectives.dims) - {&quot;asset&quot;, &quot;replacement&quot;})
 </pre></div>
 </div>
 <p>Of course, you are free to make your functions as complicated as you like, depending on your own requirements.</p>
 <p>Next, we must edit our <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file. We will modify the <code class="docutils literal notranslate"><span class="pre">default</span></code> example for this tutorial. We change the first two entry rows, to be as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Agent1</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">R1</span><span class="p">,</span><span class="n">LCOE</span><span class="p">,</span><span class="n">NPV</span><span class="p">,</span><span class="n">EAC</span><span class="p">,</span><span class="mi">1</span><span class="p">,,,</span><span class="n">FALSE</span><span class="p">,,,</span><span class="nb">all</span><span class="p">,</span><span class="n">median_objective</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">inf</span><span class="p">,</span><span class="n">New</span>
-<span class="n">Agent2</span><span class="p">,</span><span class="n">A1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">R1</span><span class="p">,</span><span class="n">LCOE</span><span class="p">,</span><span class="n">NPV</span><span class="p">,</span><span class="n">EAC</span><span class="p">,</span><span class="mi">1</span><span class="p">,,,</span><span class="n">FALSE</span><span class="p">,,,</span><span class="nb">all</span><span class="p">,</span><span class="n">median_objective</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">inf</span><span class="p">,</span><span class="n">Retrofit</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Agent1,A1,1,R1,LCOE,NPV,EAC,1,,,FALSE,,,all,median_objective,1,-1,inf,New
+Agent2,A1,2,R1,LCOE,NPV,EAC,1,,,FALSE,,,all,median_objective,1,-1,inf,Retrofit
 </pre></div>
 </div>
 <p>Here, we add the NPV and EAC decision metrics, as well as replacing the <code class="docutils literal notranslate"><span class="pre">singleObj</span></code> <code class="docutils literal notranslate"><span class="pre">DecisionMethod</span></code> to <code class="docutils literal notranslate"><span class="pre">median_objective</span></code>.</p>
@@ -633,7 +636,7 @@ Check growth constraints for wind.
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

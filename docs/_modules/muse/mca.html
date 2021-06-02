@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.mca &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -61,7 +64,7 @@
 <span class="kn">from</span> <span class="nn">muse.sectors</span> <span class="kn">import</span> <span class="n">SECTORS_REGISTERED</span><span class="p">,</span> <span class="n">AbstractSector</span>
 
 
-<div class="viewcode-block" id="MCA"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA">[docs]</a><span class="k">class</span> <span class="nc">MCA</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="MCA"><a class="viewcode-back" href="../../api.html#muse.mca.MCA">[docs]</a><span class="k">class</span> <span class="nc">MCA</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Market Clearing Algorithm.</span>
 
 <span class="sd">    The market clearing algorithm is the main object implementing the MUSE model. It is</span>
@@ -69,7 +72,7 @@
 <span class="sd">    another, with the general market and the carbon market.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="MCA.factory"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.factory">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="MCA.factory"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.factory">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">factory</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">settings</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Text</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">MCA</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Loads MCA from input settings and input files.</span>
 
@@ -228,7 +231,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">method_options</span> <span class="o">=</span> <span class="n">method_options</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span> <span class="o">=</span> <span class="n">ofactory</span><span class="p">()</span> <span class="k">if</span> <span class="n">outputs</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">outputs</span>
 
-<div class="viewcode-block" id="MCA.find_equilibrium"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.find_equilibrium">[docs]</a>    <span class="k">def</span> <span class="nf">find_equilibrium</span><span class="p">(</span>
+<div class="viewcode-block" id="MCA.find_equilibrium"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.find_equilibrium">[docs]</a>    <span class="k">def</span> <span class="nf">find_equilibrium</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FindEquilibriumResults</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Specialised version of the find_equilibrium function.</span>
@@ -251,7 +254,7 @@
             <span class="n">expect_equilibrium</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">expect_equilibrium</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="MCA.update_carbon_budget"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.update_carbon_budget">[docs]</a>    <span class="k">def</span> <span class="nf">update_carbon_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">year_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<div class="viewcode-block" id="MCA.update_carbon_budget"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.update_carbon_budget">[docs]</a>    <span class="k">def</span> <span class="nf">update_carbon_budget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">year_idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Specialised version of the update_carbon_budget function.</span>
 
 <span class="sd">        Arguments:</span>
@@ -277,7 +280,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">control_undershoot</span><span class="p">,</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="MCA.update_carbon_price"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.update_carbon_price">[docs]</a>    <span class="k">def</span> <span class="nf">update_carbon_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+<div class="viewcode-block" id="MCA.update_carbon_price"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.update_carbon_price">[docs]</a>    <span class="k">def</span> <span class="nf">update_carbon_price</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">market</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;Calculates the updated carbon price, if required.</span>
 
 <span class="sd">        If the emission calculated for the next time period is larger than the</span>
@@ -319,7 +322,7 @@
 
         <span class="k">return</span> <span class="n">new_carbon_price</span></div>
 
-<div class="viewcode-block" id="MCA.run"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<div class="viewcode-block" id="MCA.run"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Initiates the calculation, starting with the loop over years.</span>
 
 <span class="sd">        This method starts the main MUSE loop, going over the years of the simulation.</span>
@@ -388,7 +391,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">outputs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">market</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sectors</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">time_framework</span><span class="p">[</span><span class="n">year_idx</span><span class="p">])</span>
             <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Finish simulation year </span><span class="si">{</span><span class="n">years</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="MCA.calibrate_legacy_sectors"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.MCA.calibrate_legacy_sectors">[docs]</a>    <span class="k">def</span> <span class="nf">calibrate_legacy_sectors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="MCA.calibrate_legacy_sectors"><a class="viewcode-back" href="../../api.html#muse.mca.MCA.calibrate_legacy_sectors">[docs]</a>    <span class="k">def</span> <span class="nf">calibrate_legacy_sectors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Run a calibration step in the lagacy sectors.</span>
 
 <span class="sd">        TODO: Remove when LegacySectors are no longer needed.</span>
@@ -424,7 +427,7 @@
         <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sectors</span></div></div>
 
 
-<div class="viewcode-block" id="SingleYearIterationResult"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.SingleYearIterationResult">[docs]</a><span class="k">class</span> <span class="nc">SingleYearIterationResult</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<div class="viewcode-block" id="SingleYearIterationResult"><a class="viewcode-back" href="../../api.html#muse.mca.SingleYearIterationResult">[docs]</a><span class="k">class</span> <span class="nc">SingleYearIterationResult</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Result of iterating over sectors for a year.</span>
 
 <span class="sd">    Convenience tuple naming naming the return values from  of</span>
@@ -435,7 +438,7 @@
     <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="single_year_iteration"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.single_year_iteration">[docs]</a><span class="k">def</span> <span class="nf">single_year_iteration</span><span class="p">(</span>
+<div class="viewcode-block" id="single_year_iteration"><a class="viewcode-back" href="../../api.html#muse.mca.single_year_iteration">[docs]</a><span class="k">def</span> <span class="nf">single_year_iteration</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">]</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SingleYearIterationResult</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Runs one iteration of the sectors (runs each sector once).</span>
@@ -476,7 +479,7 @@
     <span class="k">return</span> <span class="n">SingleYearIterationResult</span><span class="p">(</span><span class="n">market</span><span class="p">,</span> <span class="n">sectors</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="FindEquilibriumResults"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.FindEquilibriumResults">[docs]</a><span class="k">class</span> <span class="nc">FindEquilibriumResults</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+<div class="viewcode-block" id="FindEquilibriumResults"><a class="viewcode-back" href="../../api.html#muse.mca.FindEquilibriumResults">[docs]</a><span class="k">class</span> <span class="nc">FindEquilibriumResults</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Result of find equilibrium.&quot;&quot;&quot;</span>
 
     <span class="n">converged</span><span class="p">:</span> <span class="nb">bool</span>
@@ -484,7 +487,7 @@
     <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="find_equilibrium"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.find_equilibrium">[docs]</a><span class="k">def</span> <span class="nf">find_equilibrium</span><span class="p">(</span>
+<div class="viewcode-block" id="find_equilibrium"><a class="viewcode-back" href="../../api.html#muse.mca.find_equilibrium">[docs]</a><span class="k">def</span> <span class="nf">find_equilibrium</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
     <span class="n">sectors</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">AbstractSector</span><span class="p">],</span>
     <span class="n">maxiter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
@@ -568,7 +571,7 @@
     <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="check_demand_fulfillment"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.check_demand_fulfillment">[docs]</a><span class="k">def</span> <span class="nf">check_demand_fulfillment</span><span class="p">(</span>
+<div class="viewcode-block" id="check_demand_fulfillment"><a class="viewcode-back" href="../../api.html#muse.mca.check_demand_fulfillment">[docs]</a><span class="k">def</span> <span class="nf">check_demand_fulfillment</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">tol</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">excluded_commodities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Sequence</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Checks if the supply will fulfill all the demand in the future.</span>
@@ -597,7 +600,7 @@
     <span class="k">return</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="check_equilibrium"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.mca.check_equilibrium">[docs]</a><span class="k">def</span> <span class="nf">check_equilibrium</span><span class="p">(</span>
+<div class="viewcode-block" id="check_equilibrium"><a class="viewcode-back" href="../../api.html#muse.mca.check_equilibrium">[docs]</a><span class="k">def</span> <span class="nf">check_equilibrium</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
     <span class="n">int_market</span><span class="p">:</span> <span class="n">Dataset</span><span class="p">,</span>
     <span class="n">tolerance</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
@@ -673,7 +676,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

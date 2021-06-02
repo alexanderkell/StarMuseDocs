@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. Adding an agent &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -300,7 +303,7 @@ div.rendered_html tbody tr:hover {
 investment options. We will give the LCOE a relative weight value of 1 and the EAC a relative weight value of 0.25.</p>
 <p>We will continue to use the files from the previous tutorial where we added <code class="docutils literal notranslate"><span class="pre">solarPV</span></code> and created a new scenario.</p>
 <p>To achieve this, first, we must modify the <code class="docutils literal notranslate"><span class="pre">Agents.csv</span></code> file in the directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">muse_install_location</span><span class="p">}</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">muse</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">example</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">technodata</span><span class="o">/</span><span class="n">Agents</span><span class="o">.</span><span class="n">csv</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>{muse_install_location}/src/muse/data/example/default/technodata/Agents.csv
 </pre></div>
 </div>
 <p>To do this, we will add two new rows to the file. To simplify the process, we copy the data from the first two rows of agent <code class="docutils literal notranslate"><span class="pre">A1</span></code>, changing only the rows: <code class="docutils literal notranslate"><span class="pre">Name</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective1</span></code>, <code class="docutils literal notranslate"><span class="pre">Objective2</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData1</span></code>, <code class="docutils literal notranslate"><span class="pre">ObjData2</span></code> and <code class="docutils literal notranslate"><span class="pre">DecisionMethod</span></code>. The values we changed can be seen below. Again, we only show some of the rows due to space constraints, however see <a class="reference external" href="broken-link">here INSERT LINK HERE</a> for the full file.</p>
@@ -390,7 +393,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
 </tbody>
 </table>
 <p>We will now save this file and run the new simulation model using the following command in Anaconda prompt:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">muse</span> <span class="n">settings</span><span class="o">.</span><span class="n">toml</span>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python -m muse settings.toml
 </pre></div>
 </div>
 <p>Again, we use seaborn and pandas to analyse the data in the <code class="docutils literal notranslate"><span class="pre">Results</span></code> folder.</p>
@@ -727,7 +730,7 @@ investment options. We will give the LCOE a relative weight value of 1 and the E
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>

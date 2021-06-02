@@ -6,14 +6,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>muse.demand_share &#8212; MUSE 0.9 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -113,7 +116,7 @@
 <span class="sd">&quot;&quot;&quot;Dictionary of demand share functions.&quot;&quot;&quot;</span>
 
 
-<div class="viewcode-block" id="register_demand_share"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.demand_share.register_demand_share">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">DEMAND_SHARE</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="register_demand_share"><a class="viewcode-back" href="../../api.html#muse.demand_share.register_demand_share">[docs]</a><span class="nd">@registrator</span><span class="p">(</span><span class="n">registry</span><span class="o">=</span><span class="n">DEMAND_SHARE</span><span class="p">,</span> <span class="n">loglevel</span><span class="o">=</span><span class="s2">&quot;info&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">register_demand_share</span><span class="p">(</span><span class="n">function</span><span class="p">:</span> <span class="n">DEMAND_SHARE_SIGNATURE</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Decorator to register a function as a demand share calculation.&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">function</span></div>
@@ -147,7 +150,7 @@
     <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DEMAND_SHARE_SIGNATURE</span><span class="p">,</span> <span class="n">demand_share</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="new_and_retro"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.demand_share.new_and_retro">[docs]</a><span class="nd">@register_demand_share</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="new_and_retro"><a class="viewcode-back" href="../../api.html#muse.demand_share.new_and_retro">[docs]</a><span class="nd">@register_demand_share</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">new_and_retro</span><span class="p">(</span>
     <span class="n">agents</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractAgent</span><span class="p">],</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -324,7 +327,7 @@
     <span class="k">return</span> <span class="n">result</span></div>
 
 
-<div class="viewcode-block" id="unmet_forecasted_demand"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.demand_share.unmet_forecasted_demand">[docs]</a><span class="nd">@register_demand_share</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;unmet_demand&quot;</span><span class="p">)</span>
+<div class="viewcode-block" id="unmet_forecasted_demand"><a class="viewcode-back" href="../../api.html#muse.demand_share.unmet_forecasted_demand">[docs]</a><span class="nd">@register_demand_share</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;unmet_demand&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">unmet_forecasted_demand</span><span class="p">(</span>
     <span class="n">agents</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">AbstractAgent</span><span class="p">],</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -383,7 +386,7 @@
     <span class="p">}</span>
 
 
-<div class="viewcode-block" id="unmet_demand"><a class="viewcode-back" href="../../advanced-guide/api.html#muse.demand_share.unmet_demand">[docs]</a><span class="k">def</span> <span class="nf">unmet_demand</span><span class="p">(</span>
+<div class="viewcode-block" id="unmet_demand"><a class="viewcode-back" href="../../api.html#muse.demand_share.unmet_demand">[docs]</a><span class="k">def</span> <span class="nf">unmet_demand</span><span class="p">(</span>
     <span class="n">market</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
     <span class="n">capacity</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">DataArray</span><span class="p">,</span>
     <span class="n">technologies</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">,</span>
@@ -555,7 +558,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, Sustainable Gas Institute.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
     </div>
   </body>
 </html>
